@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Lesson 3</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="tutorial_style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">About</a>
+</li>
+<li>
+  <a href="lesson_1.html">Lesson 1</a>
+</li>
+<li>
+  <a href="lesson_2.html">Lesson 2</a>
+</li>
+<li>
+  <a href="lesson_3.html">Lesson 3</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/livelihoods-and-landscapes">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://livelihoodsandlandscapes.com">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="contact.html">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Lesson 3</h1>
+
+</div>
+
+
+<div id="setup" class="section level2">
+<h2>Setup</h2>
+<div id="adding-a-basemap" class="section level4">
+<h4>Adding a basemap</h4>
+<p>Follow the steps in outlined in <em>Lesson 1</em> to add Open Street Maps as a basemap image. A reminder video for this process is below. Make sure that the CRS changes to EPSG: 3857 to enable quick rendering of the basemap. By default QGIS projects data <em>on-the-fly</em> so other layers will be projected to the project CRS.</p>
+<center>
+<video width="640px" controls>
+<source src="video/add_osm_basemap.mp4" type="video/mp4">
+</video>
+</center>
+</div>
+<div id="creating-a-geopackge-dataset" class="section level4">
+<h4>Creating a GeoPackge dataset</h4>
+<p>In the directory <em>qgis_field_training</em> create a new GeoPackage dataset called <em>complex_form.gpkg</em> with polygon geometry type. You can use the instructions in <em>Lesson 1</em> for the process to create a new GeoPackage dataset. As a reminder watch the video below.</p>
+<center>
+<video width="640px" controls>
+<source src="video/create_geopackage.mp4" type="video/mp4">
+</video>
+</center>
+</div>
+<div id="setup-attribute-table" class="section level4">
+<h4>Setup Attribute Table</h4>
+<p>Follow the steps in <em>Field Creation</em> in <em>Lesson 1</em> to create the following fields:</p>
+<ul>
+<li>a numeric field of type <em>integer</em> called <em>crop_cover_pct</em></li>
+<li>a numeric field of type <em>real</em> called <em>field_area</em></li>
+<li>a text field of type <em>text</em> with 60 characters called <em>unique_id</em></li>
+</ul>
+<p>Use the following screengrabs as guides.</p>
+<center>
+<div class="figure">
+<img src="img/create_integer_field.png" alt="Create integer field" width="640" />
+<p class="caption">Create integer field</p>
+</div>
+</center>
+<center>
+<div class="figure">
+<img src="img/create_real_field.png" alt="Create real field" width="640" />
+<p class="caption">Create real field</p>
+</div>
+</center>
+<center>
+<div class="figure">
+<img src="img/create_uniqueid_field.png" alt="Create unique ID field" width="640" />
+<p class="caption">Create unique ID field</p>
+</div>
+</center>
+<p>We will use the <em>unique_id</em> field when we set up a one-to-many relation between two tables to allow us to collect multiple records per geometry feature.</p>
+</div>
+</div>
+<div id="constraints" class="section level2">
+<h2>Constraints</h2>
+<p>Now you have created your fields you need to create the attribute form. This process is outlined in the <em>Simple Form Creation</em> section of <em>Lesson 1</em>. Open the <em>complex_form</em> layer <em>Properties</em> and open up the <em>Attribute Form</em> widget.</p>
+<center>
+<div class="figure">
+<img src="img/attributes_form_complex_form.png" alt="Attributes Form widget" width="640" />
+<p class="caption">Attributes Form widget</p>
+</div>
+</center>
+<p>Next, set up the attribute form with a <em>Drag and drop designer</em>. The under <em>Available Widgets</em> select <em>crop_cover_pct</em> so it is highlighted grey. Give this field the alias <em>% crop cover in field?</em>. When you enter data into the field in the form you will be inputting the percentage of a field covered by crops. A field cannot have more than 100 % crop coverage; therefore, you need to set a constraint to prevent a data collector accidentally entering a value more than 100. To do this go to <em>Constraints</em> then enter the expression <code>crop_cover_pct&lt;=100</code> and give an <em>Expression description</em>: <em>crop cover cannot be more than 100 %</em> and check the checkbox <em>Enforce expression constraint</em>. By checking this checkbox you will not be able to enter data into this field unless the constraint expression evaluates to true. Here, you are preventing the form from being completed unless a number less than 100 is entered. If you try and enter a number greater than 100 the <em>Expression description</em> will appear.</p>
+<center>
+<div class="figure">
+<img src="img/expression_constraint.png" alt="Set expression constraint" width="640" />
+<p class="caption">Set expression constraint</p>
+</div>
+</center>
+<p>There are a range of QGIS expressions that you can use to set up constraints in your form. You can find out about QGIS expressions <a href="https://docs.qgis.org/3.4/en/docs/user_manual/working_with_vector/expression.html?highlight=expressions#id10">here</a>.</p>
+</div>
+<div id="area" class="section level2">
+<h2>Area</h2>
+<p>You also want to be able to compute the area of the field. QGIS provides a range of functions that you can use to assist with tasks such as this; you can find a list of available functions <a href="https://docs.qgis.org/3.4/en/docs/user_manual/working_with_vector/expression.html?highlight=expressions#id11">here</a> and you can also create your own functions. To compute the area of a field (i.e. a polygon feature that you will have digitized using QField) you can use the <code>$area</code> function which is part of the <a href="https://docs.qgis.org/3.4/en/docs/user_manual/working_with_vector/expression.html?highlight=expressions#geometry-functions">geometry functions</a>.</p>
+<p>To set up your form to compute the area select the <em>field_area</em> field in <em>Available Widgets</em> then give the field an alias <em>area of field?</em> and uncheck the <em>Editable</em> checkbox. Next, go to <em>Defaults</em> and enter <code>$area</code>. When you digitze a polygon in QField the value returned from executing the <code>$area</code> function will be assigned to <em>field_area</em>.</p>
+<center>
+<div class="figure">
+<img src="img/default_function_area.png" alt="Set default to return result of area function" width="640" />
+<p class="caption">Set default to return result of area function</p>
+</div>
+</center>
+<p>You will notice this process is similar to how you set up the <em>survey_date</em> field in <em>simple_form</em>. In that instance you used the <code>$now</code> function to return the date-time that the feature was created in QField.</p>
+</div>
+<div id="one-to-many-relationships" class="section level2">
+<h2>One-to-many relationships</h2>
+<p>You can create a one-to-many relation between two tables when you need to collect multiple records (features) for a single geometry feature. This is a useful functionality for many field data collection activities; for example, you may need to fill out a form for each crop type grown in an intercropped field while a different number of crop types grown in different fields. Using a one-to-many relation will allow you to fill out a form for each crop type in each field and each field can have a different number of crops cultivated in it.</p>
+<p>This functionality is enabled in QGIS through establishing a one-to-many (<em>1-N</em>) relation between two tables. This is a database concept called <a href="https://docs.qgis.org/3.4/en/docs/training_manual/database_concepts/db_intro.html#entity-relationship-diagramming">Entity Relationship Diagramming</a>. You have a table (<em>table1</em>) where each feature is identified by a primary key. Multiple features in another table (<em>table2</em>) can relate to single features in <em>table1</em> through a foreign key (which takes on the relevant value of the primary key in <em>table1</em>). These concepts are explained further <a href="https://docs.qgis.org/3.4/en/docs/user_manual/working_with_vector/attribute_table.html#creating-one-or-many-to-many-relations">here</a> and <a href="https://docs.qgis.org/3.4/en/docs/training_manual/database_concepts/db_intro.html#constraints-primary-keys-and-foreign-keys">here</a>.</p>
+<p>To set up a one-to-many relation in QGIS you need to create a second table to relate to the attribute table of <em>complex_form</em>. To do this create a new GeoPackage layer; however, this time select the <em>Database</em> as <em>complex_form.gpkg</em> and choose the <em>Geometry type</em> as <em>No geometry</em> and the <em>Table name</em> as <em>many_records</em>. Select <em>Add New Layer</em> when the warning box appears.</p>
+<center>
+<div class="figure">
+<img src="img/no_geometry_table.png" alt="Create table with no geometry in complex_form.gpkg" width="640" />
+<p class="caption">Create table with no geometry in complex_form.gpkg</p>
+</div>
+</center>
+<p>Having created your table <em>many_records</em> you need to add fields to it. To do this open the layer properties and then go to the <em>Source Fields</em> tab. Add the following fields to the table.</p>
+<center>
+<div class="figure">
+<img src="img/create_crop_type_field.png" alt="Add crop_type field" width="640" />
+<p class="caption">Add crop_type field</p>
+</div>
+</center>
+<center>
+<div class="figure">
+<img src="img/create_fertiliser_field.png" alt="Add fertiliser field" width="640" />
+<p class="caption">Add fertiliser field</p>
+</div>
+</center>
+<center>
+<div class="figure">
+<img src="img/create_foreign_key.png" alt="Add foriegn key field" width="640" />
+<p class="caption">Add foriegn key field</p>
+</div>
+</center>
+<div id="add-relation" class="section level4">
+<h4>Add Relation</h4>
+<p>Having created a foreign key and other fields in your <em>many_records</em> table you need to add the relation to the <em>complex_form</em> table. To do this go the <em>Project</em> menu then <em>Properties</em>. In <em>Project Properties</em> select the <em>Relations</em> tab on the left hand toolbar.</p>
+<center>
+<div class="figure">
+<img src="img/project_properties.png" alt="Project properties" width="640" />
+<p class="caption">Project properties</p>
+</div>
+</center>
+<p>Next, you need to add the relation between the <em>complex_form</em> table and the <em>many_records</em> table. Click on <em>Add Relation</em> and fill in the form as in the image below. You can find more instructions for filling out the <em>Add Relation</em> form <a href="https://docs.qgis.org/3.4/en/docs/user_manual/working_with_vector/attribute_table.html#defining-1-n-relations-relation-manager">here</a> and defining one-to-many relationships.</p>
+<center>
+<div class="figure">
+<img src="img/add_relation.png" alt="Add relation" width="640" />
+<p class="caption">Add relation</p>
+</div>
+</center>
+<p>Now you have established a one-to-many relation between features in <em>complex_form</em> and features in <em>many_records</em>.</p>
+<p>Finally, you need to set up the form to enter data into <em>many_records</em>. Go the the <em>Properties</em> then <em>Attribute Form</em> of <em>many_records</em>. First, setup the foreign key <em>fk_field</em> as a <em>Relation Reference</em> widget. Make sure you uncheck the <em>Editable</em> checkbox.</p>
+<center>
+<div class="figure">
+<img src="img/fk_field_relation_reference.png" alt="Foreign key as Relation Reference" width="640" />
+<p class="caption">Foreign key as Relation Reference</p>
+</div>
+</center>
+<p>Next, setup the <em>crop_type</em> field as a <em>Value Map</em> widget where you can select a crop from a drop-down list and give it the alias <em>crop type&gt;</em>.</p>
+<center>
+<div class="figure">
+<img src="img/crop_type_value_map.png" alt="Crop type value map" width="640" />
+<p class="caption">Crop type value map</p>
+</div>
+</center>
+<p>Finally, setup the <em>fertiliser</em> field with a <em>Checkbox</em> widget.</p>
+<center>
+<div class="figure">
+<img src="img/fertiliser_checkbox.png" alt="Checkbox widget setup" width="640" />
+<p class="caption">Checkbox widget setup</p>
+</div>
+</center>
+<p>The final step in setting up a one-to-many data collection form is to add the relation to the attribute form for <em>complex_form</em>. Go to the layer properties and <em>Attribute Form</em> tab for <em>complex_form</em>. First, you need to uncheck the <em>Editable</em> checkbox for the <em>unique_id</em> field and in <em>Default</em> enter <code>uuid()</code>. Then drag the relation named <em>one_to_many</em> from <em>Relations</em> under <em>Available Widgets</em> to the <em>Form Layout</em> as in the below image.</p>
+<center>
+<div class="figure">
+<img src="img/one_to_many_form.png" alt="Add relation to attribute form" width="640" />
+<p class="caption">Add relation to attribute form</p>
+</div>
+</center>
+</div>
+</div>
+<div id="package-for-qfield" class="section level2">
+<h2>Package for QField</h2>
+<p>You have now set up a form with constraints and a one-to-many relation. Save the project as a <em>.qgs</em> file called <em>complex_form.qgs</em> then configure the project using QField Sync. Then package the project into the directory <em>export_complex_form</em>. Make sure you set you tables to offline editing during project configuration. Copy the <em>export_complex_form</em> folder to your mobile device.</p>
+<div id="one-to-many-in-action" class="section level4">
+<h4>One-to-many in action</h4>
+<p>Open up <em>complex_form.qgs</em> in QField. Check out the constraint set on the <em>crop_cover_pct</em> field and entering data into <em>many_records</em> using the value relation widget. If you have set up your constraint and the one-to-many relation successfully your form should function similar to the example in the video below.</p>
+<center>
+<video width="640px" controls>
+<source src="video/constraint_one_to_many.mp4" type="video/mp4">
+</video>
+</center>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

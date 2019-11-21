@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Lesson 1</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="tutorial_style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">About</a>
+</li>
+<li>
+  <a href="lesson_1.html">Lesson 1</a>
+</li>
+<li>
+  <a href="lesson_2.html">Lesson 2</a>
+</li>
+<li>
+  <a href="lesson_3.html">Lesson 3</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/livelihoods-and-landscapes">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://livelihoodsandlandscapes.com">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="contact.html">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Lesson 1</h1>
+
+</div>
+
+
+<div id="setup" class="section level2">
+<h2>Setup</h2>
+<div id="qgis" class="section level4">
+<h4>QGIS</h4>
+<p>QGIS is an open-source desktop GIS. In order to complete this training you will need a desktop with <a href="https://www.qgis.org/en/site/index.html">QGIS</a> installed. You can download the latest desktop version of QGIS for your operating system <a href="https://www.qgis.org/en/site/forusers/download.html">here</a>.</p>
+<p>Various training resources exist for QGIS; <a href="https://docs.qgis.org/3.4/en/docs/gentle_gis_introduction/index.html">A Gentle Introduction to GIS</a> is a good option.</p>
+</div>
+<div id="qfield" class="section level4">
+<h4>QField</h4>
+<p>You will need to install QField onto a mobile device (phone or tablet) running the Android operating system. You can install QField from Google Play Store or by downloading the latest release from their <a href="https://github.com/opengisch/QField/releases">GitHub site</a>. QField is based on QGIS and provides a simple touch-optimized user interface for collecting and editing geospatial data using mobile devices. You can find more information about QField on its <a href="https://qfield.org/docs/index.html">documentation</a> site.</p>
+<center>
+<iframe src="https://player.vimeo.com/video/173774749" width="640" height="360" align="middle" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+</iframe>
+<p>
+<a href="https://vimeo.com/173774749">Photo functionality in QField</a> from <a href="https://vimeo.com/user36168865">OPENGIS.ch</a> on <a href="https://vimeo.com">Vimeo</a>.
+</p>
+</center>
+</div>
+<div id="qfield-sync-plugin" class="section level4">
+<h4>QField Sync Plugin</h4>
+<p>The <a href="https://qfield.org/docs/qfieldsync/index.html">QField Sync</a> plugin helps move projects and associated data between QGIS and QField and vice versa.</p>
+<p>In QGIS, go to the plugin library and search for <em>QField Sync</em>.</p>
+<center>
+<div class="figure">
+<img src="img/install_plugins_qfieldsync.png" alt="Finding QField Sync in the plugin library" width="640" />
+<p class="caption">Finding QField Sync in the plugin library</p>
+</div>
+</center>
+<p>Install the plugin. If the install was successful you should see <em>QFieldSync</em> in the <em>Plugins</em> menu.</p>
+<center>
+<div class="figure">
+<img src="img/check_qfieldsync_install.png" alt="Check QField Sync install" width="640" />
+<p class="caption">Check QField Sync install</p>
+</div>
+</center>
+</div>
+<div id="directories" class="section level4">
+<h4>Directories</h4>
+<p>On your desktop create a directory called <em>qgis_qfield_training</em>. Next, inside this directory create folders called <em>export_form</em>, <em>export_complex_form</em>, <em>import_form</em>, and <em>import_complex_form</em>.</p>
+</div>
+</div>
+<div id="qgis-interface" class="section level2">
+<h2>QGIS Interface</h2>
+<p>Open the QGIS application. You should see an interface similar to below. You can find detailed instructions on the QGIS interface <a href="https://docs.qgis.org/3.4/en/docs/training_manual/introduction/overview.html">here</a>; this is just a brief overview.</p>
+<center>
+<div class="figure">
+<img src="img/qgis_interface.png" alt="QGIS interface" width="640" />
+<p class="caption">QGIS interface</p>
+</div>
+</center>
+<p>You will be able to visualise geospatial data layers in the <em>map canvas</em>. You can pin various <em>toolbars</em> to the top of your QGIS interface; you can choose which toolbars to pin by selecting them in the <em>view</em> menu. It is good to pin toolbars which contain functions you use often when interacting with geospatial data (e.g. zoom-in, zoom-out, save).</p>
+<p>The geospatial data layers which you have opened and can visualise in the <em>map canvas</em> appear in the <em>layers panel</em>. Here, you can select which layers to visualise and open the layer properties to style the layers.</p>
+<p>The <em>Geoprocessing Toolbox</em> is a quick way to access a range of raster and vector geoprocessing operations that you can apply to your geospatial data.</p>
+<p>To add geospatial data as a layer in QGIS go to the <em>Layer</em> menu or use the <em>Open Data Source Manager</em> toolbar.</p>
+<center>
+<div class="figure">
+<img src="img/add_layer.png" alt="Add geospatial data as a layer in QGIS" width="640" />
+<p class="caption">Add geospatial data as a layer in QGIS</p>
+</div>
+</center>
+</div>
+<div id="layer-creation" class="section level2">
+<h2>Layer Creation</h2>
+<p>The first step in creating a QGIS project that can be opened in QField is to create a geospatial dataset which we add data to using forms in QField. The geospatial data formats supported by QField can be found <a href="https://qfield.org/docs/project-management/dataformat.html">here</a>. For this tutorial we will create a GeoPackage dataset. You can create a new GeoPackage layer by going to the <em>Layer</em> menu then <em>Create Layer</em> then <em>New GeoPackage Layer …</em>. Alternatively, you could click on the <em>New GeoPackage Layer…</em> on the toolbar. Both these options are illustrated below.</p>
+<center>
+<div class="figure">
+<img src="img/new_geopackage_layer.png" alt="Create new GeoPackage file. New GeoPackage Layer… button on the toolbar is highlighted by the black rectangle" width="640" />
+<p class="caption">Create new GeoPackage file. New GeoPackage Layer… button on the toolbar is highlighted by the black rectangle</p>
+</div>
+</center>
+<p>You should see the following widget appear to assist with creating a GeoPackage layer.</p>
+<center>
+<div class="figure">
+<img src="img/new_geopackage_layer_form.png" alt="Create New GeoPackage Layer widget" width="640" />
+<p class="caption">Create New GeoPackage Layer widget</p>
+</div>
+</center>
+<p>Next to the <em>Database</em> option click on the <code>...</code> button and scroll to you <em>qgis_qfield_training</em> directory. Give the database the name <em>simple_form</em>. Choose the geometry type for the database; select polygon here. Then click on <em>OK</em>.</p>
+<p>A layer called <em>simple_form</em> should appear in the <em>Layers Panel</em>.</p>
+<center>
+<div class="figure">
+<img src="img/geopackage_in_layers_panel.png" alt="GeoPackage in Layers Panel" width="640" />
+<p class="caption">GeoPackage in Layers Panel</p>
+</div>
+</center>
+</div>
+<div id="field-creation" class="section level2">
+<h2>Field Creation</h2>
+<p>Now you have created your geospatial dataset you need to create fields for variables you wish to collect data in QField. Right click on <em>simple_layers</em> in the <em>Layers Panel</em> then select <em>Properties…</em>.</p>
+<center>
+<div class="figure">
+<img src="img/layer_properties.png" alt="Layer Properties and Source Fields" width="640" />
+<p class="caption">Layer Properties and Source Fields</p>
+</div>
+</center>
+<p>If your <em>Layer Properties</em> window has not opened with <em>Source Fields</em> selected then click on the <em>Source Fields</em> button. This is found in the toolbar on the left of the <em>Layer Properties</em> window and is a blue table with a yellow column highlighted. The <em>Source Fields</em> button is selected in image of the <em>Layer Properties</em> window above.</p>
+<p>To add new fields to <em>simple_form</em> you need to turn on edit mode; to do this click on the pencil icon for the <em>Toggle editing mode</em> button.</p>
+<center>
+<div class="figure">
+<img src="img/edit_source_fields.png" alt="Turn on edit mode in Source Fields - see pink rectangle for the Toggle editing mode button" width="640" />
+<p class="caption">Turn on edit mode in Source Fields - see pink rectangle for the Toggle editing mode button</p>
+</div>
+</center>
+<p>Next you need to click on the <em>New Field</em> button. This is highlighted in pink below.</p>
+<center>
+<div class="figure">
+<img src="img/newfield.png" alt="Add New field button" width="640" />
+<p class="caption">Add New field button</p>
+</div>
+</center>
+<p>You will create a simple form where you will enter some free-form text, capture numeric data, select a value from a list, auto-capture the date of survey, and take a photo. To this we need to create fields for each of these variables (i.e. a field to contain observations of free-form text data).</p>
+<p>To create a field for entering text data fill in the form widget that is generated when you click the <em>New Field</em> button as text data type, 500 characters, and give the field a name <em>some_text</em>.</p>
+<center>
+<div class="figure">
+<img src="img/create_text_field.png" alt="Add text field to vector datasat" width="640" />
+<p class="caption">Add text field to vector datasat</p>
+</div>
+</center>
+<p>Next, you will need to repeat the process to create a numeric field, a field that we can enter data into using a drop-down list, a field that we can use to save photos to, and a date field for saving the survey date. Use the screen grabs below to guide you in creating these fields.</p>
+<center>
+<div class="figure">
+<img src="img/create_numeric_field.png" alt="Create a numeric field" width="640" />
+<p class="caption">Create a numeric field</p>
+</div>
+</center>
+<center>
+<div class="figure">
+<img src="img/create_dropdown_list_field.png" alt="Create a field to store data from drop-down list" width="640" />
+<p class="caption">Create a field to store data from drop-down list</p>
+</div>
+</center>
+<center>
+<div class="figure">
+<img src="img/photo_field.png" alt="Create field to capture photos using mobile device camera" width="640" />
+<p class="caption">Create field to capture photos using mobile device camera</p>
+</div>
+</center>
+<center>
+<div class="figure">
+<img src="img/date_field.png" alt="Create date field" width="640" />
+<p class="caption">Create date field</p>
+</div>
+</center>
+<p>Note when creating the date field we select the <em>date</em> data type.</p>
+<p>Click the <em>Toggle editing mode</em> button to save your edits to the attribute table for the <em>simple_form</em> dataset.</p>
+<p>Next, click the <em>Apply</em> button and then the <em>OK</em> button.</p>
+</div>
+<div id="simple-form-creation" class="section level2">
+<h2>Simple Form Creation</h2>
+<p>In QGIS, you can create forms to assist with entering data into the attribute table of a vector dataset. There are various options for designing forms in QGIS and various form widget types to provide a user with different interfaces to enter data into the form (e.g. there is a <em>value map</em> widget to support selecting a value from a drop-down list). You can read up on the different widgets to use when designing forms <a href="https://docs.qgis.org/3.4/en/docs/user_manual/working_with_vector/vector_properties.html#edit-widgets">here</a>.</p>
+<p>The list of QGIS form widgets that QField supports is listed <a href="https://qfield.org/docs/project-management/vector-layers.html">here</a>.</p>
+<p>To design an attribute form in QGIS you need to open up the layer properties (right click on the layer name in the <em>Layers Panel</em> then select <em>Properties</em>). Now, you want to select the <em>Attribute Form</em> tab.</p>
+<center>
+<div class="figure">
+<img src="img/attribute_form_tab.png" alt="Attribute form tab" width="640" />
+<p class="caption">Attribute form tab</p>
+</div>
+</center>
+<p>Next, you want to select the <em>Drag and drop designer</em> option. This will let you create a form where you can drag and drop fields into different groups that will appear as separate tabs on your form. You can read more about the <em>Drag and drop designer</em> <a href="https://docs.qgis.org/3.4/en/docs/user_manual/working_with_vector/vector_properties.html#the-drag-and-drop-designer">here</a>.</p>
+<center>
+<div class="figure">
+<img src="img/drag_and_drop_designer.png" alt="Drag and drop designer" width="640" />
+<p class="caption">Drag and drop designer</p>
+</div>
+</center>
+<p>Now you should see the form layout appear. You can create new tabs and groups to structure your form using the green <em>+</em> icon and you can remove tabs, groups, or fields from the form using the red <em>-</em> icon. These are highlighted in the image below. Create two tabs in your form; the first called <em>overview</em> and the second called <em>photo</em>.</p>
+<center>
+<div class="figure">
+<img src="img/add_form_tabs.png" alt="Attribute form with two tabs created. The icons used to add and remove tabs and groups are highlighted by pink rectangles" width="640" />
+<p class="caption">Attribute form with two tabs created. The icons used to add and remove tabs and groups are highlighted by pink rectangles</p>
+</div>
+</center>
+<p>Now, remove <em>fid</em> from your form using the red <em>-</em> icon. Next, drag the fields <em>some_text</em>, <em>a_number</em>, and <em>survey_date</em> to the <em>overview</em> tab in the <em>Form Layout</em>. Then drag <em>list_select</em> and <em>a_photo</em> to the <em>photo</em> tab. Your <em>Attribute Form</em> widget should look like the below screen grab.</p>
+<center>
+<div class="figure">
+<img src="img/form_layout.png" alt="Form layout" width="640" />
+<p class="caption">Form layout</p>
+</div>
+</center>
+<p>Finally, you want to chose an <em>edit</em> widget for each of your fields in the form. The list of available edit widgets for each field can be seen from the drop down list under <em>Widget Type</em>.</p>
+<center>
+<div class="figure">
+<img src="img/available_edit_widgets.png" alt="Available edit widgets" width="640" />
+<p class="caption">Available edit widgets</p>
+</div>
+</center>
+<div id="text-edit-widgets" class="section level4">
+<h4>Text Edit Widgets</h4>
+<p>Select a field so it is highlighted under <em>Available Widgets</em> then select its widget type from the drop down list under <em>Widget Type</em>. You can also give the field an <em>Alias</em> which will appear on the form instead of the field name; this could be a question such as <em>how many crops are grown in this field?</em>. Having the <em>Editable</em> checkbox checked means this field can be edited using the form - this is important if you want to be able to enter data into this field using QField.</p>
+<p>Create the text edit widget for <em>some_text</em> by giving the field an alias <em>some notes about this field:</em>, choosing the <em>Text Edit</em> widget as this is a text data type field, and also check the <em>Multiline</em> checkbox so you can enter notes on multiple lines in the form.</p>
+<center>
+<div class="figure">
+<img src="img/text_edit_widget.png" alt="Text Edit widget" width="640" />
+<p class="caption">Text Edit widget</p>
+</div>
+</center>
+<p>Now, you can create a widget to enter numeric data into <em>a_number</em>. You can create an alias: <em>Number of trees in this field?</em>. Note, that you will still use the <em>Text Edit</em> widget but when you enter data using the widget on a mobile device only the number keypad will appear.</p>
+<center>
+<div class="figure">
+<img src="img/text_edit_number_widget.png" alt="Text Edit widget - numeric" width="640" />
+<p class="caption">Text Edit widget - numeric</p>
+</div>
+</center>
+</div>
+<div id="date-time-widgets" class="section level4">
+<h4>Date / Time Widgets</h4>
+<p>To capture the survey date you will use device time and date and not enter it manually. Select the <em>survey_date</em> field and uncheck the <em>Editable</em> checkbox. Give the field an alias <em>Date</em>, check it is a <em>Date/Time</em> widget, and in the <em>Default Value</em> box enter <code>$now</code>. This is a QGIS function that returns the current time.</p>
+<center>
+<div class="figure">
+<img src="img/date_time_widget.png" alt="Date / Time widget" width="640" />
+<p class="caption">Date / Time widget</p>
+</div>
+</center>
+</div>
+<div id="value-map-widgets" class="section level4">
+<h4>Value Map Widgets</h4>
+<p>You will use the <em>Value Map</em> widget to select a value from a drop-down list. Select the <em>list_select</em> field, give the field an alias <em>which tree?</em>, under <em>Widget Type</em> select <em>Value Map</em> and fill out the table as in the image below.</p>
+<center>
+<div class="figure">
+<img src="img/value_map_widget.png" alt="Value Map widget" width="640" />
+<p class="caption">Value Map widget</p>
+</div>
+</center>
+</div>
+<div id="photo-capture-widgets" class="section level4">
+<h4>Photo Capture Widgets</h4>
+<p>To create a widget to capture photos using QField select the <em>a_photo</em> field, then give it an alias <em>photo</em>, then select the widget type as <em>Attachment</em>.</p>
+<center>
+<div class="figure">
+<img src="img/photo_widget_attachment.png" alt="Attachment widget type" width="640" />
+<p class="caption">Attachment widget type</p>
+</div>
+</center>
+<p>Next, you need to set the attachment to image. In the <em>Attachment Widget</em> scroll down to the <em>Integrated Document Viewer</em> and then select <em>image</em>.</p>
+<center>
+<div class="figure">
+<img src="img/photo_widget_image.png" alt="Select image type" width="640" />
+<p class="caption">Select image type</p>
+</div>
+</center>
+<p>After you have set up edit widget types for all your fields click <em>Apply</em> and then <em>OK</em>.</p>
+</div>
+</div>
+<div id="basemaps" class="section level2">
+<h2>Basemaps</h2>
+<p>It is nice to have basemap images in QField either for aesthetics or to be able to orientate yourself in the field. There are various options for adding basemaps in QGIS which can be rendered in QField. Here, you will add Open Street Maps as a basemap. To do this go to your <em>Browser Panel</em> then right click on <em>XYZ Tile</em> and click on <em>New Connection</em>.</p>
+<center>
+<div class="figure">
+<img src="img/add_xyz_tile_new_conn.png" alt="XYZ Tiles New Connection" width="640" />
+<p class="caption">XYZ Tiles New Connection</p>
+</div>
+</center>
+<p>In the <em>XYZ Connection</em> widget add the following URL <code>http://tile.openstreetmap.org/{z}/{x}/{y}.png</code>. Give the connection a sensible name such as <em>Open Street Map</em>.</p>
+<center>
+<div class="figure">
+<img src="img/xyz_connection.png" alt="Open Street Map URL" width="640" />
+<p class="caption">Open Street Map URL</p>
+</div>
+</center>
+<p>Now, under the <em>XYZ Tiles</em> tab select <em>Open Street Map</em> and drag it below <em>simple_form</em> in the <em>Layers Panel</em>.</p>
+<center>
+<div class="figure">
+<img src="img/osm_basemap.png" alt="OSM added as a basemap" width="640" />
+<p class="caption">OSM added as a basemap</p>
+</div>
+</center>
+</div>
+<div id="qgis-projects" class="section level2">
+<h2>QGIS Projects</h2>
+<p>You have almost completed creating a QGIS project, dataset, and attribute form to collect data. The final thing you need to do is create a QGIS project file for your work. To do this click on the save icon or go to <em>File</em>, then <em>Save</em>. Give your project a sensible name such <em>simple_form.qgs</em>. Make sure you select <strong>.qgs</strong> and <strong>NOT</strong> <strong>.qgz</strong> as QField only works with <em>.qgs</em> files. Save your project to the directory where you saved your <em>simple_form</em> GeoPackage dataset. You can read up on QGIS project files <a href="https://docs.qgis.org/3.4/en/docs/user_manual/introduction/project_files.html">here</a>.</p>
+<center>
+<div class="figure">
+<img src="img/save_project.png" alt="Save a .qgs project" width="640" />
+<p class="caption">Save a .qgs project</p>
+</div>
+</center>
+<p>You are now ready to package your project for QField and begin collecting data in the field.</p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

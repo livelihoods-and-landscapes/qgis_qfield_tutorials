@@ -1,0 +1,26 @@
+---
+title: "About"
+output: 
+  html_document:
+    theme: cerulean
+    css: tutorial_style.css
+---
+
+## QGIS and QField Tutorials
+
+This site provides tutorials on the use of QGIS and QField for collecting geospatial data in the field. 
+
+These tutorials were generated as part of the ACIAR funded project: *Climate-smart landscapes for promoting sustainability of Pacific Island agricultural systems*. This project is a collaboration between researchers based in Australia, Fiji, Tonga, and New Zealand deploying an ICT for Development approach to develop geospatial applications to support landscape management under changing climates. 
+
+## Background and Overview
+
+This training will instruct on a workflow for collecting geospatial data using open-source GIS technologies. Using QGIS, a desktop GIS, you will create a QGIS project and geospatial data. You will package this project and move it to a mobile device. You will then be able to use QField, a mobile GIS application, to visualise and collect geospatial data. Finally, you can sync data collected on a mobile GIS device using QField back to a master dataset in QGIS. This training will cover the following:
+
+1. QGIS and QField setup 
+2. Project creation and form generation
+3. Opening projects on QField
+4. Data collection using QField
+5. Syncing data from mobile devices
+6. Generating complex data collection forms
+
+*The project team would like to acknowledge the developers of the open source software QGIS and [QField](https://qfield.org).*

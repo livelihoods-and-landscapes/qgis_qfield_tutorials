@@ -1,0 +1,23 @@
+output_dir: '.'
+navbar: 
+  title: ""
+  left:
+    - text: "About"
+      href: index.html
+    - text: "Lesson 1"
+      href: lesson_1.html
+    - text: "Lesson 2"
+      href: lesson_2.html
+    - text: "Lesson 3"
+      href: lesson_3.html
+  right:
+    - icon: fa-github fa-lg
+      href: https://github.com/livelihoods-and-landscapes
+    - icon: fa-home fa-lg
+      href: https://livelihoodsandlandscapes.com 
+    - icon: fa-envelope fa-lg
+      href: contact.html
+  
+
+
+

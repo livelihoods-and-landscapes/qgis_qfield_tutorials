@@ -1,0 +1,12 @@
+---
+title: "Contacts"
+output: 
+  html_document:
+    theme: cerulean
+---
+
+![](img/team.png){width=100%}
+
+Please visit our project website [here](www.livelihoodsandlandscapes.com)
+
+Email: john.duncan@uwa.edu.au

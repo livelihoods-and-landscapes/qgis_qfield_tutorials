@@ -1,0 +1,20 @@
+
+img {
+    padding: 15px;
+    width: 75%;
+    border: thin silver solid;
+    
+  }
+
+.caption {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.title {
+     text-align: center;
+ } 
+
+p {
+  font-size: 16px;
+}

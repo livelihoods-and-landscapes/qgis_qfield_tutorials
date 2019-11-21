@@ -1,0 +1,181 @@
+---
+title: "Lesson 2"
+output: 
+  html_document:
+    theme: cerulean
+    toc: true
+    toc_depth: 4
+    toc_float: true
+    css: tutorial_style.css
+---
+## Overview
+
+In lesson 1 you created a geospatial dataset *simple_form.gpkg* and created a form to enter data into the attribute table for that dataset. In this lesson you will learn how to package this data for transfer to QField, how to collect data in the field using QField, and then sync field collected data back to a dataset on your desktop. 
+
+## QField Sync Plugin
+
+To start with you will need to open the QGIS project file *simple_form.qgs*. This will load your project into QGIS. You should check that the *QField Sync* plugin is installed.
+
+Your QGIS screen with the *simple_form.qgs* project loaded should look like the below image.
+
+<center>
+
+![simple_form.qgs project loaded in QGIS](img/qgis_qgs_screen.png){width=640px}
+
+</center>
+
+Next, you need to zoom in on Fiji. To speed up the zoom process and rendering of the Open Street Maps layer change the project projection system to EPSG: 3857. You can do this by selecting the current CRS for the project in the bottom right corner of the QGIS interface and selecting EPSG: 3857.
+
+<center>
+
+![The current CRS for the QGIS project](img/change_proj.png){width=640px}
+
+</center>
+
+Once you have changed the CRS you can use the zoom icon in the toolbar to zoom in on Fiji. If you zoom in on Suva your *Map Canvas* should look like the image below.
+
+<center>
+
+![Zoomed in on Suva](img/fiji_zoom.png){width=640px}
+
+</center>
+
+Save your project.
+
+#### QFieldSync: Project Configuration
+
+You will need to configure your project before packaging it for QField. To do this go to the *Plugins* menu then select *QFieldSync* and *Project Configuration*. 
+
+<center>
+
+![QField Sync - Project Configuration](img/project_configuration.png){width=640px}
+
+</center>
+
+Now, you need to set parameters in the *Configure Project for QField Synchronisation* widget. Set the *Action* for *simple_form* to *offline editing*. This means you can edit the form offline in QField. Next, select the *Create base map* checkbox and select *OpenStreetMap* as the basemap Layer. Then click on OK.
+
+<center>
+
+![Configure project widget](img/configure_project_widget.png){width=640px}
+
+</center>
+
+#### QFieldSync: Package for QField
+
+Go back to the *Plugins* menu and select *QFieldSync* and then *Package for QField*. The *Package project for QField* widget should appear. In the `...` scroll to you directory *export_form* and select this directory. Then click on *create*. This will create a copy of your project in the *export_form* directory which you can copy to your mobile device to edit in QField.
+
+<center>
+
+![Package project for QField](img/package_for_qfield.png){width=640px}
+
+</center>
+
+If you were successful in packaging your project you should see the following files in your *export_form* directory.
+
+<center>
+
+![Project files packaged for QField](img/packaged_files_dir.png){width=640px}
+
+</center>
+
+**Make sure you save your** ***simple_forms.qgs*** **project file at this point.**
+
+## Move Project to Tablet
+
+Connect your Android device to your desktop. Copy the *export_form* directory to your Android device's internal storage (**NOT** the SD card). 
+
+## QField
+
+Open QField by selecting the QField icon ![](qfield.png){width=3.5em} on your Android device. 
+
+#### Open Project
+
+Once QField has opened click on the menu icon in the top left of the display and then click on the cog icon and select *Open Project*. Scroll to where you copied *export_form* and select *export_form.qgs* to load the project into QField. The video below illustrates this approach.
+
+<center>
+
+<video width="500px" controls>
+  <source src="video/open_project.mp4" type="video/mp4">
+</video>
+
+</center>
+
+#### Browser Mode
+
+At the top of the layers panel are two icons: a map and a pencil. Selecting the map icon means that you are in browse mode and you can visualise and query the geospatial layers loaded into your project.
+
+<center>
+
+<video width="500px" controls>
+  <source src="video/browse_mode.mp4" type="video/mp4">
+</video>
+
+</center>
+
+#### Digitize Mode
+
+If you select pencil icon you now enter digitize mode. In this mode you can digitize new features and fill in the attribute form and also edit features that you have already created or came pre-loaded with your project. Note, to edit a layer you will need to make sure that layer is selected (it is highlighted grey). The following video shows how to create a polygon feature and complete the attribute form for that layer. 
+
+<center>
+
+<video width="500px" controls>
+  <source src="video/create_feature.mp4" type="video/mp4">
+</video>
+
+</center>
+
+#### GPS
+
+You can manually digitise points by moving the crosshairs cursor on the *Map Canvas* and using the basemap images as a guide. However, you can also track your GPS position and add vertices for your current location. You can do this by selecting the GPS icon in the bottom right hand corner highlighted in the image below. 
+
+<center>
+
+![GPS icon highlighted in pink - select to create features at your current GPS location](img/gps_cursor.png){width=640px}
+
+</center>
+
+#### Editing Saved Features
+
+If you are in digitize mode you can select a feature by clicking on it. You can then click on the *A* icon highlighted in pink below to edit the attribute form for the selected feature. 
+
+<center>
+
+![Edit feature icon](img/edit_feature.png){width=640px}
+
+</center>
+
+<center>
+
+<video width="500px" controls>
+  <source src="video/edit_features.mp4" type="video/mp4">
+</video>
+
+</center>
+
+## Syncing with Master Dataset
+
+Once you have collected your data in the field you need to sync it back to your master dataset.
+
+#### Copy Data to Desktop
+
+Copy the *export_form* directory from your Android device to the *import_form* directory on your desktop. Your *import_form* directory should look like the image below. 
+
+<center>
+
+![import_form directory with project copied from QField](img/import_form_dir.png){width=640px}
+
+</center>
+
+#### QFieldSync: Synchronize from QField
+
+Go to the *Plugins* menu then select *QFieldSync* then select *Synchronize from QField*.
+
+Click on the `...` icon and scroll to the *export_form* directory in the *import_form* directory. Then click on *Synchronize* and the data you collected using QField should sync with the master dataset on your computer. 
+
+<center>
+
+![Synchronize from QField](img/sync_project.png){width=640px}
+
+</center>
+
+You have now created a QGIS project, packaged it for QField, collected data in the field, and synced this data back to your desktop. The final lesson will cover the creation of more complex forms.
