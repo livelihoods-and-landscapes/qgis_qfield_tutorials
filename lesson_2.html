@@ -404,7 +404,7 @@ div.tocify {
 <p class="caption">simple_form.qgs project loaded in QGIS</p>
 </div>
 </center>
-<p>Next, you need to zoom in on Fiji. To speed up the zoom process and rendering of the Open Street Maps layer change the project projection system to EPSG: 3857. You can do this by selecting the current CRS for the project in the bottom right corner of the QGIS interface and selecting EPSG: 3857.</p>
+<p>Next, you need to zoom in on Fiji or where you plan to collect data in the field. To speed up the zoom process and rendering of the Open Street Maps layer change the project projection system to EPSG: 3857. You can do this by selecting the current <a href="https://docs.qgis.org/testing/en/docs/gentle_gis_introduction/coordinate_reference_systems.html">coordinate reference system</a> (CRS) for the project in the bottom right corner of the QGIS interface and selecting EPSG: 3857.</p>
 <center>
 <div class="figure">
 <img src="img/change_proj.png" alt="The current CRS for the QGIS project" width="640" />
@@ -421,7 +421,7 @@ div.tocify {
 <p>Save your project.</p>
 <div id="qfieldsync-project-configuration" class="section level4">
 <h4>QFieldSync: Project Configuration</h4>
-<p>You will need to configure your project before packaging it for QField. To do this go to the <em>Plugins</em> menu then select <em>QFieldSync</em> and <em>Project Configuration</em>.</p>
+<p>You will need to configure your project before packaging it for QField. To do this go to the <em>Plugins</em> menu then select <em>QFieldSync</em> and <em>Project Configuration</em>. Project configuration defines project characteristics relevant for collecting data in the field (i.e. configuring which layers can be edited offline or which layers to use as basemap images).</p>
 <center>
 <div class="figure">
 <img src="img/project_configuration.png" alt="QField Sync - Project Configuration" width="640" />
@@ -457,7 +457,7 @@ div.tocify {
 </div>
 <div id="move-project-to-tablet" class="section level2">
 <h2>Move Project to Tablet</h2>
-<p>Connect your Android device to your desktop. Copy the <em>export_form</em> directory to your Android device’s internal storage (<strong>NOT</strong> the SD card).</p>
+<p>Connect your Android device to your desktop using a USB cable. Copy the <em>export_form</em> directory to your Android device’s internal storage (<strong>NOT</strong> the SD card).</p>
 </div>
 <div id="qfield" class="section level2">
 <h2>QField</h2>
@@ -491,7 +491,7 @@ div.tocify {
 </div>
 <div id="gps" class="section level4">
 <h4>GPS</h4>
-<p>You can manually digitise points by moving the crosshairs cursor on the <em>Map Canvas</em> and using the basemap images as a guide. However, you can also track your GPS position and add vertices for your current location. You can do this by selecting the GPS icon in the bottom right hand corner highlighted in the image below.</p>
+<p>You can manually digitize points by moving the crosshairs cursor on the <em>Map Canvas</em> and using the basemap images as a guide. However, you can also track your GPS position and add vertices for your current location. You can do this by selecting the GPS icon in the bottom right hand corner highlighted in the image below.</p>
 <center>
 <div class="figure">
 <img src="img/gps_cursor.png" alt="GPS icon highlighted in pink - select to create features at your current GPS location" width="640" />

@@ -82,8 +82,8 @@ To add geospatial data as a layer in QGIS go to the *Layer* menu or use the *Ope
 
 ## Layer Creation
 
-The first step in creating a QGIS project that can be opened in QField is to create a geospatial dataset which we add data to using forms in QField. The geospatial data formats supported by QField can be found [here](https://qfield.org/docs/project-management/dataformat.html). For this tutorial we will create a GeoPackage dataset. You can create a new GeoPackage layer by going to the *Layer* menu then *Create Layer* then *New GeoPackage Layer ...*. Alternatively, you could click on the *New GeoPackage Layer...* on the toolbar. Both these options are illustrated below.
-
+The first step in creating a QGIS project that can be opened in QField is to create a geospatial dataset which we add data to using forms in QField. The geospatial data formats supported by QField can be found [here](https://qfield.org/docs/project-management/dataformat.html). For this tutorial we will create a GeoPackage dataset; GeoPackages are an [Open Geospatial Consortium](https://www.opengeospatial.org/standards/geopackage) open standard format for sharing and storing geospatial information. GeoPackages are database containers built on SQLite, can store multiple geospatial and non-geospatial layers, and are inter-operable across multiple devices (e.g. mobile to desktop) and operating systems. You can create a new GeoPackage layer by going to the *Layer* menu then *Create Layer* then *New GeoPackage Layer ...*. Alternatively, you could click on the *New GeoPackage Layer...* on the toolbar. Both these options are illustrated below. 
+ 
 <center>
 
 ![Create new GeoPackage file. New GeoPackage Layer... button on the toolbar is highlighted by the black rectangle](img/new_geopackage_layer.png){width=640px}
@@ -121,11 +121,11 @@ Right click on *simple_layers* in the *Layers Panel* then select *Properties...*
 
 If your *Layer Properties* window has not opened with *Source Fields* selected then click on the *Source Fields* button. This is found in the toolbar on the left of the *Layer Properties* window and is a blue table with a yellow column highlighted. The *Source Fields* button is selected in image of the *Layer Properties* window above. 
 
-To add new fields to *simple_form* you need to turn on edit mode; to do this click on the pencil icon for the *Toggle editing mode* button. 
+To add new fields to *simple_form* you need to turn on edit mode; to do this click on the pencil icon for *Toggle editing mode*. 
 
 <center>
 
-![Turn on edit mode in Source Fields - see pink rectangle for the Toggle editing mode button](img/edit_source_fields.png){width=640px}
+![Turn on edit mode in Source Fields - see pink rectangle for the Toggle editing mode icon](img/edit_source_fields.png){width=640px}
 
 </center>
 
@@ -137,13 +137,13 @@ Next you need to click on the *New Field* button. This is highlighted in pink be
 
 </center>
 
-You will create a simple form where you will enter some free-form text, capture numeric data, select a value from a list, auto-capture the date of survey, and take a photo. To this we need to create fields for each of these variables (i.e. a field to contain observations of free-form text data). 
+You will create a simple form where you will enter some free-form text, capture numeric data, select a value from a list, auto-capture the date of a survey, and take a photo. To this we need to create fields for each of these variables (i.e. a field to contain observations of free-form text data). 
 
 To create a field for entering text data fill in the form widget that is generated when you click the *New Field* button as text data type, 500 characters, and give the field a name *some_text*. 
 
 <center>
 
-![Add text field to vector datasat](img/create_text_field.png){width=640px}
+![Add text field to vector dataset](img/create_text_field.png){width=640px}
 
 </center>
 
@@ -175,7 +175,7 @@ Next, you will need to repeat the process to create a numeric field, a field tha
 
 Note when creating the date field we select the *date* data type.
 
-Click the *Toggle editing mode* button to save your edits to the attribute table for the *simple_form* dataset.
+Click the *Toggle editing mode* (pencil icon - see above figure) button to save your edits to the attribute table of the *simple_form* dataset.
 
 Next, click the *Apply* button and then the *OK* button. 
 
@@ -217,7 +217,7 @@ Now, remove *fid* from your form using the red *-* icon. Next, drag the fields *
 
 </center>
 
-Finally, you want to chose an  *edit* widget for each of your fields in the form. The list of available edit widgets for each field can be seen from the drop down list under  *Widget Type*.
+Finally, you want to choose an  *edit* widget for each of your fields in the form. The list of available edit widgets for each field can be seen from the drop down list under  *Widget Type*.
 
 <center>
 
@@ -247,7 +247,7 @@ Now, you can create a widget to enter numeric data into *a_number*. You can crea
 
 #### Date / Time Widgets
 
-To capture the survey date you will use device time and date and not enter it manually. Select the *survey_date* field and uncheck the *Editable* checkbox. Give the field an alias *Date*, check it is a *Date/Time* widget, and in the *Default Value* box enter `$now`. This is a QGIS function that returns the current time. 
+To capture the survey date you will use device time and date so you do not have to enter it manually. Select the *survey_date* field and uncheck the *Editable* checkbox. Give the field an alias *Date*, check that it is a *Date/Time* widget, and in the *Default Value* box enter `$now`. This is a QGIS function that returns the current time. 
 
 <center>
 
@@ -313,7 +313,7 @@ Now, under the *XYZ Tiles* tab select *Open Street Map* and drag it below *simpl
 
 ## QGIS Projects
 
-You have almost completed creating a QGIS project, dataset, and attribute form to collect data. The final thing you need to do is create a QGIS project file for your work. To do this click on the save icon or go to *File*, then *Save*. Give your project a sensible name such *simple_form.qgs*. Make sure you select **.qgs** and **NOT** **.qgz** as QField only works with *.qgs* files. Save your project to the directory where you saved your *simple_form* GeoPackage dataset. You can read up on QGIS project files [here](https://docs.qgis.org/3.4/en/docs/user_manual/introduction/project_files.html).
+You have almost completed creating a QGIS project, dataset, and attribute form to collect data. The final thing you need to do is create a QGIS project file for your work. To do this click on the save icon or go to *File*, then *Save*. Give your project a sensible name such *simple_form.qgs*. Make sure you select **.qgs** and **NOT** **.qgz** as QField only works with *.qgs* files. Save your project to the directory where you saved your *simple_form* GeoPackage dataset. QGIS project files are XML files that record various characteristics of the state of your work in QGIS including layers added, layer properties and styling, projection systems, and relations between tables. You can read up on QGIS project files [here](https://docs.qgis.org/3.4/en/docs/user_manual/introduction/project_files.html).
 
 <center>
 

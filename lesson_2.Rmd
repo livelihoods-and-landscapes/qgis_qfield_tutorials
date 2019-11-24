@@ -24,7 +24,7 @@ Your QGIS screen with the *simple_form.qgs* project loaded should look like the 
 
 </center>
 
-Next, you need to zoom in on Fiji. To speed up the zoom process and rendering of the Open Street Maps layer change the project projection system to EPSG: 3857. You can do this by selecting the current CRS for the project in the bottom right corner of the QGIS interface and selecting EPSG: 3857.
+Next, you need to zoom in on Fiji or where you plan to collect data in the field. To speed up the zoom process and rendering of the Open Street Maps layer change the project projection system to EPSG: 3857. You can do this by selecting the current [coordinate reference system](https://docs.qgis.org/testing/en/docs/gentle_gis_introduction/coordinate_reference_systems.html) (CRS) for the project in the bottom right corner of the QGIS interface and selecting EPSG: 3857.
 
 <center>
 
@@ -44,7 +44,7 @@ Save your project.
 
 #### QFieldSync: Project Configuration
 
-You will need to configure your project before packaging it for QField. To do this go to the *Plugins* menu then select *QFieldSync* and *Project Configuration*. 
+You will need to configure your project before packaging it for QField. To do this go to the *Plugins* menu then select *QFieldSync* and *Project Configuration*. Project configuration defines project characteristics relevant for collecting data in the field (i.e. configuring which layers can be edited offline or which layers to use as basemap images).
 
 <center>
 
@@ -82,7 +82,7 @@ If you were successful in packaging your project you should see the following fi
 
 ## Move Project to Tablet
 
-Connect your Android device to your desktop. Copy the *export_form* directory to your Android device's internal storage (**NOT** the SD card). 
+Connect your Android device to your desktop using a USB cable. Copy the *export_form* directory to your Android device's internal storage (**NOT** the SD card). 
 
 ## QField
 
@@ -126,7 +126,7 @@ If you select pencil icon you now enter digitize mode. In this mode you can digi
 
 #### GPS
 
-You can manually digitise points by moving the crosshairs cursor on the *Map Canvas* and using the basemap images as a guide. However, you can also track your GPS position and add vertices for your current location. You can do this by selecting the GPS icon in the bottom right hand corner highlighted in the image below. 
+You can manually digitize points by moving the crosshairs cursor on the *Map Canvas* and using the basemap images as a guide. However, you can also track your GPS position and add vertices for your current location. You can do this by selecting the GPS icon in the bottom right hand corner highlighted in the image below. 
 
 <center>
 

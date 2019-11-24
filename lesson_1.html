@@ -453,7 +453,7 @@ div.tocify {
 </div>
 <div id="layer-creation" class="section level2">
 <h2>Layer Creation</h2>
-<p>The first step in creating a QGIS project that can be opened in QField is to create a geospatial dataset which we add data to using forms in QField. The geospatial data formats supported by QField can be found <a href="https://qfield.org/docs/project-management/dataformat.html">here</a>. For this tutorial we will create a GeoPackage dataset. You can create a new GeoPackage layer by going to the <em>Layer</em> menu then <em>Create Layer</em> then <em>New GeoPackage Layer …</em>. Alternatively, you could click on the <em>New GeoPackage Layer…</em> on the toolbar. Both these options are illustrated below.</p>
+<p>The first step in creating a QGIS project that can be opened in QField is to create a geospatial dataset which we add data to using forms in QField. The geospatial data formats supported by QField can be found <a href="https://qfield.org/docs/project-management/dataformat.html">here</a>. For this tutorial we will create a GeoPackage dataset; GeoPackages are an <a href="https://www.opengeospatial.org/standards/geopackage">Open Geospatial Consortium</a> open standard format for sharing and storing geospatial information. GeoPackages are database containers built on SQLite, can store multiple geospatial and non-geospatial layers, and are inter-operable across multiple devices (e.g. mobile to desktop) and operating systems. You can create a new GeoPackage layer by going to the <em>Layer</em> menu then <em>Create Layer</em> then <em>New GeoPackage Layer …</em>. Alternatively, you could click on the <em>New GeoPackage Layer…</em> on the toolbar. Both these options are illustrated below.</p>
 <center>
 <div class="figure">
 <img src="img/new_geopackage_layer.png" alt="Create new GeoPackage file. New GeoPackage Layer… button on the toolbar is highlighted by the black rectangle" width="640" />
@@ -486,11 +486,11 @@ div.tocify {
 </div>
 </center>
 <p>If your <em>Layer Properties</em> window has not opened with <em>Source Fields</em> selected then click on the <em>Source Fields</em> button. This is found in the toolbar on the left of the <em>Layer Properties</em> window and is a blue table with a yellow column highlighted. The <em>Source Fields</em> button is selected in image of the <em>Layer Properties</em> window above.</p>
-<p>To add new fields to <em>simple_form</em> you need to turn on edit mode; to do this click on the pencil icon for the <em>Toggle editing mode</em> button.</p>
+<p>To add new fields to <em>simple_form</em> you need to turn on edit mode; to do this click on the pencil icon for <em>Toggle editing mode</em>.</p>
 <center>
 <div class="figure">
-<img src="img/edit_source_fields.png" alt="Turn on edit mode in Source Fields - see pink rectangle for the Toggle editing mode button" width="640" />
-<p class="caption">Turn on edit mode in Source Fields - see pink rectangle for the Toggle editing mode button</p>
+<img src="img/edit_source_fields.png" alt="Turn on edit mode in Source Fields - see pink rectangle for the Toggle editing mode icon" width="640" />
+<p class="caption">Turn on edit mode in Source Fields - see pink rectangle for the Toggle editing mode icon</p>
 </div>
 </center>
 <p>Next you need to click on the <em>New Field</em> button. This is highlighted in pink below.</p>
@@ -500,12 +500,12 @@ div.tocify {
 <p class="caption">Add New field button</p>
 </div>
 </center>
-<p>You will create a simple form where you will enter some free-form text, capture numeric data, select a value from a list, auto-capture the date of survey, and take a photo. To this we need to create fields for each of these variables (i.e. a field to contain observations of free-form text data).</p>
+<p>You will create a simple form where you will enter some free-form text, capture numeric data, select a value from a list, auto-capture the date of a survey, and take a photo. To this we need to create fields for each of these variables (i.e. a field to contain observations of free-form text data).</p>
 <p>To create a field for entering text data fill in the form widget that is generated when you click the <em>New Field</em> button as text data type, 500 characters, and give the field a name <em>some_text</em>.</p>
 <center>
 <div class="figure">
-<img src="img/create_text_field.png" alt="Add text field to vector datasat" width="640" />
-<p class="caption">Add text field to vector datasat</p>
+<img src="img/create_text_field.png" alt="Add text field to vector dataset" width="640" />
+<p class="caption">Add text field to vector dataset</p>
 </div>
 </center>
 <p>Next, you will need to repeat the process to create a numeric field, a field that we can enter data into using a drop-down list, a field that we can use to save photos to, and a date field for saving the survey date. Use the screen grabs below to guide you in creating these fields.</p>
@@ -534,7 +534,7 @@ div.tocify {
 </div>
 </center>
 <p>Note when creating the date field we select the <em>date</em> data type.</p>
-<p>Click the <em>Toggle editing mode</em> button to save your edits to the attribute table for the <em>simple_form</em> dataset.</p>
+<p>Click the <em>Toggle editing mode</em> (pencil icon - see above figure) button to save your edits to the attribute table of the <em>simple_form</em> dataset.</p>
 <p>Next, click the <em>Apply</em> button and then the <em>OK</em> button.</p>
 </div>
 <div id="simple-form-creation" class="section level2">
@@ -569,7 +569,7 @@ div.tocify {
 <p class="caption">Form layout</p>
 </div>
 </center>
-<p>Finally, you want to chose an <em>edit</em> widget for each of your fields in the form. The list of available edit widgets for each field can be seen from the drop down list under <em>Widget Type</em>.</p>
+<p>Finally, you want to choose an <em>edit</em> widget for each of your fields in the form. The list of available edit widgets for each field can be seen from the drop down list under <em>Widget Type</em>.</p>
 <center>
 <div class="figure">
 <img src="img/available_edit_widgets.png" alt="Available edit widgets" width="640" />
@@ -596,7 +596,7 @@ div.tocify {
 </div>
 <div id="date-time-widgets" class="section level4">
 <h4>Date / Time Widgets</h4>
-<p>To capture the survey date you will use device time and date and not enter it manually. Select the <em>survey_date</em> field and uncheck the <em>Editable</em> checkbox. Give the field an alias <em>Date</em>, check it is a <em>Date/Time</em> widget, and in the <em>Default Value</em> box enter <code>$now</code>. This is a QGIS function that returns the current time.</p>
+<p>To capture the survey date you will use device time and date so you do not have to enter it manually. Select the <em>survey_date</em> field and uncheck the <em>Editable</em> checkbox. Give the field an alias <em>Date</em>, check that it is a <em>Date/Time</em> widget, and in the <em>Default Value</em> box enter <code>$now</code>. This is a QGIS function that returns the current time.</p>
 <center>
 <div class="figure">
 <img src="img/date_time_widget.png" alt="Date / Time widget" width="640" />
@@ -659,7 +659,7 @@ div.tocify {
 </div>
 <div id="qgis-projects" class="section level2">
 <h2>QGIS Projects</h2>
-<p>You have almost completed creating a QGIS project, dataset, and attribute form to collect data. The final thing you need to do is create a QGIS project file for your work. To do this click on the save icon or go to <em>File</em>, then <em>Save</em>. Give your project a sensible name such <em>simple_form.qgs</em>. Make sure you select <strong>.qgs</strong> and <strong>NOT</strong> <strong>.qgz</strong> as QField only works with <em>.qgs</em> files. Save your project to the directory where you saved your <em>simple_form</em> GeoPackage dataset. You can read up on QGIS project files <a href="https://docs.qgis.org/3.4/en/docs/user_manual/introduction/project_files.html">here</a>.</p>
+<p>You have almost completed creating a QGIS project, dataset, and attribute form to collect data. The final thing you need to do is create a QGIS project file for your work. To do this click on the save icon or go to <em>File</em>, then <em>Save</em>. Give your project a sensible name such <em>simple_form.qgs</em>. Make sure you select <strong>.qgs</strong> and <strong>NOT</strong> <strong>.qgz</strong> as QField only works with <em>.qgs</em> files. Save your project to the directory where you saved your <em>simple_form</em> GeoPackage dataset. QGIS project files are XML files that record various characteristics of the state of your work in QGIS including layers added, layer properties and styling, projection systems, and relations between tables. You can read up on QGIS project files <a href="https://docs.qgis.org/3.4/en/docs/user_manual/introduction/project_files.html">here</a>.</p>
 <center>
 <div class="figure">
 <img src="img/save_project.png" alt="Save a .qgs project" width="640" />
