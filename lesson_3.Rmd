@@ -153,7 +153,7 @@ Next, you need to add the relation between the *complex_form* table and the *man
 
 Now you have established a one-to-many relation between features in *complex_form* and features in *many_records*. 
 
-Finally, you need to set up the form to enter data into *many_records*. Go to the *Properties* then *Attribute Form* of *many_records*. First, setup the foreign key *fk_field* as a *Relation Reference* widget. Make sure you uncheck the *Editable* checkbox. 
+Finally, you need to set up the form to enter data into *many_records*. Go to the *Properties* then *Attribute Form* of *many_records*. First, setup the foreign key *fk_field* asa *Relation Reference* widget. Make sure you uncheck the *Editable* checkbox. 
 
 <center>
 
