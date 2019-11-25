@@ -24,7 +24,7 @@ Various training resources exist for QGIS; [A Gentle Introduction to GIS](https:
 
 #### QField 
 
-You will need to install QField onto a mobile device (phone or tablet) running the Android operating system. You can install QField from Google Play Store or by downloading the latest release from their [GitHub site](https://github.com/opengisch/QField/releases). QField is based on QGIS and provides a simple touch-optimized user interface for collecting and editing geospatial data using mobile devices. You can find more information about QField on its [documentation](https://qfield.org/docs/index.html) site.
+You will need to install QField onto a mobile device (phone or tablet) running the Android operating system. You can install QField from the Google Play Store. QField is based on QGIS and provides a simple touch-optimized user interface for collecting and editing geospatial data using mobile devices. You can find more information about QField on its [documentation](https://qfield.org/docs/index.html) site.
 
 
 <center>
@@ -310,6 +310,15 @@ Now, under the *XYZ Tiles* tab select *Open Street Map* and drag it below *simpl
 ![OSM added as a basemap](img/osm_basemap.png){width=640px}
 
 </center>
+
+To speed up the zoom process and rendering of the Open Street Maps layer change the project projection system to EPSG: 3857. You can do this by selecting the current [coordinate reference system](https://docs.qgis.org/testing/en/docs/gentle_gis_introduction/coordinate_reference_systems.html) (CRS) for the project in the bottom right corner of the QGIS interface and selecting EPSG: 3857.
+
+<center>
+
+![The current CRS for the QGIS project](img/change_proj.png){width=640px} 
+
+</center>
+
 
 ## QGIS Projects
 

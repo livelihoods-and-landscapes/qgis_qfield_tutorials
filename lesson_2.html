@@ -404,14 +404,7 @@ div.tocify {
 <p class="caption">simple_form.qgs project loaded in QGIS</p>
 </div>
 </center>
-<p>Next, you need to zoom in on Fiji or where you plan to collect data in the field. To speed up the zoom process and rendering of the Open Street Maps layer change the project projection system to EPSG: 3857. You can do this by selecting the current <a href="https://docs.qgis.org/testing/en/docs/gentle_gis_introduction/coordinate_reference_systems.html">coordinate reference system</a> (CRS) for the project in the bottom right corner of the QGIS interface and selecting EPSG: 3857.</p>
-<center>
-<div class="figure">
-<img src="img/change_proj.png" alt="The current CRS for the QGIS project" width="640" />
-<p class="caption">The current CRS for the QGIS project</p>
-</div>
-</center>
-<p>Once you have changed the CRS you can use the zoom icon in the toolbar to zoom in on Fiji. If you zoom in on Suva your <em>Map Canvas</em> should look like the image below.</p>
+<p>Next, you need to zoom in on Fiji or where you plan to collect data in the field. If you zoom in on Suva your <em>Map Canvas</em> should look like the image below.</p>
 <center>
 <div class="figure">
 <img src="img/fiji_zoom.png" alt="Zoomed in on Suva" width="640" />
@@ -457,11 +450,11 @@ div.tocify {
 </div>
 <div id="move-project-to-tablet" class="section level2">
 <h2>Move Project to Tablet</h2>
-<p>Connect your Android device to your desktop using a USB cable. Copy the <em>export_form</em> directory to your Android device’s internal storage (<strong>NOT</strong> the SD card).</p>
+<p>Connect your Android device to your desktop using a USB cable. Copy the <em>export_form</em> directory to your Android device’s internal storage (<strong>NOT</strong> the SD card). If you are working on a Mac then you may need to install the <a href="https://www.android.com/filetransfer/">Android File Transfer</a> application.</p>
 </div>
 <div id="qfield" class="section level2">
 <h2>QField</h2>
-<p>Open QField by selecting the QField icon <img src="qfield.png" style="width:3.5em" /> on your Android device.</p>
+<p>Open QField on your Android device.</p>
 <div id="open-project" class="section level4">
 <h4>Open Project</h4>
 <p>Once QField has opened click on the menu icon in the top left of the display and then click on the cog icon and select <em>Open Project</em>. Scroll to where you copied <em>export_form</em> and select <em>export_form.qgs</em> to load the project into QField. The video below illustrates this approach.</p>
@@ -539,6 +532,12 @@ div.tocify {
 </div>
 </center>
 <p>You have now created a QGIS project, packaged it for QField, collected data in the field, and synced this data back to your desktop. The final lesson will cover the creation of more complex forms.</p>
+<p>Finally, you can inspect the data you collected in QField in QGIS. Follow the process in the video below to use the <em>inspect features</em> function to query the attribute values for the data you collected in QField.</p>
+<center>
+<video width="500px" controls>
+<source src="video/inspect_features.mp4" type="video/mp4">
+</video>
+</center>
 </div>
 </div>
 

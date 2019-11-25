@@ -24,15 +24,7 @@ Your QGIS screen with the *simple_form.qgs* project loaded should look like the 
 
 </center>
 
-Next, you need to zoom in on Fiji or where you plan to collect data in the field. To speed up the zoom process and rendering of the Open Street Maps layer change the project projection system to EPSG: 3857. You can do this by selecting the current [coordinate reference system](https://docs.qgis.org/testing/en/docs/gentle_gis_introduction/coordinate_reference_systems.html) (CRS) for the project in the bottom right corner of the QGIS interface and selecting EPSG: 3857.
-
-<center>
-
-![The current CRS for the QGIS project](img/change_proj.png){width=640px}
-
-</center>
-
-Once you have changed the CRS you can use the zoom icon in the toolbar to zoom in on Fiji. If you zoom in on Suva your *Map Canvas* should look like the image below.
+Next, you need to zoom in on Fiji or where you plan to collect data in the field. If you zoom in on Suva your *Map Canvas* should look like the image below.
 
 <center>
 
@@ -82,11 +74,11 @@ If you were successful in packaging your project you should see the following fi
 
 ## Move Project to Tablet
 
-Connect your Android device to your desktop using a USB cable. Copy the *export_form* directory to your Android device's internal storage (**NOT** the SD card). 
+Connect your Android device to your desktop using a USB cable. Copy the *export_form* directory to your Android device's internal storage (**NOT** the SD card). If you are working on a Mac then you may need to install the [Android File Transfer](https://www.android.com/filetransfer/) application.
 
 ## QField
 
-Open QField by selecting the QField icon ![](qfield.png){width=3.5em} on your Android device. 
+Open QField on your Android device. 
 
 #### Open Project
 
@@ -179,3 +171,13 @@ Click on the `...` icon and scroll to the *export_form* directory in the *import
 </center>
 
 You have now created a QGIS project, packaged it for QField, collected data in the field, and synced this data back to your desktop. The final lesson will cover the creation of more complex forms.
+
+Finally, you can inspect the data you collected in QField in QGIS. Follow the process in the video below to use the *inspect features* function to query the attribute values for the data you collected in QField.
+
+<center>
+
+<video width="500px" controls>
+  <source src="video/inspect_features.mp4" type="video/mp4">
+</video>
+
+</center>
