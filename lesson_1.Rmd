@@ -275,6 +275,14 @@ To create a widget to capture photos using QField select the *a_photo* field, th
 
 </center>
 
+Make sure you check the *Relative paths* checkbox as in the image below. This means photos captured using QField will be stored in a project sub-directory (see more on this [here](https://qfield.org/docs/project-management/vector-layers.html)).
+
+<center>
+
+![Set relative paths](img/relative_paths.png){width=640px}
+
+</center>
+
 Next, you need to set the attachment to image. In the *Attachment Widget* scroll down to the *Integrated Document Viewer* and then select *image*.
 
 <center>
