@@ -23,7 +23,7 @@ Follow the steps in outlined in *Lesson 1* to add Open Street Maps as a basemap 
 
 </center>
 
-#### Creating a GeoPackge dataset
+#### Creating a GeoPackage dataset
 
 In the directory *qgis_field_training* create a new GeoPackage dataset called *complex_form.gpkg* with polygon geometry type. You can use the instructions in *Lesson 1* for the process to create a new GeoPackage dataset. As a reminder watch the video below. 
 
