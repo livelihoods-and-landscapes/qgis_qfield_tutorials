@@ -1,1 +1,1 @@
-# qgis_gfield_tutorials
+# qgis_qfield_tutorials
