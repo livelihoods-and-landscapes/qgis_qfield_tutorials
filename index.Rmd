@@ -22,5 +22,7 @@ This training will instruct on a workflow for collecting geospatial data using o
 4. Data collection using QField
 5. Syncing data from mobile devices
 6. Generating complex data collection forms
+7. Managing QGIS data collection projects on remote devices
+8. Syncing data collected on multiple devices with a central dataset
 
 *The project team would like to acknowledge the developers of the open source software QGIS and [QField](https://qfield.org).*
