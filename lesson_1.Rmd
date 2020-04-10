@@ -197,7 +197,7 @@ Next, you want to select the *Drag and drop designer* option. This will let you 
 
 <center>
 
-![Drag and drop designer](img/drag_and_drop_designer.png){}
+![Drag and drop designer](img/drag_and_drop_designer.png){width=640px}
 
 </center>
 
