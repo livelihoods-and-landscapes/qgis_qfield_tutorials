@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 QGIS is an open-source desktop GIS. In order to complete this training you will need a desktop with [QGIS](https://www.qgis.org/en/site/index.html) installed. You can download the latest desktop version of QGIS for your operating system [here](https://www.qgis.org/en/site/forusers/download.html).
 
-Various training resources exist for QGIS; [A Gentle Introduction to GIS](https://docs.qgis.org/3.4/en/docs/gentle_gis_introduction/index.html) is a good option.
+Various training resources exist for QGIS. [A Gentle Introduction to GIS](https://docs.qgis.org/3.4/en/docs/gentle_gis_introduction/index.html) is a good option.
 
 #### QField 
 
