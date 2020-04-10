@@ -2,7 +2,7 @@
 title: "Lesson 4"
 output: 
   html_document:
-    theme: cerulean
+    theme: flatly
     toc: true
     toc_depth: 4
     toc_float: true

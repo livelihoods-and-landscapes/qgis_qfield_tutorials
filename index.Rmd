@@ -2,7 +2,7 @@
 title: "About"
 output: 
   html_document:
-    theme: cerulean
+    theme: flatly
     css: tutorial_style.css
 ---
 

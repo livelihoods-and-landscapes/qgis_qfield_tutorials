@@ -2,7 +2,7 @@
 title: "Lesson 1"
 output: 
   html_document:
-    theme: cerulean
+    theme: flatly
     toc: true
     toc_depth: 4
     toc_float: true
@@ -197,7 +197,7 @@ Next, you want to select the *Drag and drop designer* option. This will let you 
 
 <center>
 
-![Drag and drop designer](img/drag_and_drop_designer.png){width=640px}
+![Drag and drop designer](img/drag_and_drop_designer.png){}
 
 </center>
 
