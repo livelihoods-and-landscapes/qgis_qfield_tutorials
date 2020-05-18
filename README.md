@@ -1,6 +1,6 @@
 # QGIS and QField Tutorials
 
-Code to generate online QGIS and [QField](https://qfield.org) tutorials which provide instructions on a workflow for mobile geospatial data collection and management. Plese visit the tutorials [here](https://livelihoods-and-landscapes.github.io/qgis_qfield_tutorials/). The tutorials cover:
+Code to generate online QGIS and [QField](https://qfield.org) tutorials which provide instructions on a workflow for mobile geospatial data collection and management. Please visit the tutorials [here](https://livelihoods-and-landscapes.github.io/qgis_qfield_tutorials/). The tutorials cover:
 
 **1. Form Creation:** creating a data collection project and form using QGIS.
 
@@ -9,5 +9,9 @@ Code to generate online QGIS and [QField](https://qfield.org) tutorials which pr
 **3. Complex Forms:** creating complex data collection projects and forms using QGIS including one-to-many relations between tables.
 
 **4. Syncthing:** using [Syncthing](https://syncthing.net) to sync data on remote devices with a central computer and manage data collection projects on multiple remote devices.
+
+Use case tutorials also focus on specific applications:
+
+**Use Case - Ground Truth Data Collection:** field collection of ground-truth data for landcover map training and accuracy assessment.
 
 These tutorials were generated as part of an ACIAR funded project which is developing open source geospatial applications to support climate-sensitive landscape management in Pacific Island Countries. The tutorials were initially developed for a training workshop with the Ministry of Forests, Fiji, and have subsequently been used for various training activities in Fiji and Tonga.  
