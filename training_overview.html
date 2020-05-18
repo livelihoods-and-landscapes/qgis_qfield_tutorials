@@ -11,7 +11,7 @@
 
 
 
-<title>Contacts</title>
+<title>Training Overview</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -70,6 +73,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="tutorial_style.css" type="text/css" />
 
 
 
@@ -250,6 +254,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -257,6 +324,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -344,41 +421,59 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Contacts</h1>
+<h1 class="title toc-ignore">Training Overview</h1>
 
 </div>
 
 
-<p><img src="img/team.png" style="width:100.0%" /></p>
-<div align="center">
-<h4 id="kevin-davies"><a href="https://www.sydney.edu.au/science/about/our-people/academic-staff/kevin-davies.html">Kevin Davies</a></h4>
-<p>School of Geosciences</p>
-University of Sydney
-<p>
-<a href="mailto:kevin.davies@sydney.edu.au">Email Kevin</a>
-</p>
+<div id="tutorials" class="section level2">
+<h2>Tutorials</h2>
+<p>These tutorials utilise existing open-source GIS software QGIS and QField to instruct on a workflow for collecting and managing geospatial data in the field.</p>
+<p><em>The project team would like to acknowledge the developers of the open source software QGIS and <a href="https://qfield.org">QField</a>.</em></p>
+<p>This training will cover the following:</p>
+<div id="lesson-1" class="section level3">
+<h3><a href="lesson_1.html">Lesson 1</a></h3>
+<ol style="list-style-type: decimal">
+<li>QGIS and QField setup</li>
+<li>Project creation and form generation</li>
+</ol>
 </div>
-<hr>
-<div align="center">
-<h4 id="renata-varea"><a href="https://scholar.google.com/citations?user=idCrKQMAAAAJ&amp;hl=en">Renata Varea</a></h4>
-<p>School of Geography, Earth Science, and Environment</p>
-The University of the South Pacific
-<p>
-<a href="mailto:renata.varea@usp.ac.fj">Email Renata</a>
-</p>
+<div id="lesson-2" class="section level3">
+<h3><a href="lesson_2.html">Lesson 2</a></h3>
+<ol start="3" style="list-style-type: decimal">
+<li>Opening projects in QField</li>
+<li>Data collection using QField</li>
+<li>Syncing data from mobile devices</li>
+</ol>
 </div>
-<hr>
-<div align="center">
-<h4 id="john-duncan"><a href="https://research-repository.uwa.edu.au/en/persons/john-duncan">John Duncan</a></h4>
-<p>UWA School of Agriculture and Environment</p>
-University of Western Australia
-<p>
-<a href="mailto:john.duncan@uwa.edu.au">Email John</a>
-</p>
+<div id="lesson-3" class="section level3">
+<h3><a href="lesson_3.html">Lesson 3</a></h3>
+<ol start="6" style="list-style-type: decimal">
+<li>Generating complex data collection forms</li>
+</ol>
+</div>
+<div id="lesson-4" class="section level3">
+<h3><a href="lesson_4.html">Lesson 4</a></h3>
+<ol start="7" style="list-style-type: decimal">
+<li>Managing QGIS data collection projects on remote devices</li>
+<li>Syncing data collected on multiple devices with a central dataset</li>
+</ol>
+<p><br></p>
+</div>
+</div>
+<div id="use-cases" class="section level2">
+<h2>Use Cases</h2>
+<p>These tutorials demonstrate applications of QConut. They are derived from use cases used during the development of QConut.</p>
+<div id="ground-truth-data-collection" class="section level3">
+<h3><a href="usecase_groundtruth.html">Ground truth data collection</a></h3>
+<p>Use QField to collect ground truth points for validating land cover maps generated from satellite images.</p>
+</div>
 </div>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -411,6 +506,32 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

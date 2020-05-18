@@ -2,11 +2,38 @@
 title: "Contacts"
 output: 
   html_document:
-    theme: cerulean
+    theme: flatly
 ---
 
 ![](img/team.png){width=100%}
 
-Please visit our project website [here](www.livelihoodsandlandscapes.com)
+<div align="center">
+#### [Kevin Davies](https://www.sydney.edu.au/science/about/our-people/academic-staff/kevin-davies.html)
 
-Email: john.duncan@uwa.edu.au
+School of Geosciences
+
+University of Sydney
+<p><a href="mailto:kevin.davies@sydney.edu.au">Email Kevin</a></p>
+</div>
+
+<hr>
+
+<div align="center">
+#### [Renata Varea](https://scholar.google.com/citations?user=idCrKQMAAAAJ&hl=en)
+
+School of Geography, Earth Science, and Environment
+
+The University of the South Pacific
+<p><a href="mailto:renata.varea@usp.ac.fj">Email Renata</a></p>
+</div>
+
+<hr>
+
+<div align="center">
+#### [John Duncan](https://research-repository.uwa.edu.au/en/persons/john-duncan) 
+
+UWA School of Agriculture and Environment
+
+University of Western Australia
+<p><a href="mailto:john.duncan@uwa.edu.au">Email John</a></p>
+</div>

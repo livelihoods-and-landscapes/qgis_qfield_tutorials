@@ -1,17 +1,27 @@
 output_dir: '.'
 navbar: 
-  title: ""
+  title: "QConut - Training"
   left:
-    - text: "About"
+    - text: "Home"
       href: index.html
-    - text: "Lesson 1"
-      href: lesson_1.html
-    - text: "Lesson 2"
-      href: lesson_2.html
-    - text: "Lesson 3"
-      href: lesson_3.html
-    - text: "Lesson 4"
-      href: lesson_4.html
+    - text: "About"
+      href: about_qconut.html
+    - text: "Training Overview"
+      href: training_overview.html
+    - text: "Tutorials"
+      menu:
+        - text: "Lesson 1"
+          href: lesson_1.html
+        - text: "Lesson 2"
+          href: lesson_2.html
+        - text: "Lesson 3"
+          href: lesson_3.html
+        - text: "Lesson 4"
+          href: lesson_4.html
+    - text: "Use Cases"
+      menu:
+        - text: "Use Case - Ground Truth"
+          href: usecase_groundtruth.html
   right:
     - icon: fa-github fa-lg
       href: https://github.com/livelihoods-and-landscapes

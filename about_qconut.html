@@ -11,7 +11,7 @@
 
 
 
-<title>Contacts</title>
+<title>About</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -70,6 +70,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="tutorial_style.css" type="text/css" />
 
 
 
@@ -344,37 +345,75 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Contacts</h1>
+<h1 class="title toc-ignore">About</h1>
 
 </div>
 
 
-<p><img src="img/team.png" style="width:100.0%" /></p>
-<div align="center">
-<h4 id="kevin-davies"><a href="https://www.sydney.edu.au/science/about/our-people/academic-staff/kevin-davies.html">Kevin Davies</a></h4>
-<p>School of Geosciences</p>
-University of Sydney
-<p>
-<a href="mailto:kevin.davies@sydney.edu.au">Email Kevin</a>
-</p>
+<div id="qconut" class="section level2">
+<h2>QConut</h2>
+<p>QConut is a geospatial platform for <strong>collecting</strong>, <strong>integrating</strong>, <strong>analysing</strong>, and <strong>visualising</strong> geospatial data.</p>
+<p>Landscapes comprise diverse ecosystems that support livelihoods and are affected by climatic shocks. When faced with a changing climate, informed, effective, and inclusive management of landscape resources requires integration and synthesis of geospatial data. QConut is being developed for this task.</p>
+<p>QConut is developed using an ICT4D software development methodology. A diverse collaboration between farmers, fisherpeople, foresters, government officials, and research scientists in Fiji, Tonga, and Australia have contributed to the development process. QConut development has been funded by ACIAR.</p>
+<p><br></p>
 </div>
+<div id="qconut-functionality" class="section level2">
+<h2>QConut Functionality</h2>
+<p><br></p>
+<div id="mobile-gis" class="section level3">
+<h3>Mobile GIS</h3>
+<p>Use Mobile GIS to collect local-level geospatial data.</p>
+<p>Use <a href="https://qfield.org">QField</a> mobile GIS to create data collection forms and collect geospatial data in the field using Android mobile devices:</p>
+<ul>
+<li>Visualise spatial data using an interactive map interface</li>
+<li>Digitise and map landscape features</li>
+<li>Enter attribute information about landscape features</li>
+</ul>
+<p>Visit our <a href="training_overview.html">training materials</a> which provide instructions on using <a href="https://qfield.org">QField</a> and <a href="https://qgis.org">QGIS</a> for creating mobile GIS data collection projects.</p>
 <hr>
-<div align="center">
-<h4 id="renata-varea"><a href="https://scholar.google.com/citations?user=idCrKQMAAAAJ&amp;hl=en">Renata Varea</a></h4>
-<p>School of Geography, Earth Science, and Environment</p>
-The University of the South Pacific
-<p>
-<a href="mailto:renata.varea@usp.ac.fj">Email Renata</a>
-</p>
 </div>
+<div id="data-syncing-and-management" class="section level3">
+<h3>Data Syncing and Management</h3>
+<p>Use <a href="https://syncthing.net">Syncthing</a> to sync data collected on mobile devices with a central database and update data collection forms on mobile devices.</p>
+<p>Syncthing provides secure data transfer, conflict resolution, backup and versioning options.</p>
+<p>Use QConut GUI application built with <a href="https://shiny.rstudio.com">Shiny</a> and interactive <a href="https://datatables.net">datatables</a> to:</p>
+<ul>
+<li>view data tables generated through completing forms using mobile GIS</li>
+<li>merge multiple data tables on mobile devices</li>
+<li>dynamic and interactive data table interface to quality assess data collected using mobile GIS</li>
+<li>table builder functionality to generate summary tables from data collected using mobile GIS</li>
+<li>download tables in .csv format</li>
+<li>insert curated and quality assessed tables into a central database</li>
+</ul>
+<p>Visit out <a href="training_overview.html">training materials</a> which provide instructions on setting up <a href="https://syncthing.net">Syncthing</a> for use with QGIS and QField projects.</p>
 <hr>
-<div align="center">
-<h4 id="john-duncan"><a href="https://research-repository.uwa.edu.au/en/persons/john-duncan">John Duncan</a></h4>
-<p>UWA School of Agriculture and Environment</p>
-University of Western Australia
-<p>
-<a href="mailto:john.duncan@uwa.edu.au">Email John</a>
-</p>
+</div>
+<div id="spatial-database" class="section level3">
+<h3>Spatial Database</h3>
+<p>One location for storing and querying geospatial data for landscape features and sectors.</p>
+<p>A spatial relational database to store and query spatial and non-spatial data about landscape features.</p>
+<p>Use either a <a href="http://www.geopackage.org">GeoPackage</a> for small, contained, and quick-to-set up projects for minimal database management.</p>
+<p>Use a <a href="https://postgis.net">PostGIS</a> enabled PostgreSQL database for large projects with big data and multiple landscape sectors.</p>
+<hr>
+</div>
+<div id="data-visualisation" class="section level3">
+<h3>Data Visualisation</h3>
+<p>Query, visualise, and summarise geospatial data from multiple landscape sectors using dynamic datatables, charts, and web maps in an interactive dashboard GUI application.</p>
+<p>Builds on <a href="https://leafletjs.com">Leaflet</a>, <a href="https://datatables.net">datatables</a>, <a href="https://shiny.rstudio.com">Shiny</a>, <a href="https://github.com/plotly/plotly.js">plotly</a>, and <a href="https://ggplot2.tidyverse.org">ggplot</a> software.</p>
+<hr>
+</div>
+<div id="landscape-monitoring" class="section level3">
+<h3>Landscape Monitoring</h3>
+<p>Use novel machine learning algorithms, satellite images, and cloud computing to monitor inter-annual land cover change.</p>
+<p>Machine learning algorithms used to generate annual land cover maps covering an entire landscape at a 10 m spatial resolution.</p>
+<p>Freely-available <a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-2">Sentinel-2</a> remote sensing data is used as input data to machine learning models.</p>
+<hr>
+</div>
+<div id="extend-and-adapt" class="section level3">
+<h3>Extend and Adapt</h3>
+<p>All QConut components are built using open-source software and open data standards so you can extend, adapt, and improve it.</p>
+<p>Where possible QConut has used existing software and applications to provide desired functionality. In cases where off-the-shelf software does not exist or does not meet requirements new applications have been developed.</p>
+</div>
 </div>
 
 

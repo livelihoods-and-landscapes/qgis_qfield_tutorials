@@ -8,6 +8,11 @@ output:
     toc_float: true
     css: tutorial_style.css
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 ## Overview
 
 In lesson 1 you created a geospatial dataset *simple_form.gpkg* and created a form to enter data into the attribute table for that dataset. In this lesson you will learn how to package this data for transfer to QField, how to collect data in the field using QField, and then sync field collected data back to a dataset on your desktop. 

@@ -11,7 +11,7 @@
 
 
 
-<title>About</title>
+<title>index.utf8</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -70,7 +70,7 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="tutorial_style.css" type="text/css" />
+<link rel="stylesheet" href="home_page_style.css" type="text/css" />
 
 
 
@@ -270,24 +270,51 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html"></a>
+      <a class="navbar-brand" href="index.html">QConut - Training</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">About</a>
+  <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="lesson_1.html">Lesson 1</a>
+  <a href="about_qconut.html">About</a>
 </li>
 <li>
-  <a href="lesson_2.html">Lesson 2</a>
+  <a href="training_overview.html">Training Overview</a>
 </li>
-<li>
-  <a href="lesson_3.html">Lesson 3</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Tutorials
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="lesson_1.html">Lesson 1</a>
+    </li>
+    <li>
+      <a href="lesson_2.html">Lesson 2</a>
+    </li>
+    <li>
+      <a href="lesson_3.html">Lesson 3</a>
+    </li>
+    <li>
+      <a href="lesson_4.html">Lesson 4</a>
+    </li>
+  </ul>
 </li>
-<li>
-  <a href="lesson_4.html">Lesson 4</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Use Cases
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="usecase_groundtruth.html">Use Case - Ground Truth</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -318,31 +345,30 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">About</h1>
 
 </div>
 
 
-<div id="qgis-and-qfield-tutorials" class="section level2">
-<h2>QGIS and QField Tutorials</h2>
-<p>This site provides tutorials on the use of QGIS and QField for collecting geospatial data in the field.</p>
-<p>These tutorials were generated as part of the ACIAR funded project: <em>Climate-smart landscapes for promoting sustainability of Pacific Island agricultural systems</em>. This project is a collaboration between researchers based in Australia, Fiji, Tonga, and New Zealand deploying an ICT for Development approach to develop geospatial applications to support landscape management under changing climates.</p>
-</div>
-<div id="background-and-overview" class="section level2">
-<h2>Background and Overview</h2>
-<p>This training will instruct on a workflow for collecting geospatial data using open-source GIS technologies. Using QGIS, a desktop GIS, you will create a QGIS project and geospatial data. You will package this project and move it to a mobile device. You will then be able to use QField, a mobile GIS application, to visualise and collect geospatial data. Finally, you can sync data collected on a mobile GIS device using QField back to a master dataset in QGIS. This training will cover the following:</p>
-<ol style="list-style-type: decimal">
-<li>QGIS and QField setup</li>
-<li>Project creation and form generation</li>
-<li>Opening projects on QField</li>
-<li>Data collection using QField</li>
-<li>Syncing data from mobile devices</li>
-<li>Generating complex data collection forms</li>
-<li>Managing QGIS data collection projects on remote devices</li>
-<li>Syncing data collected on multiple devices with a central dataset</li>
-</ol>
-<p><em>The project team would like to acknowledge the developers of the open source software QGIS and <a href="https://qfield.org">QField</a>.</em></p>
-</div>
+<head>
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+</style>
+</head>
+<body>
+<br> <br>
+<h1 style="color:white">
+<b>QConut</b>
+</h1>
+<br>
+<p style="color:white">
+An open-source geospatial application to support climate-smart landscape management.
+</p>
+<br>
+<p style="color:white">
+This website includes training material and tutorials for QConut tools.
+</p>
+</body>
 
 
 

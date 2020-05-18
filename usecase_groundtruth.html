@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Use Case - Ground Truth</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="tutorial_style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">QConut - Training</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about_qconut.html">About</a>
+</li>
+<li>
+  <a href="training_overview.html">Training Overview</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Tutorials
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="lesson_1.html">Lesson 1</a>
+    </li>
+    <li>
+      <a href="lesson_2.html">Lesson 2</a>
+    </li>
+    <li>
+      <a href="lesson_3.html">Lesson 3</a>
+    </li>
+    <li>
+      <a href="lesson_4.html">Lesson 4</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Use Cases
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="usecase_groundtruth.html">Use Case - Ground Truth</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/livelihoods-and-landscapes">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://livelihoodsandlandscapes.com">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="contact.html">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Use Case - Ground Truth</h1>
+
+</div>
+
+
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p>Ground truth data is required for landcover mapping produced from satellite images in order to ‘train’ the classification algorithm, and to calculate the accuracy of the final map. Ground truth data consists of data points with an accurate location and a label from a predefined list of known landcover types. This tutorial guides the user through ground-truth data collection for a training area in Suva, Fiji.</p>
+</div>
+<div id="prerequisites" class="section level2">
+<h2>Prerequisites</h2>
+<p>The latest version of QField must be installed on your Android device. You can install this from the Google Play Store. You should also have the latest version of the QGIS project for the ground truth data exercise preloaded onto your device <strong>(LCTrainingSuva_v1a_qfield.qgs)</strong>. Ask your instructor if you do not have this file installed.</p>
+</div>
+<div id="collecting-ground-truth-data" class="section level2">
+<h2>Collecting Ground Truth Data</h2>
+<p>This section goes through the steps to collect ground truth data around the training site.</p>
+<div id="open-the-qfield-project" class="section level3">
+<h3>1. Open the QField Project</h3>
+<p>Start QField on your device. If you receive the welcome screen (Figure 0), tap on <strong>Open local project</strong>.</p>
+<center>
+<div class="figure">
+<img src="usecase_groundtruth_img/0_open_local_project.jpg" alt="Figure 0: Welcome Screen" style="width:40.0%" />
+<p class="caption">Figure 0: Welcome Screen</p>
+</div>
+</center>
+<p>If you are in the main QField screen, to open the welcome screen tap the <strong>Menu button</strong> (Figure 1):</p>
+<center>
+<div class="figure">
+<img src="usecase_groundtruth_img/1_menu_button.jpg" alt="Figure 1: Menu Button" style="width:40.0%" />
+<p class="caption">Figure 1: Menu Button</p>
+</div>
+</center>
+<p>Then tap the <strong>Options button</strong> (Figure 2) to open the welcome screen. You can now tap <strong>Open local project</strong>.</p>
+<center>
+<div class="figure">
+<img src="usecase_groundtruth_img/2_options_button.jpg" alt="Figure 2: Options Button" style="width:40.0%" />
+<p class="caption">Figure 2: Options Button</p>
+</div>
+</center>
+<p>Navigate to the <strong>LCTrainingSuva_v1a_qfield.qgs</strong> file and tap on it to open it. If you are unsure where this file is located in your device, ask your instructor.</p>
+<p>If you have opened the project correctly, your device should display an image similar to Figure 3 below.</p>
+<center>
+<div class="figure">
+<img src="usecase_groundtruth_img/3_opening_screen.jpg" alt="Figure 3: Opening Screen" style="width:40.0%" />
+<p class="caption">Figure 3: Opening Screen</p>
+</div>
+</center>
+</div>
+<div id="working-with-the-gps" class="section level3">
+<h3>2. Working with the GPS</h3>
+<p>To centre the map on your current GPS location, tap the blue GPS icon <img src="usecase_groundtruth_img/3a_gps_button.png" style="width:7.0%" /> in the bottom right-hand corner. If the screen goes white, it probably means you are not in the study area or your GPS is not giving an accurate location.</p>
+<p>QField can display GPS information dynamically on the screen. To turn this display on, tap and hold the blue GPS icon until you receive a menu. Tick on the <em>Show Position Information</em>. The map screen should now have a tablet at the bottom showing GPS information (Figure 4).</p>
+<center>
+<div class="figure">
+<img src="usecase_groundtruth_img/4_gps_info.jpg" alt="Figure 4: GPS Information" style="width:40.0%" />
+<p class="caption">Figure 4: GPS Information</p>
+</div>
+</center>
+<p>The field of particular interest is the <em>H. Accuracy</em>, or horizontal accuracy, which tells you how close the given latitude and longitude is from the true value on the ground. If you are relying on the GPS to position yourself on the map for ground truth data collection, This value should be as small as possible (e.g. less than 5 m). Poor accuracy can be caused by working in or around buildings, working under dense tree canopy, or poor satellite configuration. Make sure you understand how poor horizontal accuracy could impact on the ground truth data collection.</p>
+</div>
+<div id="available-map-layers" class="section level3">
+<h3>3. Available Map Layers</h3>
+<p>The project contains a number of layers relevant to collecting ground truth data. To see the available layers, tap the menu button, and the available layers should be displayed similar to Figure 5.</p>
+<center>
+<div class="figure">
+<img src="usecase_groundtruth_img/5_map_layers.jpg" alt="Figure 5: Map Layers" style="width:40.0%" />
+<p class="caption">Figure 5: Map Layers</p>
+</div>
+</center>
+<p>The layers available are:</p>
+<ul>
+<li><strong>FijiLC_ERPD_Pilot_v1a</strong> (used to record ground truth data)</li>
+<li><strong>LCTraingSuva_Sites</strong> (random sites where ground truth data can be collected)</li>
+<li><strong>Open Street Map</strong> (topgraphic map)</li>
+<li><strong>ESRI Satellite</strong> (high resolution image)</li>
+<li><strong>Sentinel Satellite</strong> (low resolution image that will be used to produce the landcover)</li>
+<li><strong>Landcover Cluster</strong> (an <em>untrained</em> landcover map to aid in ground truth data collection)</li>
+</ul>
+<p>These layers will be discussed in more detail below. By default, all layers are turned on, however, only the top-most image layer (Open Street Map) obscures the other layers. To turn off the <strong>Open Street Map layer</strong>, tap and hold the layer until a small otpion window appears, and then untick the <strong>Show on map canvas</strong> option. The next image layer in the list <em>(ESRI Satellite)</em> should now be visible (similar to Figure 6).</p>
+<center>
+<div class="figure">
+<img src="usecase_groundtruth_img/6_ESRI_image.jpg" alt="Figure 6: ESRI Satellite Image" style="width:40.0%" />
+<p class="caption">Figure 6: ESRI Satellite Image</p>
+</div>
+</center>
+</div>
+<div id="labelling-pre-defined-sites" class="section level3">
+<h3>4. Labelling Pre-Defined Sites</h3>
+<p>The <strong>Landcover Cluster</strong> represents an <em>untrained</em> landcover map. Areas with the same colour are more likely to have the same landcover, but not always. This cluster map was used to generate random sites for ground truth data collection represented by the <strong>LCTraingSuva_Sites</strong> layer. The objective is to label these sites with their <em>true</em> landcover class.</p>
+<p>Ideally, you would visit each of these sites in order to understand the correct landcover. However, this is not always possible due to difficult or inaccessible terrain or vegetation. There may also be legal constraints preventing access to the sites. You must therefore make as best determination as possible of the landcover at these sites either by an appropriate distance viewpoint, local knowledge, and reference to the provided layers or other information you may have.</p>
+<p>Tap the menu button, then tap the <strong>FijiLC_ERPD_Pilot_v1a</strong> layer so it is highlighted. Then tap the <strong>Digitise Mode</strong> button as shown in Figure 7.</p>
+<center>
+<div class="figure">
+<img src="usecase_groundtruth_img/7_digitize_mode.jpg" alt="Figure 7: Digitize Mode" style="width:40.0%" />
+<p class="caption">Figure 7: Digitize Mode</p>
+</div>
+</center>
+<p>Move into one of the circled sites closest to your current locations. If you can’t access the circle, then move as close as possible so that you have a sense of the landcover on that site. Drag the map so the crosshairs are roughly centres in the site as shown in Figure 8.</p>
+<center>
+<div class="figure">
+<img src="usecase_groundtruth_img/8_find_point.jpg" alt="Figure 8: Crosshairs in Site" style="width:40.0%" />
+<p class="caption">Figure 8: Crosshairs in Site</p>
+</div>
+</center>
+<p>Tap the add feature button <img src="usecase_groundtruth_img/8a_add_button.png" style="width:7.0%" /> in the bottom right-hand corner to add a new ground truth record at this location. If this button is not on your screen then you are not in digitize mode. A form should be displayed similar to Figure 9.</p>
+<center>
+<div class="figure">
+<img src="usecase_groundtruth_img/9_add_point.jpg" alt="Figure 9: Add Point" style="width:40.0%" />
+<p class="caption">Figure 9: Add Point</p>
+</div>
+</center>
+<p>The form contains a number of fields you can edit:</p>
+<ul>
+<li><strong>SiteID</strong> (optonal): If you have pre-defined sites that are labelled, enter the site ID here.</li>
+<li><strong>LandcoverType</strong> (required): Choose the most dominant landcover for this site considering the complete area (red circle). Refer to the high resolution ESRI Satellite Image if you need help. If the landcover it not on the list, choose <strong>Other</strong> - you will be required to provide this type in the next field. If you want to mark a site but not record a landcover type, choose <strong>Not Recorded</strong>.</li>
+<li><strong>LandcoverOther</strong> (conditional): If your landcover type was <strong>Other</strong>, then you need are required to enter the landcover type here.</li>
+<li><strong>Image1, Image 2</strong> (optional): You can capture up to 2 images by tapping the camera icon.</li>
+<li><strong>Notes</strong> (optional): Add any notes about the site.</li>
+</ul>
+<p>Other fields are read-only and represent data captured from the device itself - they can’t be changed:</p>
+<ul>
+<li><strong>Bearing</strong>: If you device has a compass, this will record the direction you are facing when you added the record.</li>
+<li><strong>HAccuracy</strong>: The horizonal accuracy of the GPS when the site was recorded.</li>
+<li><strong>UserID</strong>: The default QField user ID for this device (this helps identify who captured the record)</li>
+<li><strong>Timestamp</strong>: The data and time when the site was recorded.</li>
+</ul>
+<p>Once you have finished, tap the tick button at the top left of the form (Figure 10). If the tick button is greyed out then you have not filled out all of the required fields. If you want to discard your record then click the trash can button at the top right of the form.</p>
+<center>
+<div class="figure">
+<img src="usecase_groundtruth_img/10_save_form.jpg" alt="Figure 10: Save Form" style="width:40.0%" />
+<p class="caption">Figure 10: Save Form</p>
+</div>
+</center>
+<p>The recorded point will now be shown as a yellow symbol (Figure 11).</p>
+<center>
+<div class="figure">
+<img src="usecase_groundtruth_img/11_saved_point.jpg" alt="Figure 11: Saved Point" style="width:40.0%" />
+<p class="caption">Figure 11: Saved Point</p>
+</div>
+</center>
+<p>Once you have finished recording sites, tap the menu button and then leave digitizing mode by tapping the browse button (Figure 12).</p>
+<center>
+<div class="figure">
+<img src="usecase_groundtruth_img/12_browse_mode.jpg" alt="Figure 12: Browse Mode" style="width:40.0%" />
+<p class="caption">Figure 12: Browse Mode</p>
+</div>
+</center>
+</div>
+<div id="labelling-opportunitistic-sites" class="section level3">
+<h3>5. Labelling Opportunitistic Sites</h3>
+<p>When in the field, you may come across unexpected or rare landcover types that do not have pre-defined sites. You may also wish to capture extra ground truth sites for common landcover types. The process for capturing these sites is the same as for the pre-defined sites, however, you will not have a site guide. Ensure you position the captured feature at the correct location by using your GPS (if you can access the site) and with reference to the other layers.</p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

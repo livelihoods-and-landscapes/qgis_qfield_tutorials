@@ -1,0 +1,56 @@
+---
+title: "Training Overview"
+output: 
+  html_document:
+    theme: flatly
+    toc: true
+    toc_depth: 4
+    toc_float: true
+    css: tutorial_style.css
+    
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Tutorials
+
+These tutorials utilise existing open-source GIS software QGIS and QField to instruct on a workflow for collecting and managing geospatial data in the field. 
+
+*The project team would like to acknowledge the developers of the open source software QGIS and [QField](https://qfield.org).*
+
+This training will cover the following:
+
+### [Lesson 1](lesson_1.html)
+
+1. QGIS and QField setup 
+2. Project creation and form generation
+
+### [Lesson 2](lesson_2.html)
+
+3. Opening projects in QField
+4. Data collection using QField
+5. Syncing data from mobile devices
+
+### [Lesson 3](lesson_3.html)
+
+6. Generating complex data collection forms
+
+### [Lesson 4](lesson_4.html)
+
+7. Managing QGIS data collection projects on remote devices
+8. Syncing data collected on multiple devices with a central dataset
+
+<br>
+
+## Use Cases
+
+These tutorials demonstrate applications of QConut. They are derived from use cases used during the development of QConut. 
+
+### [Ground truth data collection](usecase_groundtruth.html)
+
+Use QField to collect ground truth points for validating land cover maps generated from satellite images.
+
+
+

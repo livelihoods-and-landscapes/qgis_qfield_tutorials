@@ -1,0 +1,98 @@
+---
+title: "About"
+output: 
+  html_document:
+    theme: flatly
+    css: tutorial_style.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## QConut
+
+QConut is a geospatial platform for **collecting**, **integrating**, **analysing**, and **visualising** geospatial data. 
+
+Landscapes comprise diverse ecosystems that support livelihoods and are affected by climatic shocks. When faced with a changing climate, informed, effective, and inclusive management of landscape resources requires integration and synthesis of geospatial data. QConut is being developed for this task.
+
+QConut is developed using an ICT4D software development methodology. A diverse collaboration between farmers, fisherpeople, foresters, government officials, and research scientists in Fiji, Tonga, and Australia have contributed to the development process. QConut development has been funded by ACIAR.
+
+<br>
+
+## QConut Functionality
+
+<br>
+
+### Mobile GIS
+
+Use Mobile GIS to collect local-level geospatial data.
+
+Use [QField](https://qfield.org) mobile GIS to create data collection forms and collect geospatial data in the field using Android mobile devices: 
+
+* Visualise spatial data using an interactive map interface
+* Digitise and map landscape features
+* Enter attribute information about landscape features
+
+Visit our [training materials](training_overview.html) which provide instructions on using [QField](https://qfield.org) and [QGIS](https://qgis.org) for creating mobile GIS data collection projects. 
+
+<hr>
+
+### Data Syncing and Management
+
+Use [Syncthing](https://syncthing.net) to sync data collected on mobile devices with a central database and update data collection forms on mobile devices. 
+
+Syncthing provides secure data transfer, conflict resolution, backup and versioning options. 
+
+Use QConut GUI application built with [Shiny](https://shiny.rstudio.com) and interactive [datatables](https://datatables.net) to:
+
+* view data tables generated through completing forms using mobile GIS
+* merge multiple data tables on mobile devices
+* dynamic and interactive data table interface to quality assess data collected using mobile GIS
+* table builder functionality to generate summary tables from data collected using mobile GIS
+* download tables in .csv format
+* insert curated and quality assessed tables into a central database
+
+Visit out [training materials](training_overview.html) which provide instructions on setting up [Syncthing](https://syncthing.net) for use with QGIS and QField projects.
+
+<hr>
+
+### Spatial Database 
+
+One location for storing and querying geospatial data for landscape features and sectors.
+
+A spatial relational database to store and query spatial and non-spatial data about landscape features. 
+
+Use either a [GeoPackage](http://www.geopackage.org) for small, contained, and quick-to-set up projects for minimal database management. 
+
+Use a [PostGIS](https://postgis.net) enabled PostgreSQL database for large projects with big data and multiple landscape sectors.
+
+<hr>
+
+### Data Visualisation 
+
+Query, visualise, and summarise geospatial data from multiple landscape sectors using dynamic datatables, charts, and web maps in an interactive dashboard GUI application.
+
+Builds on [Leaflet](https://leafletjs.com), [datatables](https://datatables.net), [Shiny](https://shiny.rstudio.com), [plotly](https://github.com/plotly/plotly.js), and [ggplot](https://ggplot2.tidyverse.org) software. 
+
+<hr>
+
+### Landscape Monitoring
+
+Use novel machine learning algorithms, satellite images, and cloud computing to monitor inter-annual land cover change.
+
+Machine learning algorithms used to generate annual land cover maps covering an entire landscape at a 10 m spatial resolution.
+
+Freely-available [Sentinel-2](https://sentinel.esa.int/web/sentinel/missions/sentinel-2) remote sensing data is used as input data to machine learning models.
+
+<hr>
+
+### Extend and Adapt
+
+All QConut components are built using open-source software and open data standards so you can extend, adapt, and improve it. 
+
+Where possible QConut has used existing software and applications to provide desired functionality. In cases where off-the-shelf software does not exist or does not meet requirements new applications have been developed.
+
+
+
+
