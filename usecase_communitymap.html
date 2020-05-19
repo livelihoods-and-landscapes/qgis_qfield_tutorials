@@ -11,7 +11,7 @@
 
 
 
-<title>Training Overview</title>
+<title>Use Case - Community Mapping</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -418,52 +418,87 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Training Overview</h1>
+<h1 class="title toc-ignore">Use Case - Community Mapping</h1>
 
 </div>
 
 
-<div id="tutorials" class="section level2">
-<h2>Tutorials</h2>
-<p>These tutorials utilise existing open-source GIS software QGIS and QField to instruct on a workflow for collecting and managing geospatial data in the field.</p>
-<p><em>The project team would like to acknowledge the developers of the open source software QGIS and <a href="https://qfield.org">QField</a>.</em></p>
-<p>This training will cover the following:</p>
-<div id="lesson-1" class="section level3">
-<h3><a href="lesson_1.html">Lesson 1</a></h3>
-<ol style="list-style-type: decimal">
-<li>QGIS and QField setup</li>
-<li>Project creation and form generation</li>
-</ol>
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p>Different people use landscape resources (e.g. fields, fishing grounds, and mangroves) in different ways to support their livelihoods. Climate change and other pressures are affecting these landscape resources and, thus, people’s livelihoods. This webpage demonstrates how a mobile mapping application, QField, can be used to map different landscape resources, who is using these resources, and capture information about these resources (e.g. climatic challenges, seasons).</p>
+<p><em>The research team would like to acknowledge Semi Lotawa from Rise Beyond the Reef for his support and input in developing this use case</em>.</p>
 </div>
-<div id="lesson-2" class="section level3">
-<h3><a href="lesson_2.html">Lesson 2</a></h3>
-<ol start="3" style="list-style-type: decimal">
-<li>Opening projects in QField</li>
-<li>Data collection using QField</li>
-<li>Syncing data from mobile devices</li>
-</ol>
-</div>
-<div id="lesson-3" class="section level3">
-<h3><a href="lesson_3.html">Lesson 3</a></h3>
-<ol start="6" style="list-style-type: decimal">
-<li>Generating complex data collection forms</li>
-</ol>
-</div>
-<div id="lesson-4" class="section level3">
-<h3><a href="lesson_4.html">Lesson 4</a></h3>
-<ol start="7" style="list-style-type: decimal">
-<li>Managing QGIS data collection projects on remote devices</li>
-<li>Syncing data collected on multiple devices with a central dataset</li>
-</ol>
-<p><br></p>
+<div id="prerequisites" class="section level2">
+<h2>Prerequisites</h2>
+<p>The latest version of QField must be installed on your Android device. You can install this from the Google Play Store.</p>
+<div id="community-map-form" class="section level3">
+<h3>Community Map Form</h3>
+<p>You will need the community map form loaded onto your mobile device. The community map form is a QGIS project and associated database where spatial and attribute data is recorded <strong>(community-map-form_qfield.qgs)</strong>. The QGIS project can be downloaded <a href="https://github.com/livelihoods-and-landscapes/QConut-community-map/raw/master/community-map-blank-form.zip">here</a>.</p>
 </div>
 </div>
-<div id="use-cases" class="section level2">
-<h2>Use Cases</h2>
-<p>These tutorials demonstrate applications of QConut. They are derived from use cases used during the development of QConut.</p>
-<div id="ground-truth-data-collection" class="section level3">
-<h3><a href="usecase_groundtruth.html">Ground truth data collection</a></h3>
-<p>Use QField to collect ground truth points for validating land cover maps generated from satellite images.</p>
+<div id="data-collection" class="section level2">
+<h2>Data Collection</h2>
+<div id="opening-the-project" class="section level3">
+<h3>Opening the project</h3>
+<p>The following video shows how to open the community map project in QField. You can also find instructions for opening projects in the <a href="usecase_groundtruth.html">Use Case - Ground Truth</a> section.</p>
+<center>
+<iframe src="https://player.vimeo.com/video/420206318" width="640" height="650" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+</iframe>
+<p>
+<a href="https://player.vimeo.com/video/420206318">Open the community map form in QField</a>.
+</p>
+</center>
+<p>To centre the map on your current GPS location, tap the blue GPS icon <img src="usecase_groundtruth_img/3a_gps_button.png" style="width:7.0%" /> in the bottom right-hand corner.</p>
+<p>QField can display GPS information dynamically on the screen. To turn this display on, tap and hold the blue GPS icon until you receive a menu. Tick on the <em>Show Position Information</em>.</p>
+</div>
+<div id="browser-mode" class="section level3">
+<h3>Browser Mode</h3>
+<p>At the top of the layers panel <img src="img/menu.jpg" style="width:7.0%" /> are two icons: a map <img src="img/browse_mode.jpg" style="width:7.0%" /> and a pencil <img src="img/digitize_mode.jpg" style="width:7.0%" />. Selecting the map icon <img src="img/browse_mode.jpg" style="width:7.0%" /> means that you are in browse mode and you can visualise and query the geospatial layers loaded into your project.</p>
+</div>
+<div id="digitize-mode" class="section level3">
+<h3>Digitize Mode</h3>
+<p>If you select the pencil icon you now enter digitize mode <img src="img/digitize_mode.jpg" style="width:7.0%" />. In this mode you can digitize new features and fill in the attribute form and also edit features that you have already created. Note, to edit a layer you will need to make sure that layer is selected (it is highlighted grey).</p>
+</div>
+<div id="household-and-community-data" class="section level3">
+<h3>Household and Community Data</h3>
+<p>Once you have selected <strong>digitize mode</strong> you can mark a household’s location on the map. To do this make sure you are in digitize mode, the <strong>household</strong> layer is selected is highlighted grey, and then move the cross hairs over the location of a household and press the add feature button <img src="usecase_groundtruth_img/8a_add_button.png" style="width:7.0%" />.</p>
+<center>
+<iframe src="https://player.vimeo.com/video/420205956" width="640" height="650" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+</iframe>
+<p>
+<a href="https://player.vimeo.com/video/420205956">Mark a household’s location</a>.
+</p>
+</center>
+<p>Fill out the attribute form for the household and people living in the household. To complete the feature press the black tick <img src="img/black_tick.jpg" style="width:5.0%" />.</p>
+<center>
+<iframe src="https://player.vimeo.com/video/420213794" width="640" height="650" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+</iframe>
+<p>
+<a href="https://player.vimeo.com/video/420213794">Complete the household and people forms</a>.
+</p>
+</center>
+</div>
+<div id="landscape-feature-data" class="section level3">
+<h3>Landscape Feature Data</h3>
+<p>Once you have marked the household’s location and entered information about the people living there you can map the landscape resources they use to support their livelihoods. To map a landscape feature open the menu and select the <strong>landscape feature</strong> layer so it is highlighted grey. Then move to the map and use the add feature button <img src="usecase_groundtruth_img/8a_add_button.png" style="width:7.0%" /> to mark points that surround the feature. Once you have finished complete the feature by pressing the green tick button.</p>
+<p>Finally, you can enter information about how a person uses that landscape feature.</p>
+<div id="feature-overview" class="section level4">
+<h4>Feature Overview</h4>
+<p>Select a person from the drop down list - you can select from any of the people who you have assigned to households in the <strong>household</strong> layer. Then complete the entries for mataqali, characteristics of the feature, and any other notes.</p>
+</div>
+<div id="resources" class="section level4">
+<h4>Resources</h4>
+<p>Next, tick the appropriate checkbox corresponding to how a person uses the landscape feature. For example, if it is a field feature tick the checkbox for crops. This will then make the crop form visible. You can then bring up the crop form by pressing the black plus button <img src="img/black_add.jpg" style="width:7.0%" />.</p>
+<p>The video below shows an example of entering information for how people collect mud crabs from a mangrove feature.</p>
+<p>To complete the feature press the black tick <img src="img/black_tick.jpg" style="width:7.0%" />.</p>
+<center>
+<iframe src="https://player.vimeo.com/video/420206139" width="640" height="650" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+</iframe>
+<p>
+<a href="https://player.vimeo.com/video/420206139">Complete the landscape feature form</a>.
+</p>
+</center>
+</div>
 </div>
 </div>
 
