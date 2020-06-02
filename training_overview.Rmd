@@ -52,5 +52,6 @@ These tutorials demonstrate applications of QConut. They are derived from use ca
 
 Use QField to collect ground truth points for validating land cover maps generated from satellite images.
 
+### [Community mapping](usecase_communitymap.html)
 
-
+Use QField to map landscape features used to support livelihoods.

@@ -1,5 +1,6 @@
 ---
 title: " "
+pagetite: "QConut"
 output: 
   html_document:
     theme: flatly
