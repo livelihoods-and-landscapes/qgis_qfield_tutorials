@@ -3,6 +3,9 @@ title: "About"
 output: 
   html_document:
     theme: flatly
+    toc: true
+    toc_depth: 4
+    toc_float: true
     css: tutorial_style.css
 ---
 
@@ -10,41 +13,44 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## QConut
+<!-- <font size="6">*QConut - A Tool Supporting Climate-smart Landscapes for Promoting Sustainability of Pacific Island Agricultural Systems*</font> -->
+<hr>
+We are collaboratively developing a geospatial platform for **collecting**, **integrating**, **analysing**, and **visualising** geospatial data. 
 
-QConut is a geospatial platform for **collecting**, **integrating**, **analysing**, and **visualising** geospatial data. 
+Landscapes comprise diverse ecosystems that support livelihoods and are affected by climatic shocks. When faced with a changing climate, informed, effective, and inclusive management of landscape resources requires integration and synthesis of geospatial data. A geospatial tool is being developed for this task.
 
-Landscapes comprise diverse ecosystems that support livelihoods and are affected by climatic shocks. When faced with a changing climate, informed, effective, and inclusive management of landscape resources requires integration and synthesis of geospatial data. QConut is being developed for this task.
+The geospatial tool is being iteratively developed using an **ICT4D** software development framework (Bon et al., 2016). A diverse collaboration between farmers, fishers, foresters, government officials, and research scientists in Fiji, Tonga, and Australia have contributed to this development process. 
 
-QConut is developed using an ICT4D software development methodology. A diverse collaboration between farmers, fisherpeople, foresters, government officials, and research scientists in Fiji, Tonga, and Australia have contributed to the development process. QConut development has been funded by ACIAR.
+The geospatial tool development has been funded by the Australian Centre for International Agricultural Research (ACIAR) as part of the project **Climate-Smart Landscapes for Promoting Sustainability of Pacific Island Agricultural System (ASEM/2016/101)**.
 
+<hr>
+### ICT4D Framework
+
+We chose the ICT4D framework to provide a structured approach for developing the geospatial tool. ICT4D emphasises the need for a collaborative, adaptive, and iterative approach that hopes to address some of the common socio-technical issues that can arise in low-resource contexts (Bon et al., 2016). The importance of iterative stakeholder engagement in all stages of the framework is a central concept; ensuring the geospatial tool is aligned with local needs and contexts, explicitly addressing issues of sustainability of the geospatial tool after project completion and increasing the likelihood that the geospatial tool will have positive impacts for stakeholders. The ICT4D framework is made up of five stages (see image below) but the framework allows for these stages to be blended and addressed in an iterative, non-linear fashion.
+
+<center>
+![ICT4D approach adapted from Bon et al. (2016)](img/ict4d.png){width=80%}
+</center>
 <br>
 
-## QConut Functionality
-
-<br>
-
+<hr>
 ### Mobile GIS
 
-Use Mobile GIS to collect local-level geospatial data.
-
-Use [QField](https://qfield.org) mobile GIS to create data collection forms and collect geospatial data in the field using Android mobile devices: 
+**QField** mobile GIS was chosen to collect local-level, geospatial data and associated attributes (including photos) in the field using Android mobile devices. QField allows us to: 
 
 * Visualise spatial data using an interactive map interface
 * Digitise and map landscape features
 * Enter attribute information about landscape features
 
-Visit our [training materials](training_overview.html) which provide instructions on using [QField](https://qfield.org) and [QGIS](https://qgis.org) for creating mobile GIS data collection projects. 
+Visit our <a href="https://livelihoods-and-landscapes.github.io/qgis_qfield_tutorials/index.html" target="_blank">Training</a> website which provides instructions on using QField and QGIS for creating mobile GIS data collection projects. For further information about the tools used in this project, visit the developer's websites for <a href="https://qfield.org" target="_blank">QField</a> and <a href="https://qgis.org" target="_blank">QGIS</a>.
 
 <hr>
 
 ### Data Syncing and Management
 
-Use [Syncthing](https://syncthing.net) to sync data collected on mobile devices with a central database and update data collection forms on mobile devices. 
+We chose **Syncthing** to sync data collected on mobile devices with a central database and update data collection forms on mobile devices. Syncthing provides secure data transfer, conflict resolution, backup and versioning options. 
 
-Syncthing provides secure data transfer, conflict resolution, backup and versioning options. 
-
-Use QConut GUI application built with [Shiny](https://shiny.rstudio.com) and interactive [datatables](https://datatables.net) to:
+We built the geospatial GUI application using **Shiny** and interactive **DataTables** to:
 
 * view data tables generated through completing forms using mobile GIS
 * merge multiple data tables on mobile devices
@@ -53,46 +59,36 @@ Use QConut GUI application built with [Shiny](https://shiny.rstudio.com) and int
 * download tables in .csv format
 * insert curated and quality assessed tables into a central database
 
-Visit out [training materials](training_overview.html) which provide instructions on setting up [Syncthing](https://syncthing.net) for use with QGIS and QField projects.
+Visit our <a href="https://livelihoods-and-landscapes.github.io/qgis_qfield_tutorials/index.html" target="_blank">Training</a> website which provide instructions on setting up **Syncthing** for use with QGIS and QField projects. To find out more about these geospatial tool components, visit the developer's websites for <a href="https://syncthing.net" target="_blank">Syncthing</a>, <a href="https://shiny.rstudio.com" target="_blank">Shiny</a>, and <a href="https://datatables.net" target="_blank">DataTables</a>.
 
 <hr>
 
 ### Spatial Database 
 
-One location for storing and querying geospatial data for landscape features and sectors.
-
-A spatial relational database to store and query spatial and non-spatial data about landscape features. 
-
-Use either a [GeoPackage](http://www.geopackage.org) for small, contained, and quick-to-set up projects for minimal database management. 
-
-Use a [PostGIS](https://postgis.net) enabled PostgreSQL database for large projects with big data and multiple landscape sectors.
+A core requirement for the geospatial tool was the ability to reliably and securely, store, retrieve, analyse and share spatial and non-spatial data collected in the field, as well as provide a centralised store for reference and landscape-monitoring geospatial layers. We chose two solutions in order to provide the ability to scale from small, self-contained projects to larger, multiple landscape sector projects. We use **Geopackage** for small, contained, and quick-to-set up projects for minimal database management. For larger projects with big data and multiple landscape sectors, we use  a **PostGIS** enabled **PostgreSQL** relational database. To find out more about these geospatial tool components, visit the developer's websites for <a href="http://www.geopackage.org" target="_blank">GeoPackage</a> and <a href="https://postgis.net" target="_blank">PostGIS</a>.
 
 <hr>
 
 ### Data Visualisation 
 
-Query, visualise, and summarise geospatial data from multiple landscape sectors using dynamic datatables, charts, and web maps in an interactive dashboard GUI application.
-
-Builds on [Leaflet](https://leafletjs.com), [datatables](https://datatables.net), [Shiny](https://shiny.rstudio.com), [plotly](https://github.com/plotly/plotly.js), and [ggplot](https://ggplot2.tidyverse.org) software. 
+The geospatial tool provides the ability to query, visualise, and summarise geospatial data from multiple landscape sectors using dynamic data tables, charts, and web maps in an interactive dashboard GUI application. We chose **Leaflet**, **DataTables**, **Shiny**, **plotly** and **gpplot** to provide these capabilities to our project stakeholders. To find out more about these geospatial tool components, visit the developer's websites for <a href="https://leafletjs.com" target="_blank">Leaflet</a>, <a href="https://datatables.net" target="_blank">DataTables</a>, <a href="https://shiny.rstudio.com" target="_blank">Shiny</a>, <a href="https://github.com/plotly/plotly.js/blob/master/README.md" target="_blank">plotly</a>, and <a href="https://ggplot2.tidyverse.org" target="_blank">ggplot</a>. 
 
 <hr>
 
 ### Landscape Monitoring
 
-Use novel machine learning algorithms, satellite images, and cloud computing to monitor inter-annual land cover change.
+An important component of the geospatial tool is to provide landscape monitoring capability, as well as build in-country capacity for undertaking landscape monitoring activities. To that end, we have chosen Google's cloud-based **Earth Engine** platform for accessing, analysing and publishing dynamic landscape monitoring products. These products have primarily focussed on land-cover and land-use, and disaster impacts on agricultural areas. To find out more about the platform used, visit the websites for <a href="https://earthengine.google.com" target="_blank">Earth Engine</a>.
 
-Machine learning algorithms used to generate annual land cover maps covering an entire landscape at a 10 m spatial resolution.
-
-Freely-available [Sentinel-2](https://sentinel.esa.int/web/sentinel/missions/sentinel-2) remote sensing data is used as input data to machine learning models.
+<!-- Use novel machine learning algorithms, satellite images, and cloud computing to monitor inter-annual land cover change. -->
+<!-- Machine learning algorithms used to generate annual land cover maps covering an entire landscape at a 10 m spatial resolution. -->
+<!-- Freely-available [Sentinel-2](https://sentinel.esa.int/web/sentinel/missions/sentinel-2) remote sensing data is used as input data to machine learning models. -->
 
 <hr>
 
 ### Extend and Adapt
 
-All QConut components are built using open-source software and open data standards so you can extend, adapt, and improve it. 
+Where possible the geospatial tool has used existing software and applications to provide desired functionality. In cases where off-the-shelf software does not exist or does not meet requirements new applications have been developed. All geospatial tool components are built using open-source software and open data standards so our project stakeholders can extend, adapt, and improve it. We have also emphasised the importance of not locking-in our collaborators with expensive closed software systems, ensuring the long-term sustainability of the geospatial tool.
 
-Where possible QConut has used existing software and applications to provide desired functionality. In cases where off-the-shelf software does not exist or does not meet requirements new applications have been developed.
-
-
+<hr>
 
 

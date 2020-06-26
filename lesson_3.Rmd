@@ -133,7 +133,7 @@ Having created your table *many_records* you need to add fields to it. To do thi
 
 <center>
 
-![Add foriegn key field](img/create_foreign_key.png){width=640px}
+![Add foreign key field](img/create_foreign_key.png){width=640px}
 
 </center>
 

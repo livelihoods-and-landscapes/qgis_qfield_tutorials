@@ -19,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -251,6 +254,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -258,6 +324,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -270,7 +346,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">QConut - Training</a>
+      <a class="navbar-brand" href="index.html">Training</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -347,33 +423,37 @@ $(document).ready(function () {
 </div>
 
 
-<div id="qconut" class="section level2">
-<h2>QConut</h2>
-<p>QConut is a geospatial platform for <strong>collecting</strong>, <strong>integrating</strong>, <strong>analysing</strong>, and <strong>visualising</strong> geospatial data.</p>
-<p>Landscapes comprise diverse ecosystems that support livelihoods and are affected by climatic shocks. When faced with a changing climate, informed, effective, and inclusive management of landscape resources requires integration and synthesis of geospatial data. QConut is being developed for this task.</p>
-<p>QConut is developed using an ICT4D software development methodology. A diverse collaboration between farmers, fisherpeople, foresters, government officials, and research scientists in Fiji, Tonga, and Australia have contributed to the development process. QConut development has been funded by ACIAR.</p>
+<!-- <font size="6">*QConut - A Tool Supporting Climate-smart Landscapes for Promoting Sustainability of Pacific Island Agricultural Systems*</font> -->
+<hr>
+<p>We are collaboratively developing a geospatial platform for <strong>collecting</strong>, <strong>integrating</strong>, <strong>analysing</strong>, and <strong>visualising</strong> geospatial data.</p>
+<p>Landscapes comprise diverse ecosystems that support livelihoods and are affected by climatic shocks. When faced with a changing climate, informed, effective, and inclusive management of landscape resources requires integration and synthesis of geospatial data. A geospatial tool is being developed for this task.</p>
+<p>The geospatial tool is being iteratively developed using an <strong>ICT4D</strong> software development framework (Bon et al., 2016). A diverse collaboration between farmers, fishers, foresters, government officials, and research scientists in Fiji, Tonga, and Australia have contributed to this development process.</p>
+<p>The geospatial tool development has been funded by the Australian Centre for International Agricultural Research (ACIAR) as part of the project <strong>Climate-Smart Landscapes for Promoting Sustainability of Pacific Island Agricultural System (ASEM/2016/101)</strong>.</p>
+<hr>
+<div id="ict4d-framework" class="section level3">
+<h3>ICT4D Framework</h3>
+<p>We chose the ICT4D framework to provide a structured approach for developing the geospatial tool. ICT4D emphasises the need for a collaborative, adaptive, and iterative approach that hopes to address some of the common socio-technical issues that can arise in low-resource contexts (Bon et al., 2016). The importance of iterative stakeholder engagement in all stages of the framework is a central concept; ensuring the geospatial tool is aligned with local needs and contexts, explicitly addressing issues of sustainability of the geospatial tool after project completion and increasing the likelihood that the geospatial tool will have positive impacts for stakeholders. The ICT4D framework is made up of five stages (see image below) but the framework allows for these stages to be blended and addressed in an iterative, non-linear fashion.</p>
+<center>
+<img src="img/ict4d.png" alt="ICT4D approach adapted from Bon et al. (2016)" style="width:80.0%" />
+</center>
 <p><br></p>
+<hr>
 </div>
-<div id="qconut-functionality" class="section level2">
-<h2>QConut Functionality</h2>
-<p><br></p>
 <div id="mobile-gis" class="section level3">
 <h3>Mobile GIS</h3>
-<p>Use Mobile GIS to collect local-level geospatial data.</p>
-<p>Use <a href="https://qfield.org">QField</a> mobile GIS to create data collection forms and collect geospatial data in the field using Android mobile devices:</p>
+<p><strong>QField</strong> mobile GIS was chosen to collect local-level, geospatial data and associated attributes (including photos) in the field using Android mobile devices. QField allows us to:</p>
 <ul>
 <li>Visualise spatial data using an interactive map interface</li>
 <li>Digitise and map landscape features</li>
 <li>Enter attribute information about landscape features</li>
 </ul>
-<p>Visit our <a href="training_overview.html">training materials</a> which provide instructions on using <a href="https://qfield.org">QField</a> and <a href="https://qgis.org">QGIS</a> for creating mobile GIS data collection projects.</p>
+<p>Visit our <a href="https://livelihoods-and-landscapes.github.io/qgis_qfield_tutorials/index.html" target="_blank">Training</a> website which provides instructions on using QField and QGIS for creating mobile GIS data collection projects. For further information about the tools used in this project, visit the developer’s websites for <a href="https://qfield.org" target="_blank">QField</a> and <a href="https://qgis.org" target="_blank">QGIS</a>.</p>
 <hr>
 </div>
 <div id="data-syncing-and-management" class="section level3">
 <h3>Data Syncing and Management</h3>
-<p>Use <a href="https://syncthing.net">Syncthing</a> to sync data collected on mobile devices with a central database and update data collection forms on mobile devices.</p>
-<p>Syncthing provides secure data transfer, conflict resolution, backup and versioning options.</p>
-<p>Use QConut GUI application built with <a href="https://shiny.rstudio.com">Shiny</a> and interactive <a href="https://datatables.net">datatables</a> to:</p>
+<p>We chose <strong>Syncthing</strong> to sync data collected on mobile devices with a central database and update data collection forms on mobile devices. Syncthing provides secure data transfer, conflict resolution, backup and versioning options.</p>
+<p>We built the geospatial GUI application using <strong>Shiny</strong> and interactive <strong>DataTables</strong> to:</p>
 <ul>
 <li>view data tables generated through completing forms using mobile GIS</li>
 <li>merge multiple data tables on mobile devices</li>
@@ -382,39 +462,37 @@ $(document).ready(function () {
 <li>download tables in .csv format</li>
 <li>insert curated and quality assessed tables into a central database</li>
 </ul>
-<p>Visit out <a href="training_overview.html">training materials</a> which provide instructions on setting up <a href="https://syncthing.net">Syncthing</a> for use with QGIS and QField projects.</p>
+<p>Visit our <a href="https://livelihoods-and-landscapes.github.io/qgis_qfield_tutorials/index.html" target="_blank">Training</a> website which provide instructions on setting up <strong>Syncthing</strong> for use with QGIS and QField projects. To find out more about these geospatial tool components, visit the developer’s websites for <a href="https://syncthing.net" target="_blank">Syncthing</a>, <a href="https://shiny.rstudio.com" target="_blank">Shiny</a>, and <a href="https://datatables.net" target="_blank">DataTables</a>.</p>
 <hr>
 </div>
 <div id="spatial-database" class="section level3">
 <h3>Spatial Database</h3>
-<p>One location for storing and querying geospatial data for landscape features and sectors.</p>
-<p>A spatial relational database to store and query spatial and non-spatial data about landscape features.</p>
-<p>Use either a <a href="http://www.geopackage.org">GeoPackage</a> for small, contained, and quick-to-set up projects for minimal database management.</p>
-<p>Use a <a href="https://postgis.net">PostGIS</a> enabled PostgreSQL database for large projects with big data and multiple landscape sectors.</p>
+<p>A core requirement for the geospatial tool was the ability to reliably and securely, store, retrieve, analyse and share spatial and non-spatial data collected in the field, as well as provide a centralised store for reference and landscape-monitoring geospatial layers. We chose two solutions in order to provide the ability to scale from small, self-contained projects to larger, multiple landscape sector projects. We use <strong>Geopackage</strong> for small, contained, and quick-to-set up projects for minimal database management. For larger projects with big data and multiple landscape sectors, we use a <strong>PostGIS</strong> enabled <strong>PostgreSQL</strong> relational database. To find out more about these geospatial tool components, visit the developer’s websites for <a href="http://www.geopackage.org" target="_blank">GeoPackage</a> and <a href="https://postgis.net" target="_blank">PostGIS</a>.</p>
 <hr>
 </div>
 <div id="data-visualisation" class="section level3">
 <h3>Data Visualisation</h3>
-<p>Query, visualise, and summarise geospatial data from multiple landscape sectors using dynamic datatables, charts, and web maps in an interactive dashboard GUI application.</p>
-<p>Builds on <a href="https://leafletjs.com">Leaflet</a>, <a href="https://datatables.net">datatables</a>, <a href="https://shiny.rstudio.com">Shiny</a>, <a href="https://github.com/plotly/plotly.js">plotly</a>, and <a href="https://ggplot2.tidyverse.org">ggplot</a> software.</p>
+<p>The geospatial tool provides the ability to query, visualise, and summarise geospatial data from multiple landscape sectors using dynamic data tables, charts, and web maps in an interactive dashboard GUI application. We chose <strong>Leaflet</strong>, <strong>DataTables</strong>, <strong>Shiny</strong>, <strong>plotly</strong> and <strong>gpplot</strong> to provide these capabilities to our project stakeholders. To find out more about these geospatial tool components, visit the developer’s websites for <a href="https://leafletjs.com" target="_blank">Leaflet</a>, <a href="https://datatables.net" target="_blank">DataTables</a>, <a href="https://shiny.rstudio.com" target="_blank">Shiny</a>, <a href="https://github.com/plotly/plotly.js/blob/master/README.md" target="_blank">plotly</a>, and <a href="https://ggplot2.tidyverse.org" target="_blank">ggplot</a>.</p>
 <hr>
 </div>
 <div id="landscape-monitoring" class="section level3">
 <h3>Landscape Monitoring</h3>
-<p>Use novel machine learning algorithms, satellite images, and cloud computing to monitor inter-annual land cover change.</p>
-<p>Machine learning algorithms used to generate annual land cover maps covering an entire landscape at a 10 m spatial resolution.</p>
-<p>Freely-available <a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-2">Sentinel-2</a> remote sensing data is used as input data to machine learning models.</p>
+<p>An important component of the geospatial tool is to provide landscape monitoring capability, as well as build in-country capacity for undertaking landscape monitoring activities. To that end, we have chosen Google’s cloud-based <strong>Earth Engine</strong> platform for accessing, analysing and publishing dynamic landscape monitoring products. These products have primarily focussed on land-cover and land-use, and disaster impacts on agricultural areas. To find out more about the platform used, visit the websites for <a href="https://earthengine.google.com" target="_blank">Earth Engine</a>.</p>
+<!-- Use novel machine learning algorithms, satellite images, and cloud computing to monitor inter-annual land cover change. -->
+<!-- Machine learning algorithms used to generate annual land cover maps covering an entire landscape at a 10 m spatial resolution. -->
+<!-- Freely-available [Sentinel-2](https://sentinel.esa.int/web/sentinel/missions/sentinel-2) remote sensing data is used as input data to machine learning models. -->
 <hr>
 </div>
 <div id="extend-and-adapt" class="section level3">
 <h3>Extend and Adapt</h3>
-<p>All QConut components are built using open-source software and open data standards so you can extend, adapt, and improve it.</p>
-<p>Where possible QConut has used existing software and applications to provide desired functionality. In cases where off-the-shelf software does not exist or does not meet requirements new applications have been developed.</p>
+<p>Where possible the geospatial tool has used existing software and applications to provide desired functionality. In cases where off-the-shelf software does not exist or does not meet requirements new applications have been developed. All geospatial tool components are built using open-source software and open data standards so our project stakeholders can extend, adapt, and improve it. We have also emphasised the importance of not locking-in our collaborators with expensive closed software systems, ensuring the long-term sustainability of the geospatial tool.</p>
+<hr>
+</div>
+
+
+
 </div>
 </div>
-
-
-
 
 </div>
 
@@ -447,6 +525,32 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

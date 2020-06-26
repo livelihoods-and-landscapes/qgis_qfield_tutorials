@@ -21,10 +21,12 @@ p {text-align: center;}
 <body>
 <br>
 <br>
-<h1 style="color:white"><b>QConut</b></h1>
+<!-- <h1 style="color:white"><b>QConut</b></h1> -->
+<h1 style="color:white"><b>Climate-Smart Landscapes for Promoting Sustainability of Pacific Island Agricultural Systems</b></h1>
 <br>
-<p style="color:white">An open-source geospatial application to support climate-smart landscape management.</p>
+<!-- <p style="color:white">An open-source geospatial application to support climate-smart landscape management.</p> -->
+<p style="color:white">ACIAR Project No. ASEM/2016/101</p>
+
 <br>
-<p style="color:white">This website includes training material and tutorials for QConut tools.</p>
 
 </body>

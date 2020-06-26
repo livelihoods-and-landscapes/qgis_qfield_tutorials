@@ -344,7 +344,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">QConut - Training</a>
+      <a class="navbar-brand" href="index.html">Training</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -489,12 +489,12 @@ div.tocify {
 <ul>
 <li><strong>FijiLC_ERPD_Pilot_v1a</strong> (used to record ground truth data)</li>
 <li><strong>LCTraingSuva_Sites</strong> (random sites where ground truth data can be collected)</li>
-<li><strong>Open Street Map</strong> (topgraphic map)</li>
+<li><strong>Open Street Map</strong> (topographic map)</li>
 <li><strong>ESRI Satellite</strong> (high resolution image)</li>
 <li><strong>Sentinel Satellite</strong> (low resolution image that will be used to produce the landcover)</li>
 <li><strong>Landcover Cluster</strong> (an <em>untrained</em> landcover map to aid in ground truth data collection)</li>
 </ul>
-<p>These layers will be discussed in more detail below. By default, all layers are turned on, however, only the top-most image layer (Open Street Map) obscures the other layers. To turn off the <strong>Open Street Map layer</strong>, tap and hold the layer until a small otpion window appears, and then untick the <strong>Show on map canvas</strong> option. The next image layer in the list <em>(ESRI Satellite)</em> should now be visible (similar to Figure 6).</p>
+<p>These layers will be discussed in more detail below. By default, all layers are turned on, however, only the top-most image layer (Open Street Map) obscures the other layers. To turn off the <strong>Open Street Map layer</strong>, tap and hold the layer until a small option window appears, and then untick the <strong>Show on map canvas</strong> option. The next image layer in the list <em>(ESRI Satellite)</em> should now be visible (similar to Figure 6).</p>
 <center>
 <div class="figure">
 <img src="usecase_groundtruth_img/6_ESRI_image.jpg" alt="Figure 6: ESRI Satellite Image" style="width:40.0%" />
@@ -529,7 +529,7 @@ div.tocify {
 </center>
 <p>The form contains a number of fields you can edit:</p>
 <ul>
-<li><strong>SiteID</strong> (optonal): If you have pre-defined sites that are labelled, enter the site ID here.</li>
+<li><strong>SiteID</strong> (optional): If you have pre-defined sites that are labelled, enter the site ID here.</li>
 <li><strong>LandcoverType</strong> (required): Choose the most dominant landcover for this site considering the complete area (red circle). Refer to the high resolution ESRI Satellite Image if you need help. If the landcover it not on the list, choose <strong>Other</strong> - you will be required to provide this type in the next field. If you want to mark a site but not record a landcover type, choose <strong>Not Recorded</strong>.</li>
 <li><strong>LandcoverOther</strong> (conditional): If your landcover type was <strong>Other</strong>, then you need are required to enter the landcover type here.</li>
 <li><strong>Image1, Image 2</strong> (optional): You can capture up to 2 images by tapping the camera icon.</li>
@@ -538,7 +538,7 @@ div.tocify {
 <p>Other fields are read-only and represent data captured from the device itself - they can’t be changed:</p>
 <ul>
 <li><strong>Bearing</strong>: If you device has a compass, this will record the direction you are facing when you added the record.</li>
-<li><strong>HAccuracy</strong>: The horizonal accuracy of the GPS when the site was recorded.</li>
+<li><strong>HAccuracy</strong>: The horizontal accuracy of the GPS when the site was recorded.</li>
 <li><strong>UserID</strong>: The default QField user ID for this device (this helps identify who captured the record)</li>
 <li><strong>Timestamp</strong>: The data and time when the site was recorded.</li>
 </ul>
@@ -564,8 +564,8 @@ div.tocify {
 </div>
 </center>
 </div>
-<div id="labelling-opportunitistic-sites" class="section level3">
-<h3>5. Labelling Opportunitistic Sites</h3>
+<div id="labelling-opportunistic-sites" class="section level3">
+<h3>5. Labelling Opportunistic Sites</h3>
 <p>When in the field, you may come across unexpected or rare landcover types that do not have pre-defined sites. You may also wish to capture extra ground truth sites for common landcover types. The process for capturing these sites is the same as for the pre-defined sites, however, you will not have a site guide. Ensure you position the captured feature at the correct location by using your GPS (if you can access the site) and with reference to the other layers.</p>
 </div>
 </div>

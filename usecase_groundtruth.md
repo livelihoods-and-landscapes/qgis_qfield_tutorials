@@ -77,12 +77,12 @@ The layers available are:
 
 * **FijiLC_ERPD_Pilot_v1a** (used to record ground truth data)
 * **LCTraingSuva_Sites** (random sites where ground truth data can be collected)
-* **Open Street Map** (topgraphic map)
+* **Open Street Map** (topographic map)
 * **ESRI Satellite** (high resolution image)
 * **Sentinel Satellite** (low resolution image that will be used to produce the landcover)
 * **Landcover Cluster** (an *untrained* landcover map to aid in ground truth data collection)
 
-These layers will be discussed in more detail below. By default, all layers are turned on, however, only the top-most image layer (Open Street Map) obscures the other layers. To turn off the **Open Street Map layer**, tap and hold the layer until a small otpion window appears, and then untick the **Show on map canvas** option. The next image layer in the list *(ESRI Satellite)* should now be visible (similar to Figure 6).
+These layers will be discussed in more detail below. By default, all layers are turned on, however, only the top-most image layer (Open Street Map) obscures the other layers. To turn off the **Open Street Map layer**, tap and hold the layer until a small option window appears, and then untick the **Show on map canvas** option. The next image layer in the list *(ESRI Satellite)* should now be visible (similar to Figure 6).
 
 <center>
 ![Figure 6: ESRI Satellite Image](usecase_groundtruth_img/6_ESRI_image.jpg){width=40%}
@@ -118,7 +118,7 @@ Tap the add feature button ![](usecase_groundtruth_img/8a_add_button.png){width=
 
 The form contains a number of fields you can edit:
 
-* **SiteID** (optonal): If you have pre-defined sites that are labelled, enter the site ID here.
+* **SiteID** (optional): If you have pre-defined sites that are labelled, enter the site ID here.
 * **LandcoverType** (required): Choose the most dominant landcover for this site considering the complete area (red circle). Refer to the high resolution ESRI Satellite Image if you need help. If the landcover it not on the list, choose **Other** - you will be required to provide this type in the next field. If you want to mark a site but not record a landcover type, choose **Not Recorded**.
 * **LandcoverOther** (conditional): If your landcover type was **Other**, then you need are required to enter the landcover type here.
 * **Image1, Image 2** (optional): You can capture up to 2 images by tapping the camera icon.
@@ -127,7 +127,7 @@ The form contains a number of fields you can edit:
 Other fields are read-only and represent data captured from the device itself - they can't be changed:
 
 * **Bearing**: If you device has a compass, this will record the direction you are facing when you added the record.
-* **HAccuracy**: The horizonal accuracy of the GPS when the site was recorded.
+* **HAccuracy**: The horizontal accuracy of the GPS when the site was recorded.
 * **UserID**: The default QField user ID for this device (this helps identify who captured the record)
 * **Timestamp**: The data and time when the site was recorded.
 
@@ -152,7 +152,7 @@ Once you have finished recording sites, tap the menu button and then leave digit
 
 </center>
 
-### 5. Labelling Opportunitistic Sites
+### 5. Labelling Opportunistic Sites
 
 When in the field, you may come across unexpected or rare landcover types that do not have pre-defined sites. You may also wish to capture extra ground truth sites for common landcover types. The process for capturing these sites is the same as for the pre-defined sites, however, you will not have a site guide. Ensure you position the captured feature at the correct location by using your GPS (if you can access the site) and with reference to the other layers.
 

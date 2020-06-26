@@ -1,6 +1,6 @@
 output_dir: '.'
 navbar: 
-  title: "QConut - Training"
+  title: "Training"
   left:
     - text: "Home"
       href: index.html

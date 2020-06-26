@@ -32,7 +32,7 @@ The Android Syncthing application can be downloaded from [Google Play](https://p
 
 ### Configuring Devices
 
-For Syncthing to be able sync files across two or more devices each device must be configured with the device ID of the device it is sharing with. A device ID is a unique identifier for each device that is generated when Syncthing is first started. To find your device ID go to *Actions* then *Show ID*. This will bring up your device ID and a QR code. You can share your device ID with another trusted device to enable file syncronisation. 
+For Syncthing to be able sync files across two or more devices each device must be configured with the device ID of the device it is sharing with. A device ID is a unique identifier for each device that is generated when Syncthing is first started. To find your device ID go to *Actions* then *Show ID*. This will bring up your device ID and a QR code. You can share your device ID with another trusted device to enable file synchronisation. 
 
 <center>
 
