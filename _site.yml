@@ -24,6 +24,8 @@ navbar:
           href: usecase_groundtruth.html
         - text: "Use Case - Community Map"
           href: usecase_communitymap.html
+        - text: "Use Case - ERPD Pilot"
+          href: usecase_erpdpilot.html
   right:
     - icon: fa-github fa-lg
       href: https://github.com/livelihoods-and-landscapes
