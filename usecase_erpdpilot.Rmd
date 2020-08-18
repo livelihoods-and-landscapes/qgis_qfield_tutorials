@@ -209,3 +209,8 @@ Tap the main menu and then tap and hold the RGB layer, and tick on **Show on map
 </center>
 
 Turn off the RGB layer once again so that you can inspect the high resoution image for the plot once again. Capture the PlotClass for the opportunitistic plot location taking into account the high resolution image and spatial context surrounding the plot.
+
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>
+<footer>
+<p><hr></p>
+</footer>
