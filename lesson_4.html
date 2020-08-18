@@ -354,7 +354,7 @@ div.tocify {
   <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="about_qconut.html">About</a>
+  <a href="about.html">About</a>
 </li>
 <li>
   <a href="training_overview.html">Training Overview</a>
@@ -441,34 +441,34 @@ div.tocify {
 <p>For Syncthing to be able sync files across two or more devices each device must be configured with the device ID of the device it is sharing with. A device ID is a unique identifier for each device that is generated when Syncthing is first started. To find your device ID go to <em>Actions</em> then <em>Show ID</em>. This will bring up your device ID and a QR code. You can share your device ID with another trusted device to enable file synchronisation.</p>
 <center>
 <div class="figure">
-<img src="img/syncthing_actions.png" alt="Find device ID" width="640" />
+<img src="img/syncthing_actions.png" width="640" alt="" />
 <p class="caption">Find device ID</p>
 </div>
 </center>
 <p>Once you have the device ID for the device you wish to share a file with go to <em>Add Remote Device</em> and enter the device ID. To connect your desktop application (<em>Central</em> - as this will be the device that manages QGIS data collection projects across multiple remote devices) to your remote device (<em>Tablet 1</em>) go to <em>Add Remote Device</em> on your desktop application and enter the device ID of <em>Tablet 1</em>.</p>
 <center>
 <div class="figure">
-<img src="img/syncthing_add_remote_device.png" alt="Add remote device" width="640" />
+<img src="img/syncthing_add_remote_device.png" width="640" alt="" />
 <p class="caption">Add remote device</p>
 </div>
 </center>
 <center>
 <div class="figure">
-<img src="img/syncthing_add_remote_device_3.png" alt="Enter the device ID of the remote device" width="640" />
+<img src="img/syncthing_add_remote_device_3.png" width="640" alt="" />
 <p class="caption">Enter the device ID of the remote device</p>
 </div>
 </center>
 <p>On <strong>Tablet 1</strong>, when prompted, click <em>Add Device</em> to link up with <em>Central</em>. You can chose to give this device a name; here, we will call it <em>Central</em> as this will be the device that manages QGIS data collection projects across multiple remote devices.</p>
 <center>
 <div class="figure">
-<img src="img/syncthing_tablet_add_device.png" alt="Add Central device when prompted on your remote device" width="640" />
+<img src="img/syncthing_tablet_add_device.png" width="640" alt="" />
 <p class="caption">Add Central device when prompted on your remote device</p>
 </div>
 </center>
 <p>If both your devices are correctly connected you should see each device listed under <em>Remote Devices</em>.</p>
 <center>
 <div class="figure">
-<img src="img/syncthing_tablet_device_added.png" alt="Central device successfully linked as a remote device" width="640" />
+<img src="img/syncthing_tablet_device_added.png" width="640" alt="" />
 <p class="caption">Central device successfully linked as a remote device</p>
 </div>
 </center>
@@ -479,48 +479,48 @@ div.tocify {
 <p>You can add the folder to Syncthing on the <em>Central</em> device by clicking <em>Add Folder</em>, entering the file path to the folder, and giving the folder an informative <em>Folder ID</em>.</p>
 <center>
 <div class="figure">
-<img src="img/syncthing_add_folder.png" alt="Add folder" width="640" />
+<img src="img/syncthing_add_folder.png" width="640" alt="" />
 <p class="caption">Add folder</p>
 </div>
 </center>
 <center>
 <div class="figure">
-<img src="img/syncthing_add_folder_2.png" alt="Shared folder details" width="640" />
+<img src="img/syncthing_add_folder_2.png" width="640" alt="" />
 <p class="caption">Shared folder details</p>
 </div>
 </center>
 <p>Click on the <em>Sharing</em> tab and select the remote device to share with (here it is <em>Tablet 1</em>). If you have connected your folder to Syncthing before the devices are linked you can chose to share the folder at the time the device connection is established.</p>
 <center>
 <div class="figure">
-<img src="img/syncthing_add_folder_sharing.png" alt="Sharing settings" width="640" />
+<img src="img/syncthing_add_folder_sharing.png" width="640" alt="" />
 <p class="caption">Sharing settings</p>
 </div>
 </center>
 <p>There are options you can set for <em>File Versioning</em>; ignore them for now. Finally, go to <em>Advanced</em> and make sure the <em>Watch for Changes</em> checkbox is ticked, the <em>Folder Type</em> is <em>Send and Receive</em>, and the <em>Permissions Ignore</em> checkbox is ticked. Click save.</p>
 <center>
 <div class="figure">
-<img src="img/syncthing_add_folder_3.png" alt="Advanced settings for sharing folders" width="640" />
+<img src="img/syncthing_add_folder_3.png" width="640" alt="" />
 <p class="caption">Advanced settings for sharing folders</p>
 </div>
 </center>
 <p>Now go to your remote device (<em>Tablet 1</em>) and when prompted choose to <em>Add</em> the folder.</p>
 <center>
 <div class="figure">
-<img src="img/syncthing_tablet_add_folder.png" alt="Advanced settings for sharing folders" width="640" />
+<img src="img/syncthing_tablet_add_folder.png" width="640" alt="" />
 <p class="caption">Advanced settings for sharing folders</p>
 </div>
 </center>
 <p>Go through the same process as you did on your desktop computer under the <em>Advanced</em> tab and make sure the <em>Watch for Changes</em> checkbox is ticked, the <em>Folder Type</em> is <em>Send and Receive</em>, and the <em>Permissions Ignore</em> checkbox is ticked. Click save.</p>
 <center>
 <div class="figure">
-<img src="img/syncthing_tablet_add_folder_advanced_settings.png" alt="Advanced settings for sharing folders" width="640" />
+<img src="img/syncthing_tablet_add_folder_advanced_settings.png" width="640" alt="" />
 <p class="caption">Advanced settings for sharing folders</p>
 </div>
 </center>
 <p>You should now see <em>syncthing_demo</em> listed as a folder on your remote device (<em>Tablet 1</em>).</p>
 <center>
 <div class="figure">
-<img src="img/syncthing_tablet_add_folder_synced.png" alt="Advanced settings for sharing folders" width="640" />
+<img src="img/syncthing_tablet_add_folder_synced.png" width="640" alt="" />
 <p class="caption">Advanced settings for sharing folders</p>
 </div>
 </center>
@@ -546,15 +546,23 @@ div.tocify {
 <p>On your <em>Central</em> device (which has QGIS installed) go to the folder <em>export_syncthing_demo</em> and open <em>syncthing_demo.qgs</em> in QGIS. You should see the features you digitised using QField appear in the map canvas. You can also use the <em>QFieldSync</em> plugin introduced in lesson 2 to sync data collected on QGIS projects on remote devices with a central dataset.</p>
 <center>
 <div class="figure">
-<img src="img/syncthing_qgis_synced.png" alt="Data collected using remote device synced to central device and opened in QGIS." width="640" />
+<img src="img/syncthing_qgis_synced.png" width="640" alt="" />
 <p class="caption">Data collected using remote device synced to central device and opened in QGIS.</p>
 </div>
 </center>
 </div>
 <div id="cleaning-data-and-projects-on-remote-devices" class="section level2">
 <h2>Cleaning data and projects on remote devices</h2>
-<p>As the QGIS project files on the <em>Central</em> device are shared with the remote devices (e.g. <em>Tablet 1</em>), you can make changes to the shared files on the <em>Central</em> device which will be updated on remote devices. For example, after you have synced the data collected using QField on <em>Tablet 1</em> with your central dataset you could delete the QGIS project and associated files in the shared folder and replace them with a <em>clean</em> QGIS project. This <em>clean</em> QGIS project could be a copy of the previous QGIS project with the same attribute table and form but without any data in the attribute table. This is useful if you have sensitive data that you wish to store on remote devices for only a short a period of time. Alternatively, you could update your data collection form and want to provide this updated form on your remote devices.</p>
+<p>As the QGIS project files on the <em>Central</em> device are shared with the remote devices (e.g. <em>Tablet 1</em>), you can make changes to the shared files on the <em>Central</em> device which will be updated on remote devices. For example, after you have synced the data collected using QField on <em>Tablet 1</em> with your central dataset you could delete the QGIS project and associated files in the shared folder and replace them with a <em>clean</em> QGIS project. This <em>clean</em> QGIS project could be a copy of the previous QGIS project with the same attribute table and form but without any data in the attribute table. This is useful if you have sensitive data that you wish to store on remote devices for only a short a period of time. Alternatively, you could update your data collection form and want to provide this updated form on your remote devices.</p>
 <p>Try deleting the QGIS project and files in the shared folder on your <em>Central</em> device and add a new QGIS project. See if this updates on your remote device <em>Tablet 1</em>.</p>
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;">
+
+</div>
+<footer>
+<p>
+<hr>
+</p>
+</footer>
 </div>
 
 
@@ -607,7 +615,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0

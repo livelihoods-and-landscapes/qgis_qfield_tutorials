@@ -156,6 +156,10 @@ Once you have finished recording sites, tap the menu button and then leave digit
 
 When in the field, you may come across unexpected or rare landcover types that do not have pre-defined sites. You may also wish to capture extra ground truth sites for common landcover types. The process for capturing these sites is the same as for the pre-defined sites, however, you will not have a site guide. Ensure you position the captured feature at the correct location by using your GPS (if you can access the site) and with reference to the other layers.
 
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>
+<footer>
+<p><hr></p>
+</footer>
 
 
 

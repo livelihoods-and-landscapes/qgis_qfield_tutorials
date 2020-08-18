@@ -46,8 +46,6 @@ This training will cover the following:
 
 ## Use Cases
 
-These tutorials demonstrate applications of QConut. They are derived from use cases used during the development of QConut. 
-
 ### [Ground truth data collection](usecase_groundtruth.html)
 
 Use QField to collect ground truth points for validating land cover maps generated from satellite images.
@@ -55,3 +53,8 @@ Use QField to collect ground truth points for validating land cover maps generat
 ### [Community mapping](usecase_communitymap.html)
 
 Use QField to map landscape features used to support livelihoods.
+
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>
+<footer>
+<p><hr></p>
+</footer>

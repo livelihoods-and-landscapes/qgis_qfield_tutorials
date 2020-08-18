@@ -186,3 +186,8 @@ Finally, you can inspect the data you collected in QField in QGIS. Follow the pr
 </video>
 
 </center>
+
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>
+<footer>
+<p><hr></p>
+</footer>

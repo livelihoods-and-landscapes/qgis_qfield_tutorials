@@ -354,7 +354,7 @@ div.tocify {
   <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="about_qconut.html">About</a>
+  <a href="about.html">About</a>
 </li>
 <li>
   <a href="training_overview.html">Training Overview</a>
@@ -433,14 +433,14 @@ div.tocify {
 <p>Your QGIS screen with the <em>simple_form.qgs</em> project loaded should look like the below image.</p>
 <center>
 <div class="figure">
-<img src="img/qgis_qgs_screen.png" alt="simple_form.qgs project loaded in QGIS" width="640" />
+<img src="img/qgis_qgs_screen.png" width="640" alt="" />
 <p class="caption">simple_form.qgs project loaded in QGIS</p>
 </div>
 </center>
 <p>Next, you need to zoom in on Fiji or where you plan to collect data in the field. If you zoom in on Suva your <em>Map Canvas</em> should look like the image below.</p>
 <center>
 <div class="figure">
-<img src="img/fiji_zoom.png" alt="Zoomed in on Suva" width="640" />
+<img src="img/fiji_zoom.png" width="640" alt="" />
 <p class="caption">Zoomed in on Suva</p>
 </div>
 </center>
@@ -450,14 +450,14 @@ div.tocify {
 <p>You will need to configure your project before packaging it for QField. To do this go to the <em>Plugins</em> menu then select <em>QFieldSync</em> and <em>Project Configuration</em>. Project configuration defines project characteristics relevant for collecting data in the field (i.e. configuring which layers can be edited offline or which layers to use as basemap images).</p>
 <center>
 <div class="figure">
-<img src="img/project_configuration.png" alt="QField Sync - Project Configuration" width="640" />
+<img src="img/project_configuration.png" width="640" alt="" />
 <p class="caption">QField Sync - Project Configuration</p>
 </div>
 </center>
 <p>Now, you need to set parameters in the <em>Configure Project for QField Synchronisation</em> widget. Set the <em>Action</em> for <em>simple_form</em> to <em>offline editing</em>. This means you can edit the form offline in QField. Next, select the <em>Create base map</em> checkbox and select <em>OpenStreetMap</em> as the basemap Layer. Then click on OK.</p>
 <center>
 <div class="figure">
-<img src="img/configure_project_widget.png" alt="Configure project widget" width="640" />
+<img src="img/configure_project_widget.png" width="640" alt="" />
 <p class="caption">Configure project widget</p>
 </div>
 </center>
@@ -467,14 +467,14 @@ div.tocify {
 <p>Go back to the <em>Plugins</em> menu and select <em>QFieldSync</em> and then <em>Package for QField</em>. The <em>Package project for QField</em> widget should appear. In the <code>...</code> scroll to you directory <em>export_form</em> and select this directory. Then click on <em>create</em>. This will create a copy of your project in the <em>export_form</em> directory which you can copy to your mobile device to edit in QField.</p>
 <center>
 <div class="figure">
-<img src="img/package_for_qfield.png" alt="Package project for QField" width="640" />
+<img src="img/package_for_qfield.png" width="640" alt="" />
 <p class="caption">Package project for QField</p>
 </div>
 </center>
 <p>If you were successful in packaging your project you should see the following files in your <em>export_form</em> directory.</p>
 <center>
 <div class="figure">
-<img src="img/packaged_files_dir.png" alt="Project files packaged for QField" width="640" />
+<img src="img/packaged_files_dir.png" width="640" alt="" />
 <p class="caption">Project files packaged for QField</p>
 </div>
 </center>
@@ -520,7 +520,7 @@ div.tocify {
 <p>You can manually digitize points by moving the crosshairs cursor on the <em>Map Canvas</em> and using the basemap images as a guide. However, you can also track your GPS position and add vertices for your current location. You can do this by selecting the GPS icon in the bottom right hand corner highlighted in the image below.</p>
 <center>
 <div class="figure">
-<img src="img/gps_cursor.png" alt="GPS icon highlighted in pink - select to create features at your current GPS location" width="640" />
+<img src="img/gps_cursor.png" width="640" alt="" />
 <p class="caption">GPS icon highlighted in pink - select to create features at your current GPS location</p>
 </div>
 </center>
@@ -530,7 +530,7 @@ div.tocify {
 <p>If you are in digitize mode you can select a feature by clicking on it. You can then click on the <em>A</em> icon highlighted in pink below to edit the attribute form for the selected feature.</p>
 <center>
 <div class="figure">
-<img src="img/edit_feature.png" alt="Edit feature icon" width="640" />
+<img src="img/edit_feature.png" width="640" alt="" />
 <p class="caption">Edit feature icon</p>
 </div>
 </center>
@@ -549,7 +549,7 @@ div.tocify {
 <p>Copy the <em>export_form</em> directory from your Android device to the <em>import_form</em> directory on your desktop. Your <em>import_form</em> directory should look like the image below.</p>
 <center>
 <div class="figure">
-<img src="img/import_form_dir.png" alt="import_form directory with project copied from QField" width="640" />
+<img src="img/import_form_dir.png" width="640" alt="" />
 <p class="caption">import_form directory with project copied from QField</p>
 </div>
 </center>
@@ -560,7 +560,7 @@ div.tocify {
 <p>Click on the <code>...</code> icon and scroll to the <em>export_form</em> directory in the <em>import_form</em> directory. Then click on <em>Synchronize</em> and the data you collected using QField should sync with the master dataset on your computer.</p>
 <center>
 <div class="figure">
-<img src="img/sync_project.png" alt="Synchronize from QField" width="640" />
+<img src="img/sync_project.png" width="640" alt="" />
 <p class="caption">Synchronize from QField</p>
 </div>
 </center>
@@ -571,6 +571,14 @@ div.tocify {
 <source src="video/inspect_features.mp4" type="video/mp4">
 </video>
 </center>
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;">
+
+</div>
+<footer>
+<p>
+<hr>
+</p>
+</footer>
 </div>
 </div>
 
@@ -624,7 +632,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0

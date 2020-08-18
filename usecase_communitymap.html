@@ -354,7 +354,7 @@ div.tocify {
   <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="about_qconut.html">About</a>
+  <a href="about.html">About</a>
 </li>
 <li>
   <a href="training_overview.html">Training Overview</a>
@@ -433,7 +433,7 @@ div.tocify {
 <p>The latest version of QField must be installed on your Android device. You can install this from the Google Play Store.</p>
 <div id="community-map-form" class="section level3">
 <h3>Community Map Form</h3>
-<p>You will need the community map form loaded onto your mobile device. The community map form is a QGIS project and associated database where spatial and attribute data is recorded <strong>(community-map-form_qfield.qgs)</strong>. The QGIS project can be downloaded <a href="https://github.com/livelihoods-and-landscapes/QConut-community-map/raw/master/community-map-blank-form.zip">here</a>.</p>
+<p>You will need the community map form loaded onto your mobile device. The community map form is a QGIS project and associated database where spatial and attribute data is recorded <strong>(community-map-form_qfield.qgs)</strong>. The QGIS project can be downloaded <a href="https://github.com/livelihoods-and-landscapes/spatial-livelihoods-map/raw/master/community-map-blank-form.zip">here</a>.</p>
 </div>
 </div>
 <div id="data-collection" class="section level2">
@@ -498,6 +498,14 @@ div.tocify {
 <a href="https://player.vimeo.com/video/420206139">Complete the landscape feature form</a>.
 </p>
 </center>
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;">
+
+</div>
+<footer>
+<p>
+<hr>
+</p>
+</footer>
 </div>
 </div>
 </div>
@@ -552,7 +560,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0

@@ -167,5 +167,8 @@ As the QGIS project files on the *Central* device are shared with the remote dev
 
 Try deleting the QGIS project and files in the shared folder on your *Central* device and add a new QGIS project. See if this updates on your remote device *Tablet 1*. 
 
-
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>
+<footer>
+<p><hr></p>
+</footer>
 

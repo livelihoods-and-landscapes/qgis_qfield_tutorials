@@ -354,7 +354,7 @@ div.tocify {
   <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="about_qconut.html">About</a>
+  <a href="about.html">About</a>
 </li>
 <li>
   <a href="training_overview.html">Training Overview</a>
@@ -454,19 +454,19 @@ div.tocify {
 <p>Use the following screengrabs as guides.</p>
 <center>
 <div class="figure">
-<img src="img/create_integer_field.png" alt="Create integer field" width="640" />
+<img src="img/create_integer_field.png" width="640" alt="" />
 <p class="caption">Create integer field</p>
 </div>
 </center>
 <center>
 <div class="figure">
-<img src="img/create_real_field.png" alt="Create real field" width="640" />
+<img src="img/create_real_field.png" width="640" alt="" />
 <p class="caption">Create real field</p>
 </div>
 </center>
 <center>
 <div class="figure">
-<img src="img/create_uniqueid_field.png" alt="Create unique ID field" width="640" />
+<img src="img/create_uniqueid_field.png" width="640" alt="" />
 <p class="caption">Create unique ID field</p>
 </div>
 </center>
@@ -478,14 +478,14 @@ div.tocify {
 <p>Now you have created your fields you need to create the attribute form. This process is outlined in the <em>Simple Form Creation</em> section of <em>Lesson 1</em>. Open the <em>complex_form</em> layer <em>Properties</em> and open up the <em>Attribute Form</em> widget.</p>
 <center>
 <div class="figure">
-<img src="img/attributes_form_complex_form.png" alt="Attributes Form widget" width="640" />
+<img src="img/attributes_form_complex_form.png" width="640" alt="" />
 <p class="caption">Attributes Form widget</p>
 </div>
 </center>
 <p>Next, set up the attribute form with a <em>Drag and drop designer</em>. The under <em>Available Widgets</em> select <em>crop_cover_pct</em> so it is highlighted grey. Give this field the alias <em>% crop cover in field?</em>. When you enter data into the field in the form you will be inputting the percentage of a field covered by crops. A field cannot have more than 100 % crop coverage; therefore, you need to set a constraint to prevent a data collector accidentally entering a value more than 100. To do this go to <em>Constraints</em> then enter the expression <code>crop_cover_pct&lt;=100</code> and give an <em>Expression description</em>: <em>crop cover cannot be more than 100 %</em> and check the checkbox <em>Enforce expression constraint</em>. By checking this checkbox you will not be able to enter data into this field unless the constraint expression is true. Here, you are preventing the form from being completed unless a number less than 100 is entered. If you try and enter a number greater than 100 the <em>Expression description</em> will appear.</p>
 <center>
 <div class="figure">
-<img src="img/expression_constraint.png" alt="Set expression constraint" width="640" />
+<img src="img/expression_constraint.png" width="640" alt="" />
 <p class="caption">Set expression constraint</p>
 </div>
 </center>
@@ -497,7 +497,7 @@ div.tocify {
 <p>To set up your form to compute the area select the <em>field_area</em> field in <em>Available Widgets</em> then give the field an alias <em>area of field?</em> and uncheck the <em>Editable</em> checkbox. Next, go to <em>Defaults</em> and enter <code>$area</code>. When you digitize a polygon in QField the value returned from executing the <code>$area</code> function will be assigned to <em>field_area</em>.</p>
 <center>
 <div class="figure">
-<img src="img/default_function_area.png" alt="Set default to return result of area function" width="640" />
+<img src="img/default_function_area.png" width="640" alt="" />
 <p class="caption">Set default to return result of area function</p>
 </div>
 </center>
@@ -510,26 +510,26 @@ div.tocify {
 <p>To set up a one-to-many relation in QGIS you need to create a second table to relate to the attribute table of <em>complex_form</em>. To do this create a new GeoPackage layer; however, this time select the <em>Database</em> as <em>complex_form.gpkg</em> and choose the <em>Geometry type</em> as <em>No geometry</em> and the <em>Table name</em> as <em>many_records</em>. Select <em>Add New Layer</em> when the warning box appears.</p>
 <center>
 <div class="figure">
-<img src="img/no_geometry_table.png" alt="Create table with no geometry in complex_form.gpkg" width="640" />
+<img src="img/no_geometry_table.png" width="640" alt="" />
 <p class="caption">Create table with no geometry in complex_form.gpkg</p>
 </div>
 </center>
 <p>Having created your table <em>many_records</em> you need to add fields to it. To do this open the layer properties and then go to the <em>Source Fields</em> tab. Add the following fields to the table.</p>
 <center>
 <div class="figure">
-<img src="img/create_crop_type_field.png" alt="Add crop_type field" width="640" />
+<img src="img/create_crop_type_field.png" width="640" alt="" />
 <p class="caption">Add crop_type field</p>
 </div>
 </center>
 <center>
 <div class="figure">
-<img src="img/create_fertiliser_field.png" alt="Add fertiliser field" width="640" />
+<img src="img/create_fertiliser_field.png" width="640" alt="" />
 <p class="caption">Add fertiliser field</p>
 </div>
 </center>
 <center>
 <div class="figure">
-<img src="img/create_foreign_key.png" alt="Add foreign key field" width="640" />
+<img src="img/create_foreign_key.png" width="640" alt="" />
 <p class="caption">Add foreign key field</p>
 </div>
 </center>
@@ -538,14 +538,14 @@ div.tocify {
 <p>Having created a foreign key and other fields in your <em>many_records</em> table you need to add the relation to the <em>complex_form</em> table. To do this go to the <em>Project</em> menu then <em>Properties</em>. In <em>Project Properties</em> select the <em>Relations</em> tab on the left-hand toolbar.</p>
 <center>
 <div class="figure">
-<img src="img/project_properties.png" alt="Project properties" width="640" />
+<img src="img/project_properties.png" width="640" alt="" />
 <p class="caption">Project properties</p>
 </div>
 </center>
 <p>Next, you need to add the relation between the <em>complex_form</em> table and the <em>many_records</em> table. Click on <em>Add Relation</em> and fill in the form as in the image below. You can find more instructions for filling out the <em>Add Relation</em> form <a href="https://docs.qgis.org/3.4/en/docs/user_manual/working_with_vector/attribute_table.html#defining-1-n-relations-relation-manager">here</a> and defining one-to-many relationships.</p>
 <center>
 <div class="figure">
-<img src="img/add_relation.png" alt="Add relation" width="640" />
+<img src="img/add_relation.png" width="640" alt="" />
 <p class="caption">Add relation</p>
 </div>
 </center>
@@ -553,28 +553,28 @@ div.tocify {
 <p>Finally, you need to set up the form to enter data into <em>many_records</em>. Go to the <em>Properties</em> then <em>Attribute Form</em> of <em>many_records</em>. First, setup the foreign key <em>fk_field</em> asa <em>Relation Reference</em> widget. Make sure you uncheck the <em>Editable</em> checkbox.</p>
 <center>
 <div class="figure">
-<img src="img/fk_field_relation_reference.png" alt="Foreign key as Relation Reference" width="640" />
+<img src="img/fk_field_relation_reference.png" width="640" alt="" />
 <p class="caption">Foreign key as Relation Reference</p>
 </div>
 </center>
 <p>Next, setup the <em>crop_type</em> field as a <em>Value Map</em> widget where you can select a crop from a drop-down list and give it the alias <em>crop type&gt;</em>.</p>
 <center>
 <div class="figure">
-<img src="img/crop_type_value_map.png" alt="Crop type value map" width="640" />
+<img src="img/crop_type_value_map.png" width="640" alt="" />
 <p class="caption">Crop type value map</p>
 </div>
 </center>
 <p>Finally, setup the <em>fertiliser</em> field with a <em>Checkbox</em> widget.</p>
 <center>
 <div class="figure">
-<img src="img/fertiliser_checkbox.png" alt="Checkbox widget setup" width="640" />
+<img src="img/fertiliser_checkbox.png" width="640" alt="" />
 <p class="caption">Checkbox widget setup</p>
 </div>
 </center>
 <p>The final step in setting up a one-to-many data collection form is to add the relation to the attribute form for <em>complex_form</em>. Go to the layer properties and <em>Attribute Form</em> tab for <em>complex_form</em>. First, you need to uncheck the <em>Editable</em> checkbox for the <em>unique_id</em> field and in <em>Default</em> enter <code>uuid()</code>. Then drag the relation named <em>one_to_many</em> from <em>Relations</em> under <em>Available Widgets</em> to the <em>Form Layout</em> as in the below image.</p>
 <center>
 <div class="figure">
-<img src="img/one_to_many_form.png" alt="Add relation to attribute form" width="640" />
+<img src="img/one_to_many_form.png" width="640" alt="" />
 <p class="caption">Add relation to attribute form</p>
 </div>
 </center>
@@ -591,6 +591,14 @@ div.tocify {
 <source src="video/constraint_one_to_many.mp4" type="video/mp4">
 </video>
 </center>
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;">
+
+</div>
+<footer>
+<p>
+<hr>
+</p>
+</footer>
 </div>
 </div>
 
@@ -644,7 +652,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0

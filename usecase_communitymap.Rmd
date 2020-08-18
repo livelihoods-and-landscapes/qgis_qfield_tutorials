@@ -20,7 +20,7 @@ The latest version of QField must be installed on your Android device. You can i
 
 ### Community Map Form
 
-You will need the community map form loaded onto your mobile device. The community map form is a QGIS project and associated database where spatial and attribute data is recorded **(community-map-form_qfield.qgs)**. The QGIS project can be downloaded [here](https://github.com/livelihoods-and-landscapes/QConut-community-map/raw/master/community-map-blank-form.zip). 
+You will need the community map form loaded onto your mobile device. The community map form is a QGIS project and associated database where spatial and attribute data is recorded **(community-map-form_qfield.qgs)**. The QGIS project can be downloaded [here](https://github.com/livelihoods-and-landscapes/spatial-livelihoods-map/raw/master/community-map-blank-form.zip). 
 
 ## Data Collection
 
@@ -85,3 +85,7 @@ To complete the feature press the black tick ![](img/black_tick.jpg){width=7%}.
 <p><a href="https://player.vimeo.com/video/420206139">Complete the landscape feature form</a>.</p>
 </center>
 
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>
+<footer>
+<p><hr></p>
+</footer>

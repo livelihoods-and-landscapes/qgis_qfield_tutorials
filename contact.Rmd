@@ -37,3 +37,8 @@ UWA School of Agriculture and Environment
 University of Western Australia
 <p><a href="mailto:john.duncan@uwa.edu.au">Email John</a></p>
 </div>
+
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>
+<footer>
+<p><hr></p>
+</footer>

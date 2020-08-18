@@ -204,3 +204,8 @@ Open up *complex_form.qgs* in QField. Check out the constraint set on the *crop_
 </video>
 
 </center>
+
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>
+<footer>
+<p><hr></p>
+</footer>

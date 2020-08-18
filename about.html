@@ -11,7 +11,7 @@
 
 
 
-<title>Training Overview</title>
+<title>About</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -418,55 +418,73 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Training Overview</h1>
+<h1 class="title toc-ignore">About</h1>
 
 </div>
 
 
-<div id="tutorials" class="section level2">
-<h2>Tutorials</h2>
-<p>These tutorials utilise existing open-source GIS software QGIS and QField to instruct on a workflow for collecting and managing geospatial data in the field.</p>
-<p><em>The project team would like to acknowledge the developers of the open source software QGIS and <a href="https://qfield.org">QField</a>.</em></p>
-<p>This training will cover the following:</p>
-<div id="lesson-1" class="section level3">
-<h3><a href="lesson_1.html">Lesson 1</a></h3>
-<ol style="list-style-type: decimal">
-<li>QGIS and QField setup</li>
-<li>Project creation and form generation</li>
-</ol>
-</div>
-<div id="lesson-2" class="section level3">
-<h3><a href="lesson_2.html">Lesson 2</a></h3>
-<ol start="3" style="list-style-type: decimal">
-<li>Opening projects in QField</li>
-<li>Data collection using QField</li>
-<li>Syncing data from mobile devices</li>
-</ol>
-</div>
-<div id="lesson-3" class="section level3">
-<h3><a href="lesson_3.html">Lesson 3</a></h3>
-<ol start="6" style="list-style-type: decimal">
-<li>Generating complex data collection forms</li>
-</ol>
-</div>
-<div id="lesson-4" class="section level3">
-<h3><a href="lesson_4.html">Lesson 4</a></h3>
-<ol start="7" style="list-style-type: decimal">
-<li>Managing QGIS data collection projects on remote devices</li>
-<li>Syncing data collected on multiple devices with a central dataset</li>
-</ol>
+<!-- <font size="6">* A Tool Supporting Climate-smart Landscapes for Promoting Sustainability of Pacific Island Agricultural Systems*</font> -->
+<hr>
+<p>We are collaboratively developing a geospatial platform for <strong>collecting</strong>, <strong>integrating</strong>, <strong>analysing</strong>, and <strong>visualising</strong> geospatial data.</p>
+<p>Landscapes comprise diverse ecosystems that support livelihoods and are affected by climatic shocks. When faced with a changing climate, informed, effective, and inclusive management of landscape resources requires integration and synthesis of geospatial data. A geospatial tool is being developed for this task.</p>
+<p>The geospatial tool is being iteratively developed using an <strong>ICT4D</strong> software development framework (Bon et al., 2016). A diverse collaboration between farmers, fishers, foresters, government officials, and research scientists in Fiji, Tonga, and Australia have contributed to this development process.</p>
+<p>The geospatial tool development has been funded by the Australian Centre for International Agricultural Research (ACIAR) as part of the project <strong>Climate-Smart Landscapes for Promoting Sustainability of Pacific Island Agricultural System (ASEM/2016/101)</strong>.</p>
+<hr>
+<div id="ict4d-framework" class="section level3">
+<h3>ICT4D Framework</h3>
+<p>We chose the ICT4D framework to provide a structured approach for developing the geospatial tool. ICT4D emphasises the need for a collaborative, adaptive, and iterative approach that hopes to address some of the common socio-technical issues that can arise in low-resource contexts (Bon et al., 2016). The importance of iterative stakeholder engagement in all stages of the framework is a central concept; ensuring the geospatial tool is aligned with local needs and contexts, explicitly addressing issues of sustainability of the geospatial tool after project completion and increasing the likelihood that the geospatial tool will have positive impacts for stakeholders. The ICT4D framework is made up of five stages (see image below) but the framework allows for these stages to be blended and addressed in an iterative, non-linear fashion.</p>
+<center>
+<img src="img/ict4d.png" title="fig:" style="width:80.0%" alt="ICT4D approach adapted from Bon et al. (2016)" />
+</center>
 <p><br></p>
+<hr>
 </div>
+<div id="mobile-gis" class="section level3">
+<h3>Mobile GIS</h3>
+<p><strong>QField</strong> mobile GIS was chosen to collect local-level, geospatial data and associated attributes (including photos) in the field using Android mobile devices. QField allows us to:</p>
+<ul>
+<li>Visualise spatial data using an interactive map interface</li>
+<li>Digitise and map landscape features</li>
+<li>Enter attribute information about landscape features</li>
+</ul>
+<p>Visit our <a href="https://livelihoods-and-landscapes.github.io/qgis_qfield_tutorials/index.html" target="_blank">Training</a> website which provides instructions on using QField and QGIS for creating mobile GIS data collection projects. For further information about the tools used in this project, visit the developer’s websites for <a href="https://qfield.org" target="_blank">QField</a> and <a href="https://qgis.org" target="_blank">QGIS</a>.</p>
+<hr>
 </div>
-<div id="use-cases" class="section level2">
-<h2>Use Cases</h2>
-<div id="ground-truth-data-collection" class="section level3">
-<h3><a href="usecase_groundtruth.html">Ground truth data collection</a></h3>
-<p>Use QField to collect ground truth points for validating land cover maps generated from satellite images.</p>
+<div id="data-syncing-and-management" class="section level3">
+<h3>Data Syncing and Management</h3>
+<p>We chose <strong>Syncthing</strong> to sync data collected on mobile devices with a central database and update data collection forms on mobile devices. Syncthing provides secure data transfer, conflict resolution, backup and versioning options. We built the geospatial GUI application using <strong>Shiny</strong> and interactive <strong>DataTables</strong> to:</p>
+<ul>
+<li>view data tables generated through completing forms using mobile GIS</li>
+<li>merge multiple data tables on mobile devices</li>
+<li>dynamic and interactive data table interface to quality assess data collected using mobile GIS</li>
+<li>table builder functionality to generate summary tables from data collected using mobile GIS</li>
+<li>download tables in .csv format</li>
+<li>insert curated and quality assessed tables into a central database</li>
+</ul>
+<p>To find out more about these geospatial tool components, visit the developer’s websites for <a href="https://syncthing.net" target="_blank">Syncthing</a>, <a href="https://shiny.rstudio.com" target="_blank">Shiny</a>, and <a href="https://datatables.net" target="_blank">DataTables</a>.</p>
+<hr>
 </div>
-<div id="community-mapping" class="section level3">
-<h3><a href="usecase_communitymap.html">Community mapping</a></h3>
-<p>Use QField to map landscape features used to support livelihoods.</p>
+<div id="spatial-database" class="section level3">
+<h3>Spatial Database</h3>
+<p>A core requirement for the geospatial tool was the ability to reliably and securely, store, retrieve, analyse and share spatial and non-spatial data collected in the field, as well as provide a centralised store for reference and landscape-monitoring geospatial layers. We chose two solutions in order to provide the ability to scale from small, self-contained projects to larger, multiple landscape sector projects. We use <strong>Geopackage</strong> for small, contained, and quick-to-set up projects for minimal database management. For larger projects with big data and multiple landscape sectors, we use a <strong>PostGIS</strong> enabled <strong>PostgreSQL</strong> relational database. To find out more about these geospatial tool components, visit the developer’s websites for <a href="http://www.geopackage.org" target="_blank">GeoPackage</a> and <a href="https://postgis.net" target="_blank">PostGIS</a>.</p>
+<hr>
+</div>
+<div id="data-visualisation" class="section level3">
+<h3>Data Visualisation</h3>
+<p>The geospatial tool provides the ability to query, visualise, and summarise geospatial data from multiple landscape sectors using dynamic data tables, charts, and web maps in an interactive dashboard GUI application. We chose <strong>Leaflet</strong>, <strong>DataTables</strong>, <strong>Shiny</strong>, <strong>plotly</strong> and <strong>gpplot</strong> to provide these capabilities to our project stakeholders. To find out more about these geospatial tool components, visit the developer’s websites for <a href="https://leafletjs.com" target="_blank">Leaflet</a>, <a href="https://datatables.net" target="_blank">DataTables</a>, <a href="https://shiny.rstudio.com" target="_blank">Shiny</a>, <a href="https://github.com/plotly/plotly.js/blob/master/README.md" target="_blank">plotly</a>, and <a href="https://ggplot2.tidyverse.org" target="_blank">ggplot</a>.</p>
+<hr>
+</div>
+<div id="landscape-monitoring" class="section level3">
+<h3>Landscape Monitoring</h3>
+<p>An important component of the geospatial tool is to provide landscape monitoring capability, as well as build in-country capacity for undertaking landscape monitoring activities. To that end, we have chosen Google’s cloud-based <strong>Earth Engine</strong> platform for accessing, analysing and publishing dynamic landscape monitoring products. These products have primarily focussed on land-cover and land-use, and disaster impacts on agricultural areas. To find out more about the platform used, visit the websites for <a href="https://earthengine.google.com" target="_blank">Earth Engine</a>.</p>
+<!-- Use novel machine learning algorithms, satellite images, and cloud computing to monitor inter-annual land cover change. -->
+<!-- Machine learning algorithms used to generate annual land cover maps covering an entire landscape at a 10 m spatial resolution. -->
+<!-- Freely-available [Sentinel-2](https://sentinel.esa.int/web/sentinel/missions/sentinel-2) remote sensing data is used as input data to machine learning models. -->
+<hr>
+</div>
+<div id="extend-and-adapt" class="section level3">
+<h3>Extend and Adapt</h3>
+<p>Where possible the geospatial tool has used existing software and applications to provide desired functionality. In cases where off-the-shelf software does not exist or does not meet requirements new applications have been developed. All geospatial tool components are built using open-source software and open data standards so our project stakeholders can extend, adapt, and improve it. We have also emphasised the importance of not locking-in our collaborators with expensive closed software systems, ensuring the long-term sustainability of the geospatial tool.</p>
 <div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;">
 
 </div>
@@ -475,7 +493,6 @@ div.tocify {
 <hr>
 </p>
 </footer>
-</div>
 </div>
 
 

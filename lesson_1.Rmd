@@ -339,3 +339,8 @@ You have almost completed creating a QGIS project, dataset, and attribute form t
 </center>
 
 You are now ready to package your project for QField and begin collecting data in the field. 
+
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>
+<footer>
+<p><hr></p>
+</footer>
