@@ -1,6 +1,6 @@
 ---
 title: ""
-pagetitle: "QConut"
+pagetitle: "Home"
 output: 
   html_document:
     theme: flatly
