@@ -10,11 +10,10 @@ output:
 
 <hr>
 <div style="text-align:center;">Welcome!</div>
-<div style="text-align:center;">Learn to use QField for mapping farms and completing crop surveys.</div>
+<div style="text-align:center;">Use QField for mapping farms and completing crop surveys.</div>
 <br>
 
-<div class="cont-video"><iframe data-autoplay height="90%" src="https://player.vimeo.com/video/427286693" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
-<div style="text-align:center;"><a href="https://vimeo.com/427286693">Crop survey prototype</a></div>
+<div class="cont-video"><iframe data-autoplay src="https://player.vimeo.com/video/427286693" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
 
 ## QField
 
@@ -23,18 +22,36 @@ output:
 
 <img src="img_tonga_crop_survey/qfield-concept.png" style="float: right">
 <ul>
-  <li><a href="https://qfield.org/docs/index.html#" target="_blank">QField</a> is an open source mobile GIS.</li> 
-  <li>QField is based on <a href="https://qgis.org/en/site/" target="_blank">QGIS</a>.</li> 
-  <li>Map landscape features.</li> 
-  <li>Collect attribute information about features you map.</li> 
-  <li>Maps and forms.</li>
+  <li><a href="https://qfield.org/docs/index.html#" target="_blank">QField</a> is an open source mobile GIS</li> 
+  <li>QField is based on <a href="https://qgis.org/en/site/" target="_blank">QGIS</a></li> 
+  <li>Map landscape features</li> 
+  <li>Collect attribute information</li> 
+  <li>Maps and forms</li>
 </ul> 
+
+## QField and Crop Surveys
+
+<hr>
+<br>
+
+<div style="text-align: center">Fast data capture, more information, better decisions!</div>
+<br>
+
+<img src="img_tonga_crop_survey/qfield-concept-2.png">
+
+## QField in Action - Fiji and Tonga
+
+<hr>
+<br>
+
+<img class="r-stretch" src="img_tonga_crop_survey/qfield-in-action.png">
 
 
 ## Training Objectives
 
 <hr>
 <br>
+<img src="img_tonga_crop_survey/screenshot-tongatapu-qfield-ui.jpg" style="float: right">
 
 <ul>
   <li>Open QField on a mobile device </li>
@@ -69,10 +86,6 @@ output:
   <li><a href="https://docs.google.com/document/d/e/2PACX-1vSuVSTnQWwlGESH7tvRpMsSR2I8hOqCDkSsm5lr8ZNBdmZCIL4SlYw3cJMAF0jSUjLsoVJuS2lk4P0Q/pub" target="_blank">Details and logistics</a> </li>
 </ul>
 
-## QField in Action - Fiji and Tonga
-
-
-
 ## Data Management
 
 <hr>
@@ -80,9 +93,18 @@ output:
 
 <b>Data Owners:</b> Ministry of Agriculture, Food, Forests, and Fisheries (MAFF). 
 
-<b>Data Access:</b> MAFF staff. Do not share data with people from other organisations except with written permission of MAFF CEO. 
+<b>Data Access:</b> Restricted to MAFF staff. Do not share data with people from other organisations except with written permission of MAFF CEO. Raw data cannot be modified.
 
-<b>Data License:</b> Aligned with SPC Pacific Data Hub licensed data. 
+<a href="https://docs.google.com/document/d/e/2PACX-1vSjjfWT2VXZUAenWQFlpSOSK2JkWhJzeW-mPh5Hd7MAYMPHO0RcmsojylDs4B-tX-4lwcUGD5lUANNa/pub" target="_blank">More information here.</a>
+
+<b>Your Responsibilities:</b>
+
+<ul>
+  <li>Delete data from mobile devices once it has been submitted and you have been instructed to </li>
+  <li>Do not disclose data to any third parties without relevant permissions </li>
+  <li>Do not alter data except to correct data entry errors prior to submission </li>
+</ul>
+
 
 ## Data Management
 
@@ -90,9 +112,9 @@ output:
 <br>
 
 <ol>
-  <li>Download QGS project from <a href="www.tonga-crop-survey.com" target="_blank">www.tonga-crop-survey.com</a> to your mobile device</li>
+  <li>Download QGS project from <a href="https://tonga-crop-survey.com" target="_blank">www.tonga-crop-survey.com</a> to your mobile device</li>
   <li>Open QGS project in QField and collect data.</li>
-  <li><b>Every day</b> submit completed forms to <a href="www.tonga-crop-survey.com" target="_blank">www.tonga-crop-survey.com</a></li>
+  <li><b>Every day</b> submit completed forms to <a href="https://tonga-crop-survey.com" target="_blank">www.tonga-crop-survey.com</a></li>
   <li>At the end of fieldwork delete QGS projects on your mobile device</li>
 </ol>
 
@@ -104,12 +126,10 @@ output:
 <hr>
 <br>
 
-Please provide any feedback on your experience using QField for crop surveys. 
+<div style="text-align:center;">Please provide any feedback on your experience using QField for crop surveys.<div> 
 
-We can use it to improve the tool. 
+<div style="text-align:center;">We can use it to improve the tool.<div> 
 
-<br>
-<br>
 <br>
 
 <em>
@@ -123,7 +143,7 @@ We can use it to improve the tool.
 <hr>
 
 <p>
-Download a training project from <a href="www.tonga-crop-survey.com" target="_blank">www.tonga-crop-survey.com</a>
+Download a training project from <a href="https://tonga-crop-survey.com" target="_blank">www.tonga-crop-survey.com</a>
 </p>
 
 <img class="r-stretch" src="img_tonga_crop_survey/download_training_project_guide.jpg">
@@ -134,7 +154,7 @@ Download a training project from <a href="www.tonga-crop-survey.com" target="_bl
 <br>
 
 <div class="cont-video">
-<iframe class="r-stretch" src="https://player.vimeo.com/video/460490513" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<iframe data-autoplay class="r-stretch" src="https://player.vimeo.com/video/460490513" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 </div>
 
 ## Download Training Project
@@ -146,7 +166,7 @@ Unzip the training QGS project. Select <b>crop-survey-forms.zip</b> &rarr; unzip
 </p>
 
 <div class="cont-video">
-<iframe class="r-stretch" src="https://player.vimeo.com/video/460500687" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<iframe data-autoplay class="r-stretch" src="https://player.vimeo.com/video/460500687" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 </div>
 
 ## Open QField
@@ -196,7 +216,16 @@ Download <a href="https://qfield.org/docs/index.html#" target="_blank">QField</a
 
 <img src="img_tonga_crop_survey/complete-form.png">
 
-## Continue Mapping
+## Map a Feature and Complete Form
+
+<hr>
+<br>
+
+<div class="cont-video">
+<iframe data-autoplay class="r-stretch" src="https://player.vimeo.com/video/460842680" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</div>
+
+## Continue Mapping and Useful Tips
 
 <hr>
 <br>
@@ -210,8 +239,31 @@ Download <a href="https://qfield.org/docs/index.html#" target="_blank">QField</a
 
 <img src="img_tonga_crop_survey/submit-form.png">
 
+## Edit Features
+
+<hr>
+<br>
+
+<div class="cont-video">
+<iframe data-autoplay class="r-stretch" src="https://player.vimeo.com/video/460837789" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</div>
+
 ## Test in the Field
 
 <hr>
 <br>
+
+<ul>
+  <li>Test outside - walk around a feature to map it </li>
+  <li>Remember to check the crosshairs to so the map follows your GPS location </li>
+  <li>Submit your data at <a href="https://tonga-crop-survey.com" target="_blank">www.tonga-crop-survey.com</a>
+</ul>
+
+Useful Links:
+
+<ul>
+  <li><a href="https://qfield.org/docs/index.html" target="_blank">QField Documentation</a> </li>
+  <li><a href="https://livelihoods-and-landscapes.github.io/qgis_qfield_tutorials/training_overview.html" target="_blank">Livelihoods and Landscapes - QField and QGIS training</a></li>
+</ul>
+
 
