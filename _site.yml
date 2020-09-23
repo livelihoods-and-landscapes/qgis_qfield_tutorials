@@ -4,8 +4,6 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "About"
-      href: about.html
     - text: "Training Overview"
       href: training_overview.html
     - text: "Tutorials"
