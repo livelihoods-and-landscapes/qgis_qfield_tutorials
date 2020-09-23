@@ -1,0 +1,217 @@
+---
+title: "Tonga Crop Survey - Training" 
+output: 
+  revealjs::revealjs_presentation:
+    css: reveal_style.css
+    
+---
+
+## Overview
+
+<hr>
+<div style="text-align:center;">Welcome!</div>
+<div style="text-align:center;">Learn to use QField for mapping farms and completing crop surveys.</div>
+<br>
+
+<div class="cont-video"><iframe data-autoplay height="90%" src="https://player.vimeo.com/video/427286693" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+<div style="text-align:center;"><a href="https://vimeo.com/427286693">Crop survey prototype</a></div>
+
+## QField
+
+<hr>
+<br>
+
+<img src="img_tonga_crop_survey/qfield-concept.png" style="float: right">
+<ul>
+  <li><a href="https://qfield.org/docs/index.html#" target="_blank">QField</a> is an open source mobile GIS.</li> 
+  <li>QField is based on <a href="https://qgis.org/en/site/" target="_blank">QGIS</a>.</li> 
+  <li>Map landscape features.</li> 
+  <li>Collect attribute information about features you map.</li> 
+  <li>Maps and forms.</li>
+</ul> 
+
+
+## Training Objectives
+
+<hr>
+<br>
+
+<ul>
+  <li>Open QField on a mobile device </li>
+  <li>Open a QGS project in QField </li>
+  <li>Map a landscape feature using QField </li>
+  <li>Complete a form </li>
+  <li>Submit a completed a form </li>
+</ul>
+
+## Schedule - Next Two Weeks
+
+<hr>
+<br>
+
+<ul>
+  <li>25th September - Introduction to QField </li> 
+  <li>28th September - Introduction to crop survey form </li>
+  <li>29th September - 12th October - Crop survey fieldwork </li>
+  <li><a href="https://docs.google.com/document/d/e/2PACX-1vSuVSTnQWwlGESH7tvRpMsSR2I8hOqCDkSsm5lr8ZNBdmZCIL4SlYw3cJMAF0jSUjLsoVJuS2lk4P0Q/pub" target="_blank">Details and logistics</a> </li>
+</ul>
+
+## Schedule - Today
+
+<hr>
+<br>
+
+<ul>
+  <li>13:30 - 14:00 - Introductions </li> 
+  <li>14:00 - 15:00 - Classroom activity - Complete a form using QField </li>
+  <li>15:15 - 16:00 - Practical activity - Map a feature outside </li>
+  <li>16:10 - Feedback and plans for Monday </li>
+  <li><a href="https://docs.google.com/document/d/e/2PACX-1vSuVSTnQWwlGESH7tvRpMsSR2I8hOqCDkSsm5lr8ZNBdmZCIL4SlYw3cJMAF0jSUjLsoVJuS2lk4P0Q/pub" target="_blank">Details and logistics</a> </li>
+</ul>
+
+## QField in Action - Fiji and Tonga
+
+
+
+## Data Management
+
+<hr>
+<br>
+
+<b>Data Owners:</b> Ministry of Agriculture, Food, Forests, and Fisheries (MAFF). 
+
+<b>Data Access:</b> MAFF staff. Do not share data with people from other organisations except with written permission of MAFF CEO. 
+
+<b>Data License:</b> Aligned with SPC Pacific Data Hub licensed data. 
+
+## Data Management
+
+<hr>
+<br>
+
+<ol>
+  <li>Download QGS project from <a href="www.tonga-crop-survey.com" target="_blank">www.tonga-crop-survey.com</a> to your mobile device</li>
+  <li>Open QGS project in QField and collect data.</li>
+  <li><b>Every day</b> submit completed forms to <a href="www.tonga-crop-survey.com" target="_blank">www.tonga-crop-survey.com</a></li>
+  <li>At the end of fieldwork delete QGS projects on your mobile device</li>
+</ol>
+
+<br>
+
+
+## Feedback
+
+<hr>
+<br>
+
+Please provide any feedback on your experience using QField for crop surveys. 
+
+We can use it to improve the tool. 
+
+<br>
+<br>
+<br>
+
+<em>
+<div style="text-align:center;">UWA ethics: Any comments you provide will be recorded anonymously and will not be disclosed outside the development team (<a href="https://livelihoods-and-landscapes.github.io/info-sheet/" target="_blank">more here - information sheet</a>).
+<div>
+</em>
+
+
+## Download Training Project
+
+<hr>
+
+<p>
+Download a training project from <a href="www.tonga-crop-survey.com" target="_blank">www.tonga-crop-survey.com</a>
+</p>
+
+<img class="r-stretch" src="img_tonga_crop_survey/download_training_project_guide.jpg">
+
+## Download Training Project
+
+<hr>
+<br>
+
+<div class="cont-video">
+<iframe class="r-stretch" src="https://player.vimeo.com/video/460490513" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</div>
+
+## Download Training Project
+
+<hr>
+
+<p>
+Unzip the training QGS project. Select <b>crop-survey-forms.zip</b> &rarr; unzip / extract to.
+</p>
+
+<div class="cont-video">
+<iframe class="r-stretch" src="https://player.vimeo.com/video/460500687" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</div>
+
+## Open QField
+
+<hr>
+
+Download <a href="https://qfield.org/docs/index.html#" target="_blank">QField</a> from the Google Play Store. Look for this icon to open the app:
+
+<br>
+
+<img class="r-stretch" src="img/qfield.png">
+
+
+## Open Training Project
+
+<hr>
+<br>
+
+<img src="img_tonga_crop_survey/open-project.png">
+
+## QField Interface
+
+<hr>
+<br>
+
+<img src="img_tonga_crop_survey/qfield-ui.png">
+
+
+## Digitize Mode
+
+<hr>
+<br>
+
+<img src="img_tonga_crop_survey/ready-to-map.png">
+
+## Map a Landscape Feature
+
+<hr>
+<br>
+
+<img src="img_tonga_crop_survey/digitize-save-feature.png">
+
+## Complete a Form
+
+<hr>
+<br>
+
+<img src="img_tonga_crop_survey/complete-form.png">
+
+## Continue Mapping
+
+<hr>
+<br>
+
+<img src="img_tonga_crop_survey/continue-mapping.png">
+
+## Submit Completed Form
+
+<hr>
+<br>
+
+<img src="img_tonga_crop_survey/submit-form.png">
+
+## Test in the Field
+
+<hr>
+<br>
+
