@@ -9,9 +9,9 @@ output:
 ## Overview
 
 <hr>
-<div style="text-align:center;">Welcome!</div>
 <div style="text-align:center;">Use QField for mapping farms and completing crop surveys.</div>
 <br>
+<em><div style="text-align:center;">Bookmark <a href="https://tonga-crop-survey.com" target="_blank">www.tonga-crop-survey.com</a> in Google Chrome!</div></em>
 
 <div class="cont-video"><iframe data-autoplay src="https://player.vimeo.com/video/427286693" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
 
@@ -100,9 +100,10 @@ output:
 <b>Your Responsibilities:</b>
 
 <ul>
-  <li>Delete data from mobile devices once it has been submitted and you have been instructed to </li>
-  <li>Do not disclose data to any third parties without relevant permissions </li>
-  <li>Do not alter data except to correct data entry errors prior to submission </li>
+  <small><li>Delete data from mobile devices once it has been submitted and you have been instructed to </li></small>
+  <small><li>Do not disclose data to any third parties without relevant permissions </li></small>
+  <small><li>Do not alter data except to correct data entry errors prior to submission </li></small>
+  <small><li>If you are using a MAFF / ACIAR project laptop ensure it is kept secure and NOT used for personal use - this is to keep data secure </li></small>
 </ul>
 
 
@@ -110,7 +111,8 @@ output:
 
 <hr>
 <br>
-
+<em><div style="text-align:center;">Bookmark <a href="https://tonga-crop-survey.com" target="_blank">www.tonga-crop-survey.com</a> in Google Chrome!</div></em>
+<br>
 <ol>
   <li>Download QGS project from <a href="https://tonga-crop-survey.com" target="_blank">www.tonga-crop-survey.com</a> to your mobile device</li>
   <li>Open QGS project in QField and collect data.</li>
