@@ -16,9 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Tutorials
 
-These tutorials utilise existing open-source GIS software QGIS and QField to instruct on a workflow for collecting and managing geospatial data in the field. 
-
-*The project team would like to acknowledge the developers of the open source software QGIS and [QField](https://qfield.org).*
+These tutorials instruct on a workflow for collecting and managing geospatial data in the field using open-source tools QGIS and QField. 
 
 This training will cover the following:
 
@@ -54,7 +52,19 @@ Use QField to collect ground truth points for validating land cover maps generat
 
 Use QField to map landscape features used to support livelihoods.
 
+### [Ground Truth - ERPD Pilot](usecase_erpdpilot.html)
+
+Second tutorial, using QField to collect ground truth points for validating land cover maps generated from satellite images.
+
+### [Tonga Crop Survey](tonga_crop_survey_1.html)
+
+Slide deck demonstrating how QField can be used for farm and crop surveys.
+
 <div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>
 <footer>
-<p><hr></p>
+<p>
+<hr>
+<div style="text-align: center;">
+*The ACIAR-Livelihoods and Landscapes team (tutorial creators) acknowledge the developers of the open source software QGIS and [QField](https://qfield.org).*</div>
+</p>
 </footer>

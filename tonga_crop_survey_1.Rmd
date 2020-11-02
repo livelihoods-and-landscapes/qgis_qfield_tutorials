@@ -2,6 +2,7 @@
 title: "Tonga Crop Survey - Training" 
 output: 
   revealjs::revealjs_presentation:
+    self_contained: true
     css: reveal_style.css
     
 ---

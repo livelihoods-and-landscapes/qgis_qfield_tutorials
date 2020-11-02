@@ -25,8 +25,19 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -372,9 +383,6 @@ div.tocify {
     <li>
       <a href="lesson_3.html">Lesson 3</a>
     </li>
-    <li>
-      <a href="lesson_4.html">Lesson 4</a>
-    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -428,8 +436,7 @@ div.tocify {
 
 <div id="tutorials" class="section level2">
 <h2>Tutorials</h2>
-<p>These tutorials utilise existing open-source GIS software QGIS and QField to instruct on a workflow for collecting and managing geospatial data in the field.</p>
-<p><em>The project team would like to acknowledge the developers of the open source software QGIS and <a href="https://qfield.org">QField</a>.</em></p>
+<p>These tutorials instruct on a workflow for collecting and managing geospatial data in the field using open-source tools QGIS and QField.</p>
 <p>This training will cover the following:</p>
 <div id="lesson-1" class="section level3">
 <h3><a href="lesson_1.html">Lesson 1</a></h3>
@@ -470,12 +477,23 @@ div.tocify {
 <div id="community-mapping" class="section level3">
 <h3><a href="usecase_communitymap.html">Community mapping</a></h3>
 <p>Use QField to map landscape features used to support livelihoods.</p>
+</div>
+<div id="ground-truth---erpd-pilot" class="section level3">
+<h3><a href="usecase_erpdpilot.html">Ground Truth - ERPD Pilot</a></h3>
+<p>Second tutorial, using QField to collect ground truth points for validating land cover maps generated from satellite images.</p>
+</div>
+<div id="tonga-crop-survey" class="section level3">
+<h3><a href="tonga_crop_survey_1.html">Tonga Crop Survey</a></h3>
+<p>Slide deck demonstrating how QField can be used for farm and crop surveys.</p>
 <div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;">
 
 </div>
 <footer>
 <p>
 <hr>
+<div style="text-align: center;">
+<em>The ACIAR-Livelihoods and Landscapes team (tutorial creators) acknowledge the developers of the open source software QGIS and <a href="https://qfield.org">QField</a>.</em>
+</div>
 </p>
 </footer>
 </div>
@@ -492,7 +510,7 @@ div.tocify {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();

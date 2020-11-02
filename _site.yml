@@ -14,8 +14,6 @@ navbar:
           href: lesson_2.html
         - text: "Lesson 3"
           href: lesson_3.html
-        - text: "Lesson 4"
-          href: lesson_4.html 
     - text: "Use Cases"
       menu:
         - text: "Use Case - Ground Truth"
