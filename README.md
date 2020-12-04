@@ -1,6 +1,6 @@
 # QGIS and QField Tutorials
 
-Code to generate online QGIS and [QField](https://qfield.org) tutorials which provide instructions on a workflow for mobile geospatial data collection and management. Please visit the tutorials [here](https://livelihoods-and-landscapes.github.io/qgis_qfield_tutorials/). The tutorials cover:
+Code to generate online QGIS and [QField](https://qfield.org) tutorials which provide instructions on a workflow for mobile geospatial data collection and management. Please visit the tutorials [here](https://livelihoods-and-landscapes.com/qgis_qfield_tutorials/). The tutorials cover:
 
 **1. Form Creation:** creating a data collection project and form using QGIS.
 
