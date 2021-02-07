@@ -18,6 +18,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 These tutorials instruct on a workflow for collecting and managing geospatial data in the field using open-source tools QGIS and QField. 
 
+Please visit the <a href="https://livelihoods-and-landscapes.com" target="_blank">Livelihoods and Landscapes</a> project site for more information about how these geospatial applications are being used for monitoring agricultural landscapes.
+
 This training will cover the following:
 
 ### [Lesson 1](lesson_1.html)
