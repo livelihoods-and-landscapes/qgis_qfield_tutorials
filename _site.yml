@@ -24,6 +24,10 @@ navbar:
           href: usecase_erpdpilot.html
         - text: "Tonga Crop Survey - Intro"
           href: tonga_crop_survey_1.html
+    - text: "map.landscape"
+      menu:
+        - text: "map.landscape overview"
+          href: maplandscape_overview.html  
   right:
     - icon: fa-github fa-lg
       href: https://github.com/livelihoods-and-landscapes

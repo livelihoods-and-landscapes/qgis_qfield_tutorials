@@ -11,7 +11,7 @@
 
 
 
-<title>Use Case - Community Mapping</title>
+<title>map.landscape overview</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -440,96 +440,145 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Use Case - Community Mapping</h1>
+<h1 class="title toc-ignore">map.landscape overview</h1>
 
 </div>
 
 
 <div id="overview" class="section level2">
 <h2>Overview</h2>
-<p>Different people use landscape resources (e.g. fields, fishing grounds, and mangroves) in different ways to support their livelihoods. Climate change and other pressures are affecting these landscape resources and, thus, people’s livelihoods. This webpage demonstrates how a mobile mapping application, QField, can be used to map different landscape resources, who is using these resources, and capture information about these resources (e.g. climatic challenges, seasons).</p>
-<p><em>The research team would like to acknowledge Semi Lotawa from Rise Beyond the Reef for his support and input in developing this use case</em>.</p>
+<p>A dashboard application to explore geospatial data using interactive tables, web maps, and charts.</p>
+<p>Use map.landscape was to quickly explore and sync data collected using <a href="https://qfield.org" target="_blank">QField</a> mobile GIS.</p>
+<ul>
+<li>Sync data collected using QField on different mobile devices.</li>
+<li>Upload spatial and non-spatial tabular data as GeoPackage or zip files.</li>
+<li>Explore data in interactive tables (using <a href="https://rstudio.github.io/DT/" target="_blank">DataTables</a>).</li>
+<li>Combine tabular data using spatial and non-spatial joins.</li>
+<li>Create summary tables.</li>
+<li>Create and style web maps (using <a href="https://rstudio.github.io/leaflet/" target="_blank">Leaflet</a>).</li>
+<li>Visualise data using different charts (using <a href="https://ggplot2.tidyverse.org" target="_blank">ggplot2</a>).</li>
+</ul>
 </div>
-<div id="prerequisites" class="section level2">
-<h2>Prerequisites</h2>
-<p>The latest version of QField must be installed on your Android device. You can install this from the Google Play Store.</p>
-<div id="community-map-form" class="section level3">
-<h3>Community Map Form</h3>
-<p>You will need the community map form loaded onto your mobile device. The community map form is a QGIS project and associated database where spatial and attribute data is recorded <strong>(community-map-form_qfield.qgs)</strong>. The QGIS project can be downloaded <a href="https://github.com/livelihoods-and-landscapes/spatial-livelihoods-map/raw/master/community-map-blank-form.zip">here</a>.</p>
+<div id="links" class="section level2">
+<h2>Links</h2>
+<p>map.landscape dashboard - <a href="https://livelihoods-landscape.shinyapps.io/maplandscape/" target="_blank">map.livelihoods-and-lanscapes.com</a>.</p>
+<p><a href="https://fiji-ag-dot-aciarlal1.ts.r.appspot.com/" target="_blank">Data and training home</a>.</p>
 </div>
-</div>
-<div id="data-collection" class="section level2">
-<h2>Data Collection</h2>
-<div id="opening-the-project" class="section level3">
-<h3>Opening the project</h3>
-<p>The following video shows how to open the community map project in QField. You can also find instructions for opening projects in the <a href="usecase_groundtruth.html">Use Case - Ground Truth</a> section.</p>
+<div id="quick-tour" class="section level2">
+<h2>Quick Tour</h2>
+<p>This tutorial is a demo map.landscape using fake data generated through the Fiji Government’s Ministry of Agriculture <em>farmer profile form</em>. This tutorial will introduce a workflow to explore data related to dalo production on subsistence, semi-subsistence, and commercial farms.</p>
+<p>Tabs in the navbar to move between the Data (table), Map, and Chart analysis pages.</p>
+<strong>Data</strong>: upload data and perform analysis on data tables. <strong>Map</strong>: visualise data on a web map. <strong>Chart</strong>: visualise data using histograms, bar plots, and scatter charts. <br>
 <center>
-<iframe src="https://player.vimeo.com/video/420206318" width="640" height="650" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
-</iframe>
-<p>
-<a href="https://player.vimeo.com/video/420206318">Open the community map form in QField</a>.
-</p>
+<img src="img_dashboard_mofag_fiji/navbar.png" style="width:75.0%" />
 </center>
-<p>To centre the map on your current GPS location, tap the blue GPS icon <img src="usecase_groundtruth_img/3a_gps_button.png" style="width:7.0%" /> in the bottom right-hand corner.</p>
-<p>QField can display GPS information dynamically on the screen. To turn this display on, tap and hold the blue GPS icon until you receive a menu. Tick on the <em>Show Position Information</em>.</p>
+<p><br></p>
 </div>
-<div id="browser-mode" class="section level3">
-<h3>Browser Mode</h3>
-<p>At the top of the layers panel <img src="img/menu.jpg" style="width:7.0%" /> are two icons: a map <img src="img/browse_mode.jpg" style="width:7.0%" /> and a pencil <img src="img/digitize_mode.jpg" style="width:7.0%" />. Selecting the map icon <img src="img/browse_mode.jpg" style="width:7.0%" /> means that you are in browse mode and you can visualise and query the geospatial layers loaded into your project.</p>
-</div>
-<div id="digitize-mode" class="section level3">
-<h3>Digitize Mode</h3>
-<p>If you select the pencil icon you now enter digitize mode <img src="img/digitize_mode.jpg" style="width:7.0%" />. In this mode you can digitize new features and fill in the attribute form and also edit features that you have already created. Note, to edit a layer you will need to make sure that layer is selected (it is highlighted grey).</p>
-</div>
-<div id="household-and-community-data" class="section level3">
-<h3>Household and Community Data</h3>
-<p>Once you have selected <strong>digitize mode</strong> you can mark a household’s location on the map. To do this make sure you are in digitize mode, the <strong>household</strong> layer is selected is highlighted grey, and then move the cross hairs over the location of a household and press the add feature button <img src="usecase_groundtruth_img/8a_add_button.png" style="width:7.0%" />.</p>
+<div id="upload-data" class="section level2">
+<h2>Upload Data</h2>
+<p>Download the data from here …</p>
+<p>Go to map.landscape dashboard.</p>
+<p>Follow these operations to load the move to the <em>farmer-profile-form.gpkg</em> data into the dashboard:</p>
+<ol style="list-style-type: decimal">
+<li>Select <em>Browse…</em> under <strong>Upload Data</strong>.</li>
+<li>Move to the directory where you downloaded the <em>farmer-profile-form</em> data.</li>
+<li>Select <em>farmer-profile-form.gpkg</em>.</li>
+</ol>
+The file should start loading into the dashboard. Once complete you should see a list of tables that are stored in the GeoPackage file under the <strong>Select active layer</strong> drop down list. <br>
 <center>
-<iframe src="https://player.vimeo.com/video/420205956" width="640" height="650" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
-</iframe>
-<p>
-<a href="https://player.vimeo.com/video/420205956">Mark a household’s location</a>.
-</p>
+<img src="img_dashboard_mofag_fiji/upload_data.png" style="width:50.0%" />
 </center>
-<p>Fill out the attribute form for the household and people living in the household. To complete the feature press the black tick <img src="img/black_tick.jpg" style="width:5.0%" />.</p>
+<p><br> Before doing any analysis of dalo cultivation, explore the data on the map interface.</p>
+<p>Click on the <strong>Map</strong> tab.</p>
+<p>Click the <strong>Map controls</strong> check box to bring up the options to style your web map. To quickly expore the data we’ll make a map of the fields surveyed using the <em>farmer profile form</em> and visualise the area of each field using a colour scale.</p>
+<p>Style your web map:</p>
+<ol style="list-style-type: decimal">
+<li>In the <strong>Select active layer</strong> drop down selector choose the layer *farmer-profile (farmer-profile-form)_1*.</li>
+<li>In the <strong>Select variable</strong> drop down selector choose <em>area</em>. This variable represents the area of the field in square metres.</li>
+<li>Choose a <strong>Fill colour palette</strong> such as <em>red-yellow-green</em> - with this colour palette fields with a smaller area will be visualised in red shades and fields with larger areas will be visualised in green shades.</li>
+<li>Click <strong>draw map</strong> and the fields should render on your web map. <br>
 <center>
-<iframe src="https://player.vimeo.com/video/420213794" width="640" height="650" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
-</iframe>
-<p>
-<a href="https://player.vimeo.com/video/420213794">Complete the household and people forms</a>.
-</p>
+<img src="img_dashboard_mofag_fiji/go_to_map.png" style="width:90.0%" />
 </center>
+<br></li>
+</ol>
 </div>
-<div id="landscape-feature-data" class="section level3">
-<h3>Landscape Feature Data</h3>
-<p>Once you have marked the household’s location and entered information about the people living there you can map the landscape resources they use to support their livelihoods. To map a landscape feature open the menu and select the <strong>landscape feature</strong> layer so it is highlighted grey. Then move to the map and use the add feature button <img src="usecase_groundtruth_img/8a_add_button.png" style="width:7.0%" /> to mark points that surround the feature. Once you have finished complete the feature by pressing the green tick button.</p>
-<p>Finally, you can enter information about how a person uses that landscape feature.</p>
-<div id="feature-overview" class="section level4">
-<h4>Feature Overview</h4>
-<p>Select a person from the drop down list - you can select from any of the people who you have assigned to households in the <strong>household</strong> layer. Then complete the entries for mataqali, characteristics of the feature, and any other notes.</p>
-</div>
-<div id="resources" class="section level4">
-<h4>Resources</h4>
-<p>Next, tick the appropriate checkbox corresponding to how a person uses the landscape feature. For example, if it is a field feature tick the checkbox for crops. This will then make the crop form visible. You can then bring up the crop form by pressing the black plus button <img src="img/black_add.jpg" style="width:7.0%" />.</p>
-<p>The video below shows an example of entering information for how people collect mud crabs from a mangrove feature.</p>
-<p>To complete the feature press the black tick <img src="img/black_tick.jpg" style="width:7.0%" />.</p>
+<div id="tables" class="section level2">
+<h2>Tables</h2>
+<div id="attach-crops-information-to-each-field" class="section level3">
+<h3>Attach crops information to each field</h3>
+<p>Click on the <strong>Data</strong> tab.</p>
+<p>Use the <strong>Select active layer</strong> selector to click on the <em>farmer-profile (farmer-profile-form)_1</em> and <em>crops (farmer-profile-form)_3</em> tables. Explore these tables in the interactive table interface.</p>
+<p>The <em>farmer-profile (farmer-profile-form)_1</em> is a spatial table which includes geographic information (shape and location) for each field surveyed (you just saw this on the web map). Each field is uniquely identified by a value in the column <em>farm_id</em>. There are other columns in this table which describe farm attributes such as <em>type_of_farmer</em> which tells us if this field is part of a subsistence, semi-subsistence, or commercial farm.</p>
+<p>The <em>crops (farmer-profile-form)_3</em> is a non-spatial table (like an Excel spreadsheet). Each column in this table stores a variable describing some attribute about crop cultivation. There is a column <em>crop_id</em>; the value in this column relates each crop observation to a field. This tells us which crops are grown in each field.</p>
+<p>We can use matches between the <em>farm_id</em> and the <em>crop_id</em> to attach the crops information to each field. This will allow us to make maps of dalo cultivation and summarise dalo cultivation across different types of farmer.</p>
+<p>Under <strong>Table Analysis</strong> and the <strong>Select analysis</strong> selector choose <strong>Combine Tables</strong>.</p>
+<p>Fill out the <strong>Combine Tables</strong> options:</p>
+<ul>
+<li><strong>Select left table in join</strong>: <em>farmer-profile (farmer-profile-form)_1</em></li>
+<li><strong>Select right table in join</strong>: <em>crops (farmer-profile-form)_3</em></li>
+<li><strong>Select primary key(s) - left table</strong>: <em>farm_id</em></li>
+<li><strong>Select foreign key(s) - right table</strong>: <em>crop_id</em></li>
+<li><strong>Join Type</strong>: <em>column - inner</em></li>
+<li><strong>Table name</strong>: give your table an informative name - (e.g. <em>crops_joined</em>)</li>
+<li>Click <strong>Join</strong></li>
+</ul>
+<br>
 <center>
-<iframe src="https://player.vimeo.com/video/420206139" width="640" height="650" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
-</iframe>
-<p>
-<a href="https://player.vimeo.com/video/420206139">Complete the landscape feature form</a>.
-</p>
+<img src="img_dashboard_mofag_fiji/combine_tables_options.png" style="width:35.0%" />
 </center>
-<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;">
-
+<p><br></p>
+<p>Click on the <strong>Select active layer</strong> selector and check that the table you just created by combining the <em>farmer-profile (farmer-profile-form)_1</em> and <em>crops (farmer-profile-form)_3</em> tables is listed.</p>
 </div>
-<footer>
-<p>
-<hr>
-</p>
-</footer>
+<div id="extract-dalo-cropping" class="section level3">
+<h3>Extract dalo cropping</h3>
+<p>Next, we need to create a table that contains only the information related to dalo cultivation. We can do this by filtering values in a table based on values in one or more columns.</p>
+<p>Under <strong>Table Analysis</strong> select <strong>Filter Rows</strong>.</p>
+<p>Select the table you just created by combining <em>farmer-profile (farmer-profile-form)_1</em> and <em>crops (farmer-profile-form)_3</em>.</p>
+<br>
+<center>
+<img src="img_dashboard_mofag_fiji/filter_rows_1.png" style="width:50.0%" />
+</center>
+<p><br></p>
+<p>Click <strong>Filter Options</strong> and a popup window will appear.</p>
+<p>In <strong>Conditions to filter rows</strong> add <code>crop == 'dalo'</code> and in <strong>Table name</strong> enter <em>dalo</em>.</p>
+<p>Click <strong>Filter</strong>.</p>
+<br>
+<center>
+<img src="img_dashboard_mofag_fiji/filter_rows_2.png" style="width:50.0%" />
+</center>
+<p><br></p>
+<p>Click on the <strong>Select active layer</strong> selector and check that the <em>dalo</em> table you just created is listed.</p>
+</div>
+<div id="calculate-area-of-dalo-cultivation" class="section level3">
+<h3>Calculate area of dalo cultivation</h3>
+<p>Next, we will calculate the area of each field under dalo cultivation. The <em>dalo</em> has an <em>area.x</em> column which records the area of the field (computed by the GIS on QField) and an <em>area.y</em> column which records the percentage of a field under dalo cultivation. We can combine values in these two columns to calculate the area of dalo in square metres in a new column.</p>
+<p>Under <strong>Table Analysis</strong> select <strong>Add Column</strong>.</p>
+<p>In the <strong>Select table to add new column</strong> selector choose the <em>dalo</em> table.</p>
+<p>Click <strong>Add Column Options</strong></p>
+<br>
+<center>
+<img src="img_dashboard_mofag_fiji/add_columns_1.png" style="width:50.0%" />
+</center>
+<p><br></p>
+<p>In the popup window, enter *the following into <em>dalo_area</e> into the <strong>New column name</strong> and <code>area.x * (area.y / 100)</code> into <strong>Function to add new column</strong>.</p>
+<p>Click <strong>Create column</strong>.</p>
+<br>
+<center>
+<img src="img_dashboard_mofag_fiji/add_columns_2.png" style="width:50.0%" />
+</center>
+<p><br></p>
+<p>Click on the <strong>Select active layer</strong> selector and check that the <em>dalo</em> table you just created is listed. Select the <em>dalo</em> table and scroll to the far right to see if a <em>dalo_area</em> column has been created.</p>
 </div>
 </div>
+<div id="charts" class="section level2">
+<h2>Charts</h2>
+</div>
+<div id="maps" class="section level2">
+<h2>Maps</h2>
+</div>
+<div id="summary-tables" class="section level2">
+<h2>Summary Tables</h2>
 </div>
 
 
