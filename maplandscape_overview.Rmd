@@ -30,15 +30,23 @@ Use map.landscape was to quickly explore and sync data collected using <a href="
 
 ## Overview
 
-This tutorial is a demo map.landscape using fake data generated through the Fiji Government's Ministry of Agriculture *farmer profile form*. This tutorial will introduce a workflow to explore data related to dalo production on subsistence, semi-subsistence, and commercial farms.  
+This tutorial is a demo of analysing data using the map.landscape dashboard.*Fake* test data generated using the Fiji Government's Ministry of Agriculture *farmer profile form* is used here. This tutorial will introduce a workflow to explore and visualise data related to dalo production on subsistence, semi-subsistence, and commercial farms.  
+
+It will demonstrate:
+
+* combining geographic location and outline of fields with tables storing information about cropping practices
+* extracting fields where dalo cultivation occurs
+* computing the area under dalo cultivation in each field
+* creating a bar chart showing the area of dalo on commercial, semi-subsistence, and subsistence farms
+* visualising dalo cultivation on a web map
 
 ## Links
 
-map.landscape dashboard - <a href="https://livelihoods-landscape.shinyapps.io/maplandscape/" target="_blank">map.livelihoods-and-lanscapes.com</a> 
+**map.landscape dashboard** - <a href="https://livelihoods-landscape.shinyapps.io/maplandscape/" target="_blank">map.livelihoods-and-lanscapes.com</a> 
+
+**training data for this tutorial** - <a href="https://storage.googleapis.com/fiji-dashboard-training/farmer-profile-form.gpkg" target="_blank">download here</a>
 
 data submission and download - <a href="https://fiji-ag-dot-aciarlal1.ts.r.appspot.com/" target="_blank">training.livelihoods-and-landscapes.com</a>
-
-training data for this tutorial - <a href="https://storage.googleapis.com/fiji-dashboard-training/farmer-profile-form.gpkg" target="_blank">download here</a>
 
 ## Quick Tour
 
@@ -78,13 +86,13 @@ Before doing any analysis of dalo cultivation, explore the data on the map inter
 
 Click on the **Map** tab.
 
-Click the **Map controls** check box to bring up the options to style your web map. To quickly expore the data we'll make a map of the fields surveyed using the *farmer profile form* and visualise the area of each field using a colour scale. 
+Click the **Map controls** check box to bring up the options to style your web map. To quickly explore the data we'll make a map of the fields surveyed using the *farmer profile form* and represent the area of each field using a colour scale. 
 
 Style your web map:
 
 1. In the **Select active layer** drop down selector choose the layer *farmer-profile (farmer-profile-form)_1*.
 2. In the **Select variable** drop down selector choose *area*. This variable represents the area of the field in square metres. 
-3. Choose a **Fill colour palette** such as *red-yellow-green* - with this colour palette fields with a smaller area will be visualised in red shades and fields with larger areas will be visualised in green shades. 
+3. Choose a **Fill colour palette** such as *red-yellow-green* - with this colour palette fields with a smaller area will be rendered in red shades and fields with larger areas will be rendered in green shades. 
 4. Click **draw map** and the fields should render on your web map. 
 
 <br>
@@ -126,7 +134,6 @@ Fill out the **Combine Tables** options:
 <br> 
 
 Click on the **Select active layer** selector and check that the table you just created by combining the <em>farmer-profile (farmer-profile-form)_1</em> and <em>crops (farmer-profile-form)_3</em> tables is listed. 
-
 ### Extract dalo cropping
 
 Next, we need to create a table that contains only the information related to dalo cultivation. We can do this by filtering values in a table based on values in one or more columns. 
@@ -157,7 +164,7 @@ Click on the **Select active layer** selector and check that the *dalo* table yo
 
 ### Calculate area of dalo cultivation
 
-Next, we will calculate the area of each field under dalo cultivation. The <em>dalo</em> has an *area.x* column which records the area of the field (computed by the GIS on QField) and an *area.y* column which records the percentage of a field under dalo cultivation. We can combine values in these two columns to calculate the area of dalo in square metres in a new column. 
+Next, we will calculate the area of dalo cultivation in each field. The <em>dalo</em> table has an *area.x* column which records the area of the field (computed by QField) and an *area.y* column which records the percentage of a field under dalo cultivation. We can combine values in these two columns to calculate the area of dalo in square metres in a new column. 
 
 Under **Table Analysis** select **Add Column**.
 
@@ -171,7 +178,7 @@ Click **Add Column Options**
 </center>
 <br> 
 
-In the popup window, enter *the following into <em>dalo_area</e> into the **New column name** and `area.x * (area.y / 100)` into **Function to add new column**. 
+In the popup window, enter *the following into <em>dalo_area</em> into the **New column name** and `area.x * (area.y / 100)` into **Function to add new column**. 
 
 Click **Create column**. 
 
@@ -183,10 +190,66 @@ Click **Create column**.
 
 Click on the **Select active layer** selector and check that the *dalo* table you just created is listed. Select the *dalo* table and scroll to the far right to see if a *dalo_area* column has been created.
 
-
 ## Charts
+
+We have now identified all fields where dalo was cultivated and computed the area of dalo cultivation in these fields. 
+
+Next, we will use map.landscapes chart options to create a bar plot showing the area of dalo cultivation on commercial, semi-subsistence, and subsistence farms. 
+
+Click on the **Charts** tab in the navbar. 
+
+Set the following chart options:
+
+* In the **Select active layer** selector select *dalo*
+* In the **Chart type** selector select *bar plot*
+* In the **Grouping variable** selector select *type of farmer*
+* In the **Summary variable** selector select *dalo_area*
+* In the **Bar plot type** checkbox select *sum*
+* Click the **draw chart** button
+
+Here, we are creating a bar plot which visualises amounts or quantities in different categories / groups. The categories are selected in the **Grouping variable** selector and here we are using type of farmer (commercial, semi-subsistence, and subsistence) as a category. The variable to summarise in each group is specified in the **Summary variable** selector; here we are summarising the area of dalo cultivation on different types of farms. 
+
+<br>
+<center>
+![](img_dashboard_mofag_fiji/chart_1.png){width=50%}
+</center>
+<br>
+
+You should see a chart similar to the image below appear in your display. 
+
+<br>
+<center>
+![](img_dashboard_mofag_fiji/chart_2.png){width=75%}
+</center>
+<br>
 
 ## Maps 
 
-## Summary Tables
+We can also visualise dalo cultivation on a web map. Click on the **Map** tab in the navbar. 
+
+Click the **Map controls** checkbox and set the following options to create a map of the area of dalo cultivation in each field.
+
+* In the **Select active layer** selector choose the *dalo* table
+* In the **Select variable** selector choose *dalo area*
+* In the **Fill colour palette** selector choose *red-blue*
+* Click **draw map**
+
+<br>
+<center>
+![](img_dashboard_mofag_fiji/dalo_map_1.png){width=50%}
+</center>
+<br>
+
+You should see a map similar to the below image render on your display. You can check the **Legend** checkbox in the **Map controls** to bring up a legend for your map. 
+
+<br>
+<center>
+![](img_dashboard_mofag_fiji/dalo_map_2.png){width=90%}
+</center>
+<br>
+
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>
+<footer>
+<p><hr></p>
+</footer>
 
