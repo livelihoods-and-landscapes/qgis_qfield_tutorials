@@ -14,7 +14,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Overview
+## Introduction
 
 A dashboard application to explore geospatial data using interactive tables, web maps, and charts.
 
@@ -28,21 +28,26 @@ Use map.landscape was to quickly explore and sync data collected using <a href="
 * Create and style web maps (using <a href="https://rstudio.github.io/leaflet/" target="_blank">Leaflet</a>).
 * Visualise data using different charts (using <a href="https://ggplot2.tidyverse.org" target="_blank">ggplot2</a>).
 
-## Links
-
-map.landscape dashboard - <a href="https://livelihoods-landscape.shinyapps.io/maplandscape/" target="_blank">map.livelihoods-and-lanscapes.com</a>. 
-
-<a href="https://fiji-ag-dot-aciarlal1.ts.r.appspot.com/" target="_blank">Data and training home</a>.
-
-## Quick Tour
+## Overview
 
 This tutorial is a demo map.landscape using fake data generated through the Fiji Government's Ministry of Agriculture *farmer profile form*. This tutorial will introduce a workflow to explore data related to dalo production on subsistence, semi-subsistence, and commercial farms.  
+
+## Links
+
+map.landscape dashboard - <a href="https://livelihoods-landscape.shinyapps.io/maplandscape/" target="_blank">map.livelihoods-and-lanscapes.com</a> 
+
+data submission and download - <a href="https://fiji-ag-dot-aciarlal1.ts.r.appspot.com/" target="_blank">training.livelihoods-and-landscapes.com</a>
+
+training data for this tutorial - <a href="https://storage.googleapis.com/fiji-dashboard-training/farmer-profile-form.gpkg" target="_blank">download here</a>
+
+## Quick Tour
 
 Tabs in the navbar to move between the Data (table), Map, and Chart analysis pages. 
 
 **Data**: upload data and perform analysis on data tables.
 **Map**: visualise data on a web map.
 **Chart**: visualise data using histograms, bar plots, and scatter charts.
+
 <br>
 <center>
 ![](img_dashboard_mofag_fiji/navbar.png){width=75%}
@@ -51,22 +56,24 @@ Tabs in the navbar to move between the Data (table), Map, and Chart analysis pag
 
 ## Upload Data
 
-Download the data from here ...
+Download the data for the tutorial here <a href="https://storage.googleapis.com/fiji-dashboard-training/farmer-profile-form.gpkg" target="_blank">here</a>.
 
-Go to map.landscape dashboard.
+Go to <a href="https://livelihoods-landscape.shinyapps.io/maplandscape/" target="_blank">map.landscape dashboard</a>.
 
-Follow these operations to load the  move to the *farmer-profile-form.gpkg* data into the dashboard:
+Follow these operations to load the *farmer-profile-form.gpkg* data into the dashboard:
 
 1. Select *Browse...* under **Upload Data**.
 2. Move to the directory where you downloaded the *farmer-profile-form* data.
 3. Select *farmer-profile-form.gpkg*.
 
 The file should start loading into the dashboard. Once complete you should see a list of tables that are stored in the GeoPackage file under the **Select active layer** drop down list. 
+
 <br>
 <center>
 ![](img_dashboard_mofag_fiji/upload_data.png){width=50%}
 </center>
 <br>
+
 Before doing any analysis of dalo cultivation, explore the data on the map interface.
 
 Click on the **Map** tab.
@@ -79,6 +86,7 @@ Style your web map:
 2. In the **Select variable** drop down selector choose *area*. This variable represents the area of the field in square metres. 
 3. Choose a **Fill colour palette** such as *red-yellow-green* - with this colour palette fields with a smaller area will be visualised in red shades and fields with larger areas will be visualised in green shades. 
 4. Click **draw map** and the fields should render on your web map. 
+
 <br>
 <center>
 ![](img_dashboard_mofag_fiji/go_to_map.png){width=90%}

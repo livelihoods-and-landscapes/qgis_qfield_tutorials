@@ -445,8 +445,8 @@ div.tocify {
 </div>
 
 
-<div id="overview" class="section level2">
-<h2>Overview</h2>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
 <p>A dashboard application to explore geospatial data using interactive tables, web maps, and charts.</p>
 <p>Use map.landscape was to quickly explore and sync data collected using <a href="https://qfield.org" target="_blank">QField</a> mobile GIS.</p>
 <ul>
@@ -459,16 +459,21 @@ div.tocify {
 <li>Visualise data using different charts (using <a href="https://ggplot2.tidyverse.org" target="_blank">ggplot2</a>).</li>
 </ul>
 </div>
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p>This tutorial is a demo map.landscape using fake data generated through the Fiji Government’s Ministry of Agriculture <em>farmer profile form</em>. This tutorial will introduce a workflow to explore data related to dalo production on subsistence, semi-subsistence, and commercial farms.</p>
+</div>
 <div id="links" class="section level2">
 <h2>Links</h2>
-<p>map.landscape dashboard - <a href="https://livelihoods-landscape.shinyapps.io/maplandscape/" target="_blank">map.livelihoods-and-lanscapes.com</a>.</p>
-<p><a href="https://fiji-ag-dot-aciarlal1.ts.r.appspot.com/" target="_blank">Data and training home</a>.</p>
+<p>map.landscape dashboard - <a href="https://livelihoods-landscape.shinyapps.io/maplandscape/" target="_blank">map.livelihoods-and-lanscapes.com</a></p>
+<p>data submission and download - <a href="https://fiji-ag-dot-aciarlal1.ts.r.appspot.com/" target="_blank">training.livelihoods-and-landscapes.com</a></p>
+<p>training data for this tutorial - <a href="https://storage.googleapis.com/fiji-dashboard-training/farmer-profile-form.gpkg" target="_blank">download here</a></p>
 </div>
 <div id="quick-tour" class="section level2">
 <h2>Quick Tour</h2>
-<p>This tutorial is a demo map.landscape using fake data generated through the Fiji Government’s Ministry of Agriculture <em>farmer profile form</em>. This tutorial will introduce a workflow to explore data related to dalo production on subsistence, semi-subsistence, and commercial farms.</p>
 <p>Tabs in the navbar to move between the Data (table), Map, and Chart analysis pages.</p>
-<strong>Data</strong>: upload data and perform analysis on data tables. <strong>Map</strong>: visualise data on a web map. <strong>Chart</strong>: visualise data using histograms, bar plots, and scatter charts. <br>
+<p><strong>Data</strong>: upload data and perform analysis on data tables. <strong>Map</strong>: visualise data on a web map. <strong>Chart</strong>: visualise data using histograms, bar plots, and scatter charts.</p>
+<br>
 <center>
 <img src="img_dashboard_mofag_fiji/navbar.png" style="width:75.0%" />
 </center>
@@ -476,19 +481,21 @@ div.tocify {
 </div>
 <div id="upload-data" class="section level2">
 <h2>Upload Data</h2>
-<p>Download the data from here …</p>
-<p>Go to map.landscape dashboard.</p>
-<p>Follow these operations to load the move to the <em>farmer-profile-form.gpkg</em> data into the dashboard:</p>
+<p>Download the data for the tutorial here <a href="https://storage.googleapis.com/fiji-dashboard-training/farmer-profile-form.gpkg" target="_blank">here</a>.</p>
+<p>Go to <a href="https://livelihoods-landscape.shinyapps.io/maplandscape/" target="_blank">map.landscape dashboard</a>.</p>
+<p>Follow these operations to load the <em>farmer-profile-form.gpkg</em> data into the dashboard:</p>
 <ol style="list-style-type: decimal">
 <li>Select <em>Browse…</em> under <strong>Upload Data</strong>.</li>
 <li>Move to the directory where you downloaded the <em>farmer-profile-form</em> data.</li>
 <li>Select <em>farmer-profile-form.gpkg</em>.</li>
 </ol>
-The file should start loading into the dashboard. Once complete you should see a list of tables that are stored in the GeoPackage file under the <strong>Select active layer</strong> drop down list. <br>
+<p>The file should start loading into the dashboard. Once complete you should see a list of tables that are stored in the GeoPackage file under the <strong>Select active layer</strong> drop down list.</p>
+<br>
 <center>
 <img src="img_dashboard_mofag_fiji/upload_data.png" style="width:50.0%" />
 </center>
-<p><br> Before doing any analysis of dalo cultivation, explore the data on the map interface.</p>
+<p><br></p>
+<p>Before doing any analysis of dalo cultivation, explore the data on the map interface.</p>
 <p>Click on the <strong>Map</strong> tab.</p>
 <p>Click the <strong>Map controls</strong> check box to bring up the options to style your web map. To quickly expore the data we’ll make a map of the fields surveyed using the <em>farmer profile form</em> and visualise the area of each field using a colour scale.</p>
 <p>Style your web map:</p>
@@ -496,12 +503,13 @@ The file should start loading into the dashboard. Once complete you should see a
 <li>In the <strong>Select active layer</strong> drop down selector choose the layer *farmer-profile (farmer-profile-form)_1*.</li>
 <li>In the <strong>Select variable</strong> drop down selector choose <em>area</em>. This variable represents the area of the field in square metres.</li>
 <li>Choose a <strong>Fill colour palette</strong> such as <em>red-yellow-green</em> - with this colour palette fields with a smaller area will be visualised in red shades and fields with larger areas will be visualised in green shades.</li>
-<li>Click <strong>draw map</strong> and the fields should render on your web map. <br>
+<li>Click <strong>draw map</strong> and the fields should render on your web map.</li>
+</ol>
+<br>
 <center>
 <img src="img_dashboard_mofag_fiji/go_to_map.png" style="width:90.0%" />
 </center>
-<br></li>
-</ol>
+<p><br></p>
 </div>
 <div id="tables" class="section level2">
 <h2>Tables</h2>
