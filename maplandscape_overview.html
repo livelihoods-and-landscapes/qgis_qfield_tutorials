@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>map.landscape overview</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+<link rel="stylesheet" href="tutorial_style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Training</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="training_overview.html">Training Overview</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Tutorials
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="lesson_1.html">Lesson 1</a>
+    </li>
+    <li>
+      <a href="lesson_2.html">Lesson 2</a>
+    </li>
+    <li>
+      <a href="lesson_3.html">Lesson 3</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Use Cases
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="usecase_groundtruth.html">Use Case - Ground Truth</a>
+    </li>
+    <li>
+      <a href="usecase_communitymap.html">Use Case - Community Map</a>
+    </li>
+    <li>
+      <a href="usecase_erpdpilot.html">Use Case - Ground Truth (ERPD Pilot)</a>
+    </li>
+    <li>
+      <a href="tonga_crop_survey_1.html">Tonga Crop Survey - Intro</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    map.landscape
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="maplandscape_overview.html">map.landscape overview</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/livelihoods-and-landscapes">
+    <span class="fas fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="contact.html">
+    <span class="fas fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">map.landscape overview</h1>
+
+</div>
+
+
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>A dashboard application to explore geospatial data using interactive tables, web maps, and charts.</p>
+<p>Use map.landscape was to quickly explore and sync data collected using <a href="https://qfield.org" target="_blank">QField</a> mobile GIS.</p>
+<ul>
+<li>Sync data collected using QField on different mobile devices.</li>
+<li>Upload spatial and non-spatial tabular data as GeoPackage or zip files.</li>
+<li>Explore data in interactive tables (using <a href="https://rstudio.github.io/DT/" target="_blank">DataTables</a>).</li>
+<li>Combine tabular data using spatial and non-spatial joins.</li>
+<li>Create summary tables.</li>
+<li>Create and style web maps (using <a href="https://rstudio.github.io/leaflet/" target="_blank">Leaflet</a>).</li>
+<li>Visualise data using different charts (using <a href="https://ggplot2.tidyverse.org" target="_blank">ggplot2</a>).</li>
+</ul>
+</div>
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p>This tutorial is a demo of analysing data using the map.landscape dashboard.<em>Fake</em> test data generated using the Fiji Government’s Ministry of Agriculture <em>farmer profile form</em> is used here. This tutorial will introduce a workflow to explore and visualise data related to dalo production on subsistence, semi-subsistence, and commercial farms.</p>
+<p>It will demonstrate:</p>
+<ul>
+<li>combining geographic location and outline of fields with tables storing information about cropping practices</li>
+<li>extracting fields where dalo cultivation occurs</li>
+<li>computing the area under dalo cultivation in each field</li>
+<li>creating a bar chart showing the area of dalo on commercial, semi-subsistence, and subsistence farms</li>
+<li>visualising dalo cultivation on a web map</li>
+</ul>
+</div>
+<div id="links" class="section level2">
+<h2>Links</h2>
+<p><strong>map.landscape dashboard</strong> - <a href="https://livelihoods-landscape.shinyapps.io/maplandscape/" target="_blank">map.livelihoods-and-lanscapes.com</a></p>
+<p><strong>training data for this tutorial</strong> - <a href="https://storage.googleapis.com/fiji-dashboard-training/farmer-profile-form.gpkg" target="_blank">download here</a></p>
+<p>data submission and download - <a href="https://fiji-ag-dot-aciarlal1.ts.r.appspot.com/" target="_blank">training.livelihoods-and-landscapes.com</a></p>
+</div>
+<div id="quick-tour" class="section level2">
+<h2>Quick Tour</h2>
+<p>Tabs in the navbar to move between the Data (table), Map, and Chart analysis pages.</p>
+<p><strong>Data</strong>: upload data and perform analysis on data tables. <strong>Map</strong>: visualise data on a web map. <strong>Chart</strong>: visualise data using histograms, bar plots, and scatter charts.</p>
+<br>
+<center>
+<img src="img_dashboard_mofag_fiji/navbar.png" style="width:75.0%" />
+</center>
+<p><br></p>
+</div>
+<div id="upload-data" class="section level2">
+<h2>Upload Data</h2>
+<p>Download the data for the tutorial here <a href="https://storage.googleapis.com/fiji-dashboard-training/farmer-profile-form.gpkg" target="_blank">here</a>.</p>
+<p>Go to <a href="https://livelihoods-landscape.shinyapps.io/maplandscape/" target="_blank">map.landscape dashboard</a>.</p>
+<p>Follow these operations to load the <em>farmer-profile-form.gpkg</em> data into the dashboard:</p>
+<ol style="list-style-type: decimal">
+<li>Select <em>Browse…</em> under <strong>Upload Data</strong>.</li>
+<li>Move to the directory where you downloaded the <em>farmer-profile-form</em> data.</li>
+<li>Select <em>farmer-profile-form.gpkg</em>.</li>
+</ol>
+<p>The file should start loading into the dashboard. Once complete you should see a list of tables that are stored in the GeoPackage file under the <strong>Select active layer</strong> drop down list.</p>
+<br>
+<center>
+<img src="img_dashboard_mofag_fiji/upload_data.png" style="width:50.0%" />
+</center>
+<p><br></p>
+<p>Before doing any analysis of dalo cultivation, explore the data on the map interface.</p>
+<p>Click on the <strong>Map</strong> tab.</p>
+<p>Click the <strong>Map controls</strong> check box to bring up the options to style your web map. To quickly explore the data we’ll make a map of the fields surveyed using the <em>farmer profile form</em> and represent the area of each field using a colour scale.</p>
+<p>Style your web map:</p>
+<ol style="list-style-type: decimal">
+<li>In the <strong>Select active layer</strong> drop down selector choose the layer *farmer-profile (farmer-profile-form)_1*.</li>
+<li>In the <strong>Select variable</strong> drop down selector choose <em>area</em>. This variable represents the area of the field in square metres.</li>
+<li>Choose a <strong>Fill colour palette</strong> such as <em>red-yellow-green</em> - with this colour palette fields with a smaller area will be rendered in red shades and fields with larger areas will be rendered in green shades.</li>
+<li>Click <strong>draw map</strong> and the fields should render on your web map.</li>
+</ol>
+<br>
+<center>
+<img src="img_dashboard_mofag_fiji/go_to_map.png" style="width:90.0%" />
+</center>
+<p><br></p>
+</div>
+<div id="tables" class="section level2">
+<h2>Tables</h2>
+<div id="attach-crops-information-to-each-field" class="section level3">
+<h3>Attach crops information to each field</h3>
+<p>Click on the <strong>Data</strong> tab.</p>
+<p>Use the <strong>Select active layer</strong> selector to click on the <em>farmer-profile (farmer-profile-form)_1</em> and <em>crops (farmer-profile-form)_3</em> tables. Explore these tables in the interactive table interface.</p>
+<p>The <em>farmer-profile (farmer-profile-form)_1</em> is a spatial table which includes geographic information (shape and location) for each field surveyed (you just saw this on the web map). Each field is uniquely identified by a value in the column <em>farm_id</em>. There are other columns in this table which describe farm attributes such as <em>type_of_farmer</em> which tells us if this field is part of a subsistence, semi-subsistence, or commercial farm.</p>
+<p>The <em>crops (farmer-profile-form)_3</em> is a non-spatial table (like an Excel spreadsheet). Each column in this table stores a variable describing some attribute about crop cultivation. There is a column <em>crop_id</em>; the value in this column relates each crop observation to a field. This tells us which crops are grown in each field.</p>
+<p>We can use matches between the <em>farm_id</em> and the <em>crop_id</em> to attach the crops information to each field. This will allow us to make maps of dalo cultivation and summarise dalo cultivation across different types of farmer.</p>
+<p>Under <strong>Table Analysis</strong> and the <strong>Select analysis</strong> selector choose <strong>Combine Tables</strong>.</p>
+<p>Fill out the <strong>Combine Tables</strong> options:</p>
+<ul>
+<li><strong>Select left table in join</strong>: <em>farmer-profile (farmer-profile-form)_1</em></li>
+<li><strong>Select right table in join</strong>: <em>crops (farmer-profile-form)_3</em></li>
+<li><strong>Select primary key(s) - left table</strong>: <em>farm_id</em></li>
+<li><strong>Select foreign key(s) - right table</strong>: <em>crop_id</em></li>
+<li><strong>Join Type</strong>: <em>column - inner</em></li>
+<li><strong>Table name</strong>: give your table an informative name - (e.g. <em>crops_joined</em>)</li>
+<li>Click <strong>Join</strong></li>
+</ul>
+<br>
+<center>
+<img src="img_dashboard_mofag_fiji/combine_tables_options.png" style="width:35.0%" />
+</center>
+<p><br></p>
+<p>Click on the <strong>Select active layer</strong> selector and check that the table you just created by combining the <em>farmer-profile (farmer-profile-form)_1</em> and <em>crops (farmer-profile-form)_3</em> tables is listed. ### Extract dalo cropping</p>
+<p>Next, we need to create a table that contains only the information related to dalo cultivation. We can do this by filtering values in a table based on values in one or more columns.</p>
+<p>Under <strong>Table Analysis</strong> select <strong>Filter Rows</strong>.</p>
+<p>Select the table you just created by combining <em>farmer-profile (farmer-profile-form)_1</em> and <em>crops (farmer-profile-form)_3</em>.</p>
+<br>
+<center>
+<img src="img_dashboard_mofag_fiji/filter_rows_1.png" style="width:50.0%" />
+</center>
+<p><br></p>
+<p>Click <strong>Filter Options</strong> and a popup window will appear.</p>
+<p>In <strong>Conditions to filter rows</strong> add <code>crop == 'dalo'</code> and in <strong>Table name</strong> enter <em>dalo</em>.</p>
+<p>Click <strong>Filter</strong>.</p>
+<br>
+<center>
+<img src="img_dashboard_mofag_fiji/filter_rows_2.png" style="width:50.0%" />
+</center>
+<p><br></p>
+<p>Click on the <strong>Select active layer</strong> selector and check that the <em>dalo</em> table you just created is listed.</p>
+</div>
+<div id="calculate-area-of-dalo-cultivation" class="section level3">
+<h3>Calculate area of dalo cultivation</h3>
+<p>Next, we will calculate the area of dalo cultivation in each field. The <em>dalo</em> table has an <em>area.x</em> column which records the area of the field (computed by QField) and an <em>area.y</em> column which records the percentage of a field under dalo cultivation. We can combine values in these two columns to calculate the area of dalo in square metres in a new column.</p>
+<p>Under <strong>Table Analysis</strong> select <strong>Add Column</strong>.</p>
+<p>In the <strong>Select table to add new column</strong> selector choose the <em>dalo</em> table.</p>
+<p>Click <strong>Add Column Options</strong></p>
+<br>
+<center>
+<img src="img_dashboard_mofag_fiji/add_columns_1.png" style="width:50.0%" />
+</center>
+<p><br></p>
+<p>In the popup window, enter *the following into <em>dalo_area</em> into the <strong>New column name</strong> and <code>area.x * (area.y / 100)</code> into <strong>Function to add new column</strong>.</p>
+<p>Click <strong>Create column</strong>.</p>
+<br>
+<center>
+<img src="img_dashboard_mofag_fiji/add_columns_2.png" style="width:50.0%" />
+</center>
+<p><br></p>
+<p>Click on the <strong>Select active layer</strong> selector and check that the <em>dalo</em> table you just created is listed. Select the <em>dalo</em> table and scroll to the far right to see if a <em>dalo_area</em> column has been created.</p>
+</div>
+</div>
+<div id="charts" class="section level2">
+<h2>Charts</h2>
+<p>We have now identified all fields where dalo was cultivated and computed the area of dalo cultivation in these fields.</p>
+<p>Next, we will use map.landscapes chart options to create a bar plot showing the area of dalo cultivation on commercial, semi-subsistence, and subsistence farms.</p>
+<p>Click on the <strong>Charts</strong> tab in the navbar.</p>
+<p>Set the following chart options:</p>
+<ul>
+<li>In the <strong>Select active layer</strong> selector select <em>dalo</em></li>
+<li>In the <strong>Chart type</strong> selector select <em>bar plot</em></li>
+<li>In the <strong>Grouping variable</strong> selector select <em>type of farmer</em></li>
+<li>In the <strong>Summary variable</strong> selector select <em>dalo_area</em></li>
+<li>In the <strong>Bar plot type</strong> checkbox select <em>sum</em></li>
+<li>Click the <strong>draw chart</strong> button</li>
+</ul>
+<p>Here, we are creating a bar plot which visualises amounts or quantities in different categories / groups. The categories are selected in the <strong>Grouping variable</strong> selector and here we are using type of farmer (commercial, semi-subsistence, and subsistence) as a category. The variable to summarise in each group is specified in the <strong>Summary variable</strong> selector; here we are summarising the area of dalo cultivation on different types of farms.</p>
+<br>
+<center>
+<img src="img_dashboard_mofag_fiji/chart_1.png" style="width:50.0%" />
+</center>
+<p><br></p>
+<p>You should see a chart similar to the image below appear in your display.</p>
+<br>
+<center>
+<img src="img_dashboard_mofag_fiji/chart_2.png" style="width:75.0%" />
+</center>
+<p><br></p>
+</div>
+<div id="maps" class="section level2">
+<h2>Maps</h2>
+<p>We can also visualise dalo cultivation on a web map. Click on the <strong>Map</strong> tab in the navbar.</p>
+<p>Click the <strong>Map controls</strong> checkbox and set the following options to create a map of the area of dalo cultivation in each field.</p>
+<ul>
+<li>In the <strong>Select active layer</strong> selector choose the <em>dalo</em> table</li>
+<li>In the <strong>Select variable</strong> selector choose <em>dalo area</em></li>
+<li>In the <strong>Fill colour palette</strong> selector choose <em>red-blue</em></li>
+<li>Click <strong>draw map</strong></li>
+</ul>
+<br>
+<center>
+<img src="img_dashboard_mofag_fiji/dalo_map_1.png" style="width:50.0%" />
+</center>
+<p><br></p>
+<p>You should see a map similar to the below image render on your display. You can check the <strong>Legend</strong> checkbox in the <strong>Map controls</strong> to bring up a legend for your map.</p>
+<br>
+<center>
+<img src="img_dashboard_mofag_fiji/dalo_map_2.png" style="width:90.0%" />
+</center>
+<p><br></p>
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;">
+
+</div>
+<footer>
+<p>
+<hr>
+</p>
+</footer>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

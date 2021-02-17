@@ -37,11 +37,6 @@ This training will cover the following:
 
 6. Generating complex data collection forms
 
-### [Lesson 4](lesson_4.html)
-
-7. Managing QGIS data collection projects on remote devices
-8. Syncing data collected on multiple devices with a central dataset
-
 <br>
 
 ## Use Cases
