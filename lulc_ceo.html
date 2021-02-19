@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Collect Earth Online</title>
+
+<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+<link rel="stylesheet" href="tutorial_style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Training</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="training_overview.html">Training Overview</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Tutorials
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="lesson_1.html">Lesson 1</a>
+    </li>
+    <li>
+      <a href="lesson_2.html">Lesson 2</a>
+    </li>
+    <li>
+      <a href="lesson_3.html">Lesson 3</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Use Cases
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="usecase_groundtruth.html">Use Case - Ground Truth</a>
+    </li>
+    <li>
+      <a href="usecase_communitymap.html">Use Case - Community Map</a>
+    </li>
+    <li>
+      <a href="usecase_erpdpilot.html">Use Case - Ground Truth (ERPD Pilot)</a>
+    </li>
+    <li>
+      <a href="tonga_crop_survey_1.html">Tonga Crop Survey - Intro</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    LULC
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="lulc_ceo.html">Collect Earth Online</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    map.landscape
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="maplandscape_overview.html">map.landscape overview</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/livelihoods-and-landscapes">
+    <span class="fas fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="contact.html">
+    <span class="fas fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Collect Earth Online</h1>
+
+</div>
+
+
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p>Fiji Forestry have a need for accurate maps of land cover fin areas they manage. A pilot project is being done to co-develop a land cover mapping methodology using the geospatial tool, Google Earth Engine, and Collect Earth Online to produce 10m land cover map for a single forestry site (Nalotawa) based on Sentinel-2 satellite data. This workshop focuses on Collect Earth Online (CEO) - a web-based, collaborative tool for collecting land cover data for map generation and accuracy assessment.</p>
+<p>There are two components to this training: - Learning CEO - Collecting Land Cover Data</p>
+All workshop attendees must register with CEO well before the scheduled day of the workshop.
+<p>
+<hr>
+</p>
+</div>
+<div id="register-with-ceo" class="section level2">
+<h2>Register with CEO</h2>
+<p>Before you can start this workshop, you will need to register with Collect Earth Online:</p>
+<ol style="list-style-type: decimal">
+<li>Open your web browser and go to <a href="https://collect.earth" class="uri">https://collect.earth</a></li>
+<li>Click the <strong>Login/Register</strong> button in the top right of the page</li>
+<li>Click the <strong>Register</strong> button</li>
+<li>Enter your preferred email address and choose a password. You can untick the <strong>Subscribe to Mailinglist</strong> if you prefer. Click the <strong>Register</strong> button.</li>
+<li>You will now be at the main page of Collect Earth Online. Click the <strong>Logout</strong> button on the top of the page.</li>
+<li>You should receive a message: <strong>You have successfully created an account</strong>. You will also receive a confirmation email.</li>
+<li><strong>IMPORTANT:</strong> Let your instructor know the the email address you used to register with Collect Earth Online <strong>BEFORE</strong> the workshop. Your instructor will need to assign you to the <strong>University of Sydney, School of Geosciences</strong> organisation in CEO so you can complete the workshop. You will receive another email when your instructor havs completed this step.</li>
+</ol>
+<p>
+<hr>
+</p>
+</div>
+<div id="suggested-schedule" class="section level2">
+<h2>Suggested Schedule</h2>
+<ul>
+<li>09:00 Introduction</li>
+<li>09:15 Learning CEO</li>
+<li>10:15 Break</li>
+<li>10:30 Collecting Land Cover Data</li>
+<li>12:00 Review and Discussion</li>
+<li>12:30 Finish</li>
+</ul>
+<p>
+<hr>
+</p>
+</div>
+<div id="learning-ceo" class="section level2">
+<h2>Learning CEO</h2>
+<p>On 14th and 15th July 2020, a field team from Ministry of Forestry and USP labelled land cover plots in the Nalotawa Forestry area. The land cover classes used by the field team are shown below (at Level 2):</p>
+<table>
+<colgroup>
+<col width="31%" />
+<col width="31%" />
+<col width="9%" />
+<col width="26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Level 1</th>
+<th>Level 2</th>
+<th>Code</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Forest</td>
+<td>Closed Forest</td>
+<td>1</td>
+<td>Tree &gt; 40% cover</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Open Forest</td>
+<td>2</td>
+<td>Tree &lt; 40% cover</td>
+</tr>
+<tr class="odd">
+<td>Shrubland</td>
+<td>Shrubland</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Grassland</td>
+<td>Dry Grassland</td>
+<td>4</td>
+<td>May include herbs/shrubs. Tree canopy &lt; 10% cover.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Wet Grassland</td>
+<td>5</td>
+<td>May include herbs/shrubs. Tree canopy &lt; 10% cover.</td>
+</tr>
+<tr class="even">
+<td>Cropland</td>
+<td>Cropland</td>
+<td>6</td>
+<td>Area &gt;= 50% covered by agriculture</td>
+</tr>
+<tr class="odd">
+<td>Wetland</td>
+<td>Mangroves</td>
+<td>7</td>
+<td>Area &gt;= 30% covered in mangroves</td>
+</tr>
+<tr class="even">
+<td>Settlement</td>
+<td>Settlement</td>
+<td>8</td>
+<td>Area &gt;= 30% developed land including houses, roads</td>
+</tr>
+<tr class="odd">
+<td>Other Lands</td>
+<td>Water</td>
+<td>9</td>
+<td>Water</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Bare Ground</td>
+<td>10</td>
+<td>Bare soil/rock</td>
+</tr>
+</tbody>
+</table>
+<p>The objective of this exercise is to learn how to label these same plots using Collect Earth Online (CEO). You will be using the provided satellite images in CEO to decide which land cover is present. You will then compare your land cover label with the class assigned to the same plot during the fieldwork. At the end of this exercise, your instructor will lead a short discussion on the results and your experience with CEO.</p>
+<ol style="list-style-type: decimal">
+<li>Open your web browser and go to <a href="https://collect.earth" class="uri">https://collect.earth</a></li>
+<li>Click the <strong>Login/Register</strong> button in the top right of the page</li>
+<li>Enter the email address and password you used to register with CEO.</li>
+<li>You should now be at the home page of CEO. The map shows the locations of institutions using CEO.</li>
+<li>Check that the <strong>University of Sydney, School of Geosciences</strong> is listed under <strong>Your Affiliations</strong> (circled in red in Fig. 1). If you see <strong>No Affiliations Found…</strong> then you will need to speak to your instructor to have you added before you can continue.</li>
+</ol>
+<p><br></p>
+<center>
+<img src="lulc_ceo_img/CEO%20Affiliation.png" title="fig:" style="width:100.0%" alt="Figure 1: CEO Main Page" />
+</center>
+<p><br></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Click the <strong>VISIT</strong> button next to the <strong>University of Sydney, School of Geosciences</strong>.</li>
+<li>You will see a list of projects that you have access to. Find the project which ends with your name or email and click on it (see Fig. 2 below). If you do not see your name or email after any projects then speak with your instructor before continuing with the training.</li>
+</ol>
+<p><br></p>
+<center>
+<img src="lulc_ceo_img/CEO%20Projects.png" title="fig:" style="width:80.0%" alt="Figure 2: CEO Projects - open the project ending with your name or email addres." />
+</center>
+<p><br></p>
+<ol start="8" style="list-style-type: decimal">
+<li>Your project should now open. Carefully read through the captions on Fig. 3 below to understand the various elements. After you have completed this, continue to step 9.</li>
+</ol>
+<p><br></p>
+<center>
+<img src="lulc_ceo_img/CEO%20Project%20Overview.png" title="fig:" style="width:95.0%" alt="Figure 3: CEO project overview page." />
+</center>
+<p><br></p>
+<ol start="9" style="list-style-type: decimal">
+<li><p>Ensure you have <strong>Unanalyzed plots</strong> chosen and click the <strong>Go to first plot</strong> button.</p></li>
+<li><p>The instuctor will now demonstrate the various steps to label a plot. Follow along and use Fig. 4 below as a reference.</p></li>
+</ol>
+<p><br></p>
+<center>
+<img src="lulc_ceo_img/CEO%20Plot%20Label.png" title="fig:" style="width:95.0%" alt="Figure 4: Labelling a plot." />
+</center>
+<p><br></p>
+<ol start="11" style="list-style-type: decimal">
+<li>Keep labelling as many plots as you can in the time remaining. Make sure you note down the plot ID where your chosen landcover class does not match the landcover class assigned during the fieldwork.</li>
+</ol>
+<p>Your instructor will lead a discussion on some example plots where the particpant’s land cover class did not agree with the land cover class assigned during the fieldwork. Remember, there is not necessarily a correct answer, so it is important to discuss these ambiguities and why they occur. This will help you use your existing knowledge of the area to improve your image interpretation skills.</p>
+<p>
+<hr>
+</p>
+</div>
+<div id="collecting-land-cover-data" class="section level2">
+<h2>Collecting Land Cover Data</h2>
+<p>You will use your CEO skills to label new plots for the Nalotawa forestry site. The labels you assign in this exercise will be used to produce a pilot land cover map for this area. All participants will be labelling unique plots in the same project which demonstrates the collaborative nature of CEO.</p>
+<ol style="list-style-type: decimal">
+<li>Log into CEO if you aren’t already logged in (<a href="https://collect.earth" class="uri">https://collect.earth</a>)</li>
+<li>Click <strong>Home</strong> in the main menu.</li>
+<li>Click <strong>VISIT</strong> next to <strong>University of Sydney, School of Geosciences</strong> under <strong>Your Affiliations</strong></li>
+<li>Open the project called <strong>CEO Nalotawa Training</strong>. If you don’t see this project then speak with your instructor.</li>
+<li>Start labelling plots as you learnt in the previous exercise. Please use your knowledge and experience when choosing a land cover label, but if you are unsure of a class then you can click the <strong>Flag Plot</strong> button. <strong>IMPORTANT</strong> make sure you click <strong>Save</strong> at the bottom after assigning a class or flagging a plot to automatically move to the next plot. If you do not click Save, your choice will be lost.</li>
+</ol>
+<p>One the group has finished the exercise, you instructor will download the labelled data and demonstrate how the land cover map can be produced in Google Earth Engine.</p>
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;">
+
+</div>
+<footer>
+<p>
+<hr>
+</p>
+</footer>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
