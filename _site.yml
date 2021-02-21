@@ -6,7 +6,7 @@ navbar:
       href: index.html
     - text: "Training Overview"
       href: training_overview.html
-    - text: "Tutorials"
+    - text: "Mobile GIS"
       menu:
         - text: "Lesson 1"
           href: lesson_1.html
@@ -14,8 +14,6 @@ navbar:
           href: lesson_2.html
         - text: "Lesson 3"
           href: lesson_3.html
-    - text: "Use Cases"
-      menu:
         - text: "Use Case - Ground Truth"
           href: usecase_groundtruth.html
         - text: "Use Case - Community Map"
@@ -24,14 +22,14 @@ navbar:
           href: usecase_erpdpilot.html
         - text: "Tonga Crop Survey - Intro"
           href: tonga_crop_survey_1.html
-    - text: "LULC"
-      menu:
-        - text: "Collect Earth Online"
-          href: lulc_ceo.html  
-    - text: "map.landscape"
+    - text: "map.landscape dashboard"
       menu:
         - text: "map.landscape overview"
           href: maplandscape_overview.html  
+    - text: "LULC mapping"
+      menu:
+        - text: "Collect Earth Online"
+          href: lulc_ceo.html 
   right:
     - icon: fa-github fa-lg
       href: https://github.com/livelihoods-and-landscapes
