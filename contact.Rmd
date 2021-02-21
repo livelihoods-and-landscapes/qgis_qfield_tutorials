@@ -5,7 +5,6 @@ output:
     theme: flatly
 ---
 
-![](img/team.png){width=100%}
 
 <div align="center">
 #### [Kevin Davies](https://www.sydney.edu.au/science/about/our-people/academic-staff/kevin-davies.html)
@@ -25,6 +24,14 @@ School of Geography, Earth Science, and Environment
 
 The University of the South Pacific
 <p><a href="mailto:renata.varea@usp.ac.fj">Email Renata</a></p>
+</div>
+
+<hr>
+
+<div align="center">
+#### [Ahi Saipaia](https://livelihoods-and-landscapes.com)
+
+Ministry of Agriculture, Food, Forest, and Fisheries - Government of Tonga
 </div>
 
 <hr>
